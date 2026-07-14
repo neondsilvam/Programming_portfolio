@@ -1,0 +1,31 @@
+import { useLang } from '../context/LangContext'
+import styles from './Perfil.module.css'
+import Perfil_photo from '../assets/Perfil_photo.jpg'
+
+export function Perfil() {
+  const { t } = useLang()
+  const { name, role, description, tags } = t.perfil
+
+  return (
+    <section className={styles.section}>
+      <div className={styles.hero}>
+        <div className={styles.avatar}>
+                  <img src={Perfil_photo}/>
+        </div>
+
+        <div className={styles.info}>
+          <h1 className={styles.name}>{name}</h1>
+          <p className={styles.role}>{role}</p>
+          <p className={styles.description}>{description}</p>
+          <div className={styles.tags}>
+            {tags.map((tag) => (
+              <span key={tag} className={styles.tag}>
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

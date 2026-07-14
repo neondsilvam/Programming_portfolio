@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    border-bottom: 1px solid #e5e7eb;
+    background-image: linear-gradient(0deg, #2c5836 40%, #000000 100%);
+    bottom: 0;
+}
+
+.subtext {
+    font-size: 1em;
+    color: #fbfaf8;
+    padding: 1em;
+}
