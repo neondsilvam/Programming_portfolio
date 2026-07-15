@@ -1,18 +1,41 @@
+@keyframes IntroAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .section {
   padding: 3rem 0.5rem;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-.hero {
+.profileArea {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 2.5rem;
   align-items: center;
+  margin: 3%;
+}
+
+.firstPageArea {
+  display: inline-grid;
+  grid-template-rows: auto 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background-image:linear-gradient(rgba(255, 255, 255, 0.7));
+  padding: 10%;
+  border-radius: 25px;
+  opacity: 0;
+  animation: IntroAnimation 1s ease-out forwards;
+  animation-delay: 2s;
 }
 
 @media (max-width: 560px) {
-  .hero {
+  .profileArea {
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
@@ -48,6 +71,20 @@
 
 .name {
   font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.catchPhrase {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.identityPhrase {
+  font-size: 12px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;

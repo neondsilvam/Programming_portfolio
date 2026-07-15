@@ -4,11 +4,15 @@ import Perfil_photo from '../assets/Perfil_photo.jpg'
 
 export function Perfil() {
   const { t } = useLang()
-  const { name, role, description, tags } = t.perfil
+  const { name, role, description, tags, catchPhrase, identitySentence } = t.profilePage
 
   return (
     <section className={styles.section}>
-      <div className={styles.hero}>
+      <div className={styles.firstPageArea}>
+        <h1 className={styles.catchPhrase}>{catchPhrase}</h1>
+        <h5 className={styles.identityPhrase}>{identitySentence}</h5>
+      </div>
+      <div className={styles.profileArea}>
         <div className={styles.avatar}>
                   <img src={Perfil_photo}/>
         </div>

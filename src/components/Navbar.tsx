@@ -11,12 +11,12 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
   const { t, toggleLang } = useLang()
 
   const pages: { key: Page; label: string }[] = [
-    { key: 'perfil', label: t.nav.perfil },
+    { key: 'perfil', label: t.nav.profile },
     { key: 'web', label: t.nav.web },
     { key: 'gameExp', label: t.nav.gameExp },
     { key: 'uiExp', label: t.nav.uiExp },
     { key: 'mobile', label: t.nav.mobile },
-    { key: 'contacto', label: t.nav.contacto },
+    { key: 'contacto', label: t.nav.contact },
   ]
 
   return (

@@ -4,7 +4,7 @@ import styles from './Contacto.module.css'
 
 export function Contacto() {
     const {t} = useLang()
-    const {title, subtitle1, subtitle2, labels} = t.contact
+    const {title, subtitle1, subtitle2, labels} = t.contactPage
 
     const items = [
         {label: labels.email, value: contactInfo.email, href: `mailto:${contactInfo.email}`},

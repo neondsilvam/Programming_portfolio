@@ -53,7 +53,7 @@ export function MobileProjects() {
                             </div>
                         )
                     })}
-                    <h5 className={styles.sectionSubTitle}>{t.mobileProjects.aclaration}</h5>
+                    <h5 className={styles.sectionSubTitle}>{t.mobileProjects.clarification}</h5>
                 </aside>
 
                 <div className={styles.detail}>

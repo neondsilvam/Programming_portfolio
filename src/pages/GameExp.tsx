@@ -53,7 +53,7 @@ export function GameExp() {
                             </div>
                         )
                     })}
-                    <h5 className={styles.sectionSubTitle}>{t.gameExp.aclaration}</h5>
+                    <h5 className={styles.sectionSubTitle}>{t.gameExp.clarification}</h5>
                 </aside>
 
                 <div className={styles.detail}>

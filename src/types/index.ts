@@ -51,15 +51,17 @@ export interface Section {
 export interface Translations {
   nav: {
     logo: string
-    perfil: string
+    profile: string
     web: string
     mobile: string
     gameExp: string
     uiExp: string
-    contacto: string
+    contact: string
     langBtn: string
   }
-  perfil: {
+  profilePage: {
+    catchPhrase: string
+    identitySentence: string
     name: string
     role: string
     description: string
@@ -67,21 +69,21 @@ export interface Translations {
   }
   webProjects: {
       sections: Section[]
-      aclaration: string,
+      clarification: string,
       projects: ProjectTranslation[]
       showingProcessButtonTextFalse: string
       showingProcessButtonTextTrue: string
   }
   mobileProjects: {
       sections: Section[]
-      aclaration: string,
+      clarification: string,
       projects: ProjectTranslation[]
       showingProcessButtonTextFalse: string
       showingProcessButtonTextTrue: string
   }
   gameExp: {
     sections: Section[]
-    aclaration: string,
+    clarification: string,
     projects: ProjectTranslation[]
     showingProcessButtonTextFalse: string
     showingProcessButtonTextTrue: string
@@ -93,7 +95,7 @@ export interface Translations {
     showingProcessButtonTextFalse: string
     showingProcessButtonTextTrue: string
   }
-  contact: {
+  contactPage: {
     title: string
     subtitle1: string
     subtitle2: string

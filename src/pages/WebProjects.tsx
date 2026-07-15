@@ -53,7 +53,7 @@ export function WebProjects() {
                             </div>
                         )
                     })}
-                    <h5 className={styles.sectionSubTitle}>{t.webProjects.aclaration}</h5>
+                    <h5 className={styles.sectionSubTitle}>{t.webProjects.clarification}</h5>
                 </aside>
 
                 <div className={styles.detail}>
