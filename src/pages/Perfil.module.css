@@ -7,6 +7,12 @@
   }
 }
 
+*{
+  opacity: 0;
+  animation: IntroAnimation 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
 .section {
   padding: 3rem 0.5rem;
   max-width: 1000px;
@@ -26,12 +32,9 @@
   grid-template-rows: auto 1fr;
   gap: 2.5rem;
   align-items: center;
-  background-image:linear-gradient(rgba(255, 255, 255, 0.7));
+  background-image:linear-gradient(rgba(0, 0, 0, 0.9));
   padding: 10%;
   border-radius: 25px;
-  opacity: 0;
-  animation: IntroAnimation 1s ease-out forwards;
-  animation-delay: 2s;
 }
 
 @media (max-width: 560px) {
@@ -84,7 +87,7 @@
 }
 
 .identityPhrase {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
