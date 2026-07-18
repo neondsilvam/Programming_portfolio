@@ -7,6 +7,15 @@
   }
 }
 
+@keyframes OutroAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 *{
   opacity: 0;
   animation: IntroAnimation 0.5s ease-out forwards;
@@ -17,6 +26,13 @@
   padding: 3rem 0.5rem;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+section.FadeOut{
+  opacity: 1;
+  animation: IntroAnimation 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+
 }
 
 .profileArea {

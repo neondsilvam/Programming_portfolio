@@ -1,13 +1,18 @@
 import { useLang } from '../context/LangContext'
 import styles from './Perfil.module.css'
 import Perfil_photo from '../assets/Perfil_photo.jpg'
+import {useEffect, useState} from "react"
 
 export function Perfil() {
   const { t } = useLang()
-  const { name, role, description, tags, catchPhrase, identitySentence } = t.profilePage
-
+  const { name, role, description, tags, catchPhrase, identitySentence } = t.profilePage;
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => {
+        setIsMounted(false);
+    }, []);
+    
   return (
-    <section className={styles.section}>
+    <section className={`styles.section ${isMounted ? 'FadeOut' : ''}`}>
       <div className={styles.firstPageArea}>
         <h1 className={styles.catchPhrase}>{catchPhrase}</h1>
         <h5 className={styles.identityPhrase}>{identitySentence}</h5>
