@@ -6,13 +6,14 @@ import {useEffect, useState} from "react"
 export function Perfil() {
   const { t } = useLang()
   const { name, role, description, tags, catchPhrase, identitySentence } = t.profilePage;
-    const [isMounted, setIsMounted] = useState(false);
+    
+  const [isMounted, setIsMounted] = useState(false);
     useEffect(() => {
         setIsMounted(false);
     }, []);
     
   return (
-    <section className={`styles.section ${isMounted ? 'FadeOut' : ''}`}>
+    <section className={isMounted ? styles.section : styles.section}>
       <div className={styles.firstPageArea}>
         <h1 className={styles.catchPhrase}>{catchPhrase}</h1>
         <h5 className={styles.identityPhrase}>{identitySentence}</h5>
