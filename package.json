@@ -1,9 +1,9 @@
 {
-  "name": "visual-portfolio",
+  "name": "programming_portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://http//neondsilvam.github.io/Web_Framework_portfolio",
+  "homepage": "http://http//neondsilvam.github.io/programming_portfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
