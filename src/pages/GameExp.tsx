@@ -3,6 +3,8 @@ import {useLang} from '../context/LangContext'
 import type {Project} from '../types'
 import {GameExpES, GameExpEN} from '../data/projects'
 import styles from './Proyectos.module.css'
+import { motion } from "motion/react"
+import {IntroVariant} from "../types/variants.ts";
 
 export function GameExp() {
     const {t, lang} = useLang()
@@ -33,7 +35,12 @@ export function GameExp() {
     }
 
     return (
-        <section className={styles.section}>
+        <motion.section
+            variants={IntroVariant}
+            initial='start'
+            animate='static'
+            exit='end'
+            className={styles.section}>
             <div className={styles.layout}>
                 <aside className={styles.sidebar}>
                     {t.gameExp.sections.map((sec) => {
@@ -125,6 +132,6 @@ export function GameExp() {
                     ) : (<></>)}
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }

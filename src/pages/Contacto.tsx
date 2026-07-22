@@ -1,6 +1,8 @@
 import {useLang} from '../context/LangContext'
 import {contactInfo} from '../data/contact'
 import styles from './Contacto.module.css'
+import { motion } from "motion/react"
+import {IntroVariant} from "../types/variants.ts";
 
 export function Contacto() {
     const {t} = useLang()
@@ -17,7 +19,11 @@ export function Contacto() {
     ]
 
     return (
-        <section className={styles.section}>
+        <motion.section
+            variants={IntroVariant}
+            initial='start'
+            animate='static'
+            exit='end' className={styles.section}>
             <h2 className={styles.title}>{title}</h2>
             <h4 className={styles.subtitle}>{subtitle1}</h4>
             <h4 className={styles.subtitle}>{subtitle2}</h4>
@@ -35,6 +41,6 @@ export function Contacto() {
                     </div>
                 ))}
             </div>
-        </section>
+        </motion.section>
     )
 }

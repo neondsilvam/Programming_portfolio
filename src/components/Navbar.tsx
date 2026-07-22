@@ -1,6 +1,9 @@
 import { useLang } from '../context/LangContext'
+//import { motion } from "motion/react" -> Revisar pa animaciones
 import type {Page} from '../types'
 import styles from './Navbar.module.css'
+import {motion} from 'motion/react'
+import {ScrollVariant} from "../types/variants.ts";
 
 interface NavbarProps {
   currentPage: Page
@@ -20,7 +23,11 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
   ]
 
   return (
-    <nav className={styles.nav}>
+    <motion.nav
+    variants={{ScrollVariant}}
+    initial='start'
+    whileInView='static'
+        className={styles.nav}>
       <span className={styles.logo}>{t.nav.logo}</span>
 
       <div className={styles.links}>
@@ -38,6 +45,6 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
       <button className={styles.langBtn} onClick={toggleLang}>
         {t.nav.langBtn}
       </button>
-    </nav>
+    </motion.nav>
   )
 }

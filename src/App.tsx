@@ -11,6 +11,7 @@ import {GameExp} from "./pages/GameExp.tsx";
 import {UiExp} from "./pages/UiExp.tsx";
 import './App.css'
 import {Loadder} from "./components/Loadder.tsx";
+import { AnimatePresence } from 'motion/react'
 
 function AppContent() {
   const [currentPage, setCurrentPage] = useState<Page>('perfil')
@@ -34,10 +35,12 @@ function AppContent() {
 
   return (
     <div className="app">
-      <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
-          <main className="main">{renderPage()}</main>
-      <Footer />
-      <Loadder />
+      <AnimatePresence>
+        <Loadder />
+        <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
+        <main className="main">{renderPage()}</main>
+        <Footer />
+      </AnimatePresence>
     </div>
   )
 }

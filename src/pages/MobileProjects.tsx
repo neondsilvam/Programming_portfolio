@@ -3,6 +3,8 @@ import {useLang} from '../context/LangContext'
 import type {Project} from '../types'
 import {MobileProjectsEN, MobileProjectsES} from '../data/projects'
 import styles from './Proyectos.module.css'
+import { motion } from "motion/react"
+import {IntroVariant} from "../types/variants.ts";
 
 export function MobileProjects() {
     const {t, lang} = useLang()
@@ -33,7 +35,12 @@ export function MobileProjects() {
     }
 
     return (
-        <section className={styles.section}>
+        <motion.section
+            variants={IntroVariant}
+            initial='start'
+            animate='static'
+            exit='end'
+            className={styles.section}>
             <div className={styles.layout}>
                 <aside className={styles.sidebar}>
                     {t.mobileProjects.sections.map((sec) => {
@@ -126,6 +133,6 @@ export function MobileProjects() {
                     ) : (<></>)}
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
