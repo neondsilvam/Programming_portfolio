@@ -2,6 +2,13 @@ export type Lang = 'es' | 'en'
 
 export type Page = 'perfil' | 'web' | 'mobile' | 'gameExp' | 'uiExp' | 'contacto'
 
+export interface HighlightProjects {
+  id: string
+  title: string
+  description: string
+  imgSrc: string
+}
+
 export interface Project {
   id: string
   title: string
