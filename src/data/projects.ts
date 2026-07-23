@@ -1354,54 +1354,82 @@ export const UIExpEN: Project[] = [
 
 export const HighlightsES: HighlightProjects[] = [
     {
-        id: "",
-        title: "",
-        description: "",
-        imgSrc: "",
+        id: 'p1',
+        title: 'Proyecto base - Portafolio web',
+        description:
+            'Este proyecto fue desarrollado en 2026, tras múltiples versiones previas construidas con diferentes herramientas. Este portafolio fue creado usando React y alojado en GitHub Pages. Refleja mi evolución como programador, así como mi nivel de organización y crecimiento a lo largo de los años.',
+        imgSrc: IMGPort,
     },
     {
-        id: "",
-        title: "",
-        description: "",
-        imgSrc: "",
+        id: 'p2',
+        title: '(Des)Conectado - Un juego fuera del dispositivo',
+        description:
+            'Este proyecto fue desarrollado en colaboración con la Universidad de los Andes. ' +
+            'Presenta el DEMO de una novela gráfica interactiva para dispositivos móviles Android, centrada en Ashley, una joven con nomofobia que se pierde en un bosque mientras su familia acampa y debe encontrar el camino de regreso. ' +
+            'Este proyecto representa mi primer acercamiento profesional a Unity y mi inicio formal en el área de programación, ya que con anterioridad únicamente había realizado ejercicios menores. \n' +
+            'Dentro del siguiente link se puede descagar el APK del DEMO para dispositivos android. (Toca dar permiso para instalar APK de Google Drive.)',
+        imgSrc: DesConectado,
     },
     {
-        id: "",
-        title: "",
-        description: "",
-        imgSrc: "",
+        id: 'p3',
+        title: 'EcoRanger',
+        description:
+            'EcoRanger es un proyecto desarrollado en Unity como entrega de mitad de programa del curso de Programación para Juegos, Web y Móvil de la Vancouver Film School. ' +
+            'Fue desarrollado en equipo de 5 personas, donde desempeñé el rol de uno de los dos programadores del proyecto. ' +
+            'EcoRanger es un shooter 3D de conflicto ambiental que presenta a Ekko, un Ranger espacial enviado a la Tierra con la misión de impedir que los peligrosos Eco Breakers la destruyan mediante una contaminación masiva. ' +
+            'Durante el juego, Ekko deberá resistir durante 5 minutos hasta que lleguen los refuerzos, utilizando su pistola teletransportadora para eliminar los distintos tipos de basura presentes en el área. ' +
+            'En este proyecto, estuve a cargo del desarrollo de sistemas generales de juego, así como de la programación de máquinas de estados e inteligencia artificial. ' +
+            'La duración total del proyecto fue de 2 meses, distribuidos en 3 semanas para prototipo, 3 para Alpha, 2 para Beta, y una semana final para pulir los detalles del proyecto. ' +
+            'Revisa el enlace para descargar el juego (PC):',
+        imgSrc: PostEco1,
     },
     {
-        id: "",
-        title: "",
-        description: "",
-        imgSrc: "",
+        id: 'p4',
+        title: 'Cocktail App - Learning to prepare',
+        description:
+            'Este es un proyecto desarrollado con React Native, que consiste en una aplicación web con acceso a una amplia variedad de cócteles para preparar, indicando los ingredientes, los pasos y el tiempo necesario para su elaboración. ' +
+            'El proyecto se conecta con Firebase para verificar que los usuarios sean mayores de edad, accede a una API gratuita con información detallada de cada cóctel e incluso utiliza el acelerómetro del dispositivo para simular el proceso de mezcla de la bebida.',
+        imgSrc: postCocktail,
     },
 ]
 
 export const HighlightsEN: HighlightProjects[] = [
     {
-        id: "",
-        title: "",
-        description: "",
-        imgSrc: "",
+        id: 'p1',
+        title: 'Base Project - Web Portfolio',
+        description:
+            'This project was developed in 2026, following multiple previous versions built with different tools. This portfolio was created using React and hosted on GitHub Pages. It reflects my evolution as a developer, as well as my level of organization and personal growth over the years.',
+        imgSrc: IMGPort,
     },
     {
-        id: "",
-        title: "",
-        description: "",
-        imgSrc: "",
+        id: 'p2',
+        title: '(Dis)Connected - An Off-Device Game',
+        description:
+            'This project was developed in collaboration with Universidad de los Andes. ' +
+            'It presents the DEMO of an interactive graphic novel for Android mobile devices, centered on Ashley, a young woman with nomophobia who gets lost in a forest while her family goes camping and must find her way back. ' +
+            'This project represents my first professional approach to Unity and my formal entry into software development, as I had previously only completed minor exercises.' +
+            '\n On the next link there is available the APK Demo to download from android. (The download is from google drive, so you need to use an android device that allow to install external apps.)',
+         imgSrc: DesConectado,
     },
     {
-        id: "",
-        title: "",
-        description: "",
-        imgSrc: "",
+        id: 'p3',
+        title: 'EcoRanger',
+        description:
+            'EcoRanger is a project developed in Unity as a mid-program deliverable for the Game, Web & Mobile Programming course at Vancouver Film School. ' +
+            'It was developed by a team of 5, where I served as one of the two programmers on the project. ' +
+            'EcoRanger is a 3D environmental conflict shooter featuring Ekko, a space Ranger sent to Earth on a mission to prevent the dangerous Eco Breakers from destroying it through massive pollution. ' +
+            'Throughout the game, Ekko must hold out for 5 minutes until reinforcements arrive, using a teleportation gun to eliminate different types of waste scattered across the area. ' +
+            'In this project, I was responsible for the development of general game systems as well as the programming of state machines and artificial intelligence. ' +
+            'The total duration of the project was 2 months, distributed across 3 weeks for the prototype, 3 for Alpha, 2 for Beta, and a final week dedicated to polishing the project. ' +
+            'Check the link bellow to download the game (PC):',
+        imgSrc: PostEco1,
     },
     {
-        id: "",
-        title: "",
-        description: "",
-        imgSrc: "",
+        id: 'p4',
+        title: 'Cocktail App - Learning to Prepare',
+        description:
+            'This is a project developed with React Native, consisting of a web application that provides access to a wide variety of cocktails to prepare, including ingredients, preparation steps, and the time required for each. ' +
+            'The project connects with Firebase to verify that users are of legal drinking age, accesses a free API with detailed information on each cocktail, and even uses the device\'s accelerometer to simulate the drink mixing process.',
+        imgSrc: postCocktail,
     },
 ]

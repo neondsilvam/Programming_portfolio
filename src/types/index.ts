@@ -73,6 +73,10 @@ export interface Translations {
     role: string
     description: string
     tags: string[]
+    Highlights: {
+      title: string
+      subTitle: string
+    }
   }
   webProjects: {
       sections: Section[]

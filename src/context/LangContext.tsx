@@ -27,7 +27,11 @@ const translations: Record<Lang, Translations> = {
           'Me gusta combinar la creatividad con la tecnología para construir experiencias digitales.',
       tags: ['HTML - 2 años', 'CSS - 2 años', 'JavaScript - 1 año', 'C# - 1 año', 'Vue - 6 meses', 'React - 6 meses', 'React Native - 6 meses', 'C++ - 6 meses'],
       catchPhrase: "La oportunidad de expandir tus posibilidades",
-      identitySentence: "Soy un programmador, experto en desarrollo de frontend y de sistemas generales. He estudiado mas de 10 lenguajes diferentes desarrollando juegos, paginas web y aplicaciones moviles. Mi objetivo es desarrollarme inicialmente como frontend y eventualmente como desarrollador fullstack."
+      identitySentence: "Soy un programmador, experto en desarrollo de frontend y de sistemas generales. He estudiado mas de 10 lenguajes diferentes desarrollando juegos, paginas web y aplicaciones moviles. Mi objetivo es desarrollarme inicialmente como frontend y eventualmente como desarrollador fullstack.",
+      Highlights: {
+        title: "Destacados",
+        subTitle: "Estos han sindo algunos de mis projectos mas destacados"
+      }
     },
     webProjects: {
       sections: [
@@ -109,7 +113,11 @@ const translations: Record<Lang, Translations> = {
           'I am passionate about merging creativity with technology to craft meaningful digital experiences.',
       tags: ['HTML - 2 years', 'CSS - 2 years', 'JavaScript - 1 year', 'C# - 1 year', 'Vue - 6 months', 'React - 6 months', 'React Native - 6 months', 'C++ - 6 months'],
       catchPhrase: "Expand your horizon",
-      identitySentence: "I am a programmer, specialized on frontend and systems development. I had studied more than 10 coding languages, reflected on projects such as games, web pages and mobile apps. My objective is to grow initially as a frontend developer and eventually as a fullstack developer."
+      identitySentence: "I am a programmer, specialized on frontend and systems development. I had studied more than 10 coding languages, reflected on projects such as games, web pages and mobile apps. My objective is to grow initially as a frontend developer and eventually as a fullstack developer.",
+      Highlights: {
+        title: "Highlights",
+        subTitle: "This had been some of my best most recent projects"
+      }
     },
     webProjects: {
       sections: [

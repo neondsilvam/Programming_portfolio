@@ -1,0 +1,41 @@
+.section{
+    padding: 3rem 0.5rem;
+    max-width: 1000px;
+    margin: 1em;
+    background-color: rgb(255 255 255 / 0.5);
+    border-radius: 10px;
+}
+
+.title{
+    font-size: 44px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.subtitle{
+    
+}
+
+.organizer{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+/*Specific for each highlight*/
+.heading{
+    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.description{
+    
+}
+
+.media{
+    max-width: 300px;
+}
