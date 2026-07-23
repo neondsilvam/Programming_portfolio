@@ -1,4 +1,4 @@
-import type {Project} from '../types'
+import type {Project, HighlightProjects} from '../types'
 
 //Same portfolio
 import IMGPort from '../assets/IMGPortfolio/Base.png'
@@ -1352,3 +1352,56 @@ export const UIExpEN: Project[] = [
     },
 ]
 
+export const HighlightsES: HighlightProjects[] = [
+    {
+        id: "",
+        title: "",
+        description: "",
+        imgSrc: "",
+    },
+    {
+        id: "",
+        title: "",
+        description: "",
+        imgSrc: "",
+    },
+    {
+        id: "",
+        title: "",
+        description: "",
+        imgSrc: "",
+    },
+    {
+        id: "",
+        title: "",
+        description: "",
+        imgSrc: "",
+    },
+]
+
+export const HighlightsEN: HighlightProjects[] = [
+    {
+        id: "",
+        title: "",
+        description: "",
+        imgSrc: "",
+    },
+    {
+        id: "",
+        title: "",
+        description: "",
+        imgSrc: "",
+    },
+    {
+        id: "",
+        title: "",
+        description: "",
+        imgSrc: "",
+    },
+    {
+        id: "",
+        title: "",
+        description: "",
+        imgSrc: "",
+    },
+]

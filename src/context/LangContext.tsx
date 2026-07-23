@@ -15,7 +15,7 @@ const translations: Record<Lang, Translations> = {
     },
     profilePage: {
       name: 'Julian D Silva',
-      role: 'Desarrollador de Aplicaciones Web y Móviles.',
+      role: 'Desarrollador frontend web y de sistemas de juegos.',
       description: 'Soy graduado de la Universidad de los Andes (Colombia) en Narrativas Digitales, con especializaciones en Cine, Video y Animación, y Computación Visual. Actualmente, curso un programa intensivo en la Vancouver Film School, enfocado en programación de videojuegos, desarrollo web y aplicaciones móviles.\n' +
           '\n' +
           'Durante los últimos dos años, he enfocado mi crecimiento en el desarrollo de software, fortaleciendo mis habilidades en programación, desarrollo web y desarrollo móvil, con un interés especial en la creación de soluciones digitales .\n' +
@@ -97,7 +97,7 @@ const translations: Record<Lang, Translations> = {
     },
     profilePage: {
       name: 'Julian D Silva',
-      role: 'Frontend & Mobile Developer',
+      role: 'Web Frontend & game systems Developer',
       description: 'I hold a degree in Digital Narratives from Universidad de los Andes (Colombia), with specializations in Film, Video and Animation, and Visual Computing. I am currently enrolled in an intensive program at Vancouver Film School, focused on video game programming, web development, and mobile application development.' +
           '\n' +
           'Over the past two years, I have concentrated my professional growth on software development, strengthening my skills in programming, web development, and mobile development, with a particular interest in building effective digital solutions.' +
@@ -177,7 +177,7 @@ interface LangContextValue {
 const LangContext = createContext<LangContextValue | null>(null)
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>('es')
+  const [lang, setLang] = useState<Lang>('en')
 
   const toggleLang = () => setLang((prev) => (prev === 'es' ? 'en' : 'es'))
 

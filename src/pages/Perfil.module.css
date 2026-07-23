@@ -58,7 +58,7 @@
 }
 
 .name {
-  font-size: 28px;
+  font-size: 44px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
@@ -79,9 +79,10 @@
 }
 
 .role {
-    font-size: 15px;
-    color: #ffffff;
-    margin: 0;
+  font-size: 25px;
+  color: #ffffff;
+  margin: 0;
+  font-style: italic;  
 }
 
 .description {
