@@ -1,9 +1,9 @@
 {
-  "name": "programming_portfolio",
+  "name": "Programming_portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://http//neondsilvam.github.io/programming_portfolio",
+  "homepage": "http://http//neondsilvam.github.io/Programming_portfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
