@@ -1,7 +1,7 @@
 ﻿import styles from './Highlights.module.css'
 import {HighlightsES, HighlightsEN} from "../data/projects.ts";
 import {useLang} from "../context/LangContext.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import type {HighlightProjects} from "../types";
 
 export function Highlights()
@@ -11,6 +11,11 @@ export function Highlights()
     const [projects, setProjects] = useState<HighlightProjects[]>(
         lang === 'en' ? HighlightsEN : HighlightsES
     )
+
+    useEffect(() => {
+        const nextProjects = lang === 'en' ? HighlightsEN : HighlightsES
+        setProjects(nextProjects)
+    }, [lang])
     
     return (
         <div className={styles.section}>
