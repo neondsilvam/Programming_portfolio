@@ -31,8 +31,15 @@ export function Highlights()
                             <p className={styles.description}>
                                 {project.description}
                             </p>
+                            <div className={styles.actions}>
+                                <button className={styles.button}>
+                                    See more
+                                </button>
+                                <button className={styles.button}>
+                                    See all projects
+                                </button>
+                            </div>
                         </div>
-
                     </div>
                 ))}
             </div>
