@@ -12,7 +12,7 @@ export interface HighlightProjects {
   title: string
   description: string
   imgSrc: string
-  orID: string
+  posInList: number
   section: Page
 }
 
@@ -84,15 +84,9 @@ export interface Translations {
       title: string
       subTitle: string
     }
+    seeMore: string
   }
   webProjects: {
-      sections: Section[]
-      clarification: string,
-      projects: ProjectTranslation[]
-      showingProcessButtonTextFalse: string
-      showingProcessButtonTextTrue: string
-  }
-  mobileProjects: {
       sections: Section[]
       clarification: string,
       projects: ProjectTranslation[]
@@ -106,17 +100,11 @@ export interface Translations {
     showingProcessButtonTextFalse: string
     showingProcessButtonTextTrue: string
   }
-  uiExp: {
-    sections: Section[]
-    aclaration: string,
-    projects: ProjectTranslation[]
-    showingProcessButtonTextFalse: string
-    showingProcessButtonTextTrue: string
-  }
   contactPage: {
     title: string
     subtitle1: string
     subtitle2: string
+    ShortSubtitle: string
     labels: {
       email: string
       phoneCol: string

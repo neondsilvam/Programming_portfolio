@@ -1,10 +1,10 @@
 import {useLang} from '../context/LangContext'
 import {contactInfo} from '../data/contact'
-import styles from './Contacto.module.css'
+import styles from './Contact.module.css'
 import { motion } from "motion/react"
 import {IntroVariant} from "../types/variants.ts";
 
-export function Contacto() {
+export function Contact() {
     const {t} = useLang()
     const {title, subtitle1, subtitle2, labels} = t.contactPage
 

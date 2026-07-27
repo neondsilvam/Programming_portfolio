@@ -1,11 +1,12 @@
 import { useLang } from '../context/LangContext'
-import styles from './Perfil.module.css'
+import styles from './Profile.module.css'
 import Perfil_photo from '../assets/Perfil_photo.jpg'
 import { motion } from "motion/react"
 import {IntroVariant} from "../types/variants.ts";
 import {Highlights} from "../components/Highlights.tsx";
+import {DirectContact} from "../components/DirectContact.tsx";
 
-export function Perfil() {
+export function Profile() {
   const { t } = useLang()
   const { name, role, description, tags, catchPhrase, identitySentence } = t.profilePage;
   
@@ -39,6 +40,7 @@ export function Perfil() {
                   </div>
               </div>
               <Highlights />
+              <DirectContact />
           </motion.section>
   )
 }

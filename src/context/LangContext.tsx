@@ -31,7 +31,8 @@ const translations: Record<Lang, Translations> = {
       Highlights: {
         title: "Destacados",
         subTitle: "Estos han sindo algunos de mis projectos mas destacados"
-      }
+      },
+      seeMore: "Ver mas"
     },
     webProjects: {
       sections: [
@@ -43,31 +44,11 @@ const translations: Record<Lang, Translations> = {
       showingProcessButtonTextFalse: "Mostrar proceso",
       showingProcessButtonTextTrue: "Ocultar proceso",
     },
-    mobileProjects: {
-      sections: [
-        {id: '2026', label: '2026'},
-        {id: '2025', label: '2025'},
-      ],
-      clarification: 'Estos son mis proyectos para desarrollo móvil.',
-      projects: [],
-      showingProcessButtonTextFalse: "Mostrar proceso",
-      showingProcessButtonTextTrue: "Ocultar proceso",
-    },
     gameExp: {
       sections: [
         { id: '2025', label: '2025' },
       ],
       clarification: 'Experiencia en desarrollo de videojuegos.',
-      projects: [
-      ],
-      showingProcessButtonTextFalse: "Mostrar proceso",
-      showingProcessButtonTextTrue: "Ocultar proceso",
-    },
-    uiExp: {
-      sections: [
-        { id: '2026', label: '2026' },
-      ],
-      aclaration: 'Experiencia en desarrollo de UI.',
       projects: [
       ],
       showingProcessButtonTextFalse: "Mostrar proceso",
@@ -86,6 +67,7 @@ const translations: Record<Lang, Translations> = {
         MainGithub: 'GitHub Principal (Projectos principales)',
         SecondaryGithub: 'Github Secundarios (Experimentos y exploración)'
       },
+      ShortSubtitle: "¿Quieres contactarme?"
     }
   },
   en: {
@@ -117,7 +99,8 @@ const translations: Record<Lang, Translations> = {
       Highlights: {
         title: "Highlights",
         subTitle: "This had been some of my best most recent projects"
-      }
+      },
+      seeMore: "See More"
     },
     webProjects: {
       sections: [
@@ -125,16 +108,6 @@ const translations: Record<Lang, Translations> = {
         {id: '2025', label: '2025'},
       ],
       clarification: 'These are some of my best Web projects. (Including this web page.)',
-      projects: [],
-      showingProcessButtonTextFalse: "Show Process",
-      showingProcessButtonTextTrue: "Hide Process",
-    },
-    mobileProjects: {
-      sections: [
-        {id: '2026', label: '2026'},
-        {id: '2025', label: '2025'},
-      ],
-      clarification: 'Experience in mobile and applications.',
       projects: [],
       showingProcessButtonTextFalse: "Show Process",
       showingProcessButtonTextTrue: "Hide Process",
@@ -152,6 +125,7 @@ const translations: Record<Lang, Translations> = {
         MainGithub: 'Main GitHub Link (Main projects)',
         SecondaryGithub: 'Secondary Github Link (Self learn and exploration)'
       },
+      ShortSubtitle: "Want to get in touch?"
     },
     gameExp: {
       sections: [
@@ -163,16 +137,6 @@ const translations: Record<Lang, Translations> = {
       showingProcessButtonTextFalse: "Show Process",
       showingProcessButtonTextTrue: "Hide Process",
     },
-    uiExp: {
-      sections: [
-        { id: '2026', label: '2026' },
-      ],
-      aclaration: 'Experience in UI development.',
-      projects: [
-      ],
-      showingProcessButtonTextFalse: "Show Process",
-      showingProcessButtonTextTrue: "Hide Process",
-    }
   },
 }
 

@@ -6,14 +6,14 @@ import styles from './Proyectos.module.css'
 import { motion } from "motion/react"
 import {IntroVariant} from "../types/variants.ts";
 
-export function GameExp() {
+export function GameExp({ initialIndex }: { initialIndex: number }) {
     const {t, lang} = useLang()
 
     const [projects, setProjects] = useState<Project[]>(
         lang === 'en' ? GameExpEN : GameExpES
     )
     const [selectedId, setSelectedId] = useState<string>(
-        lang === 'en' ? GameExpEN[0].id : GameExpES[0].id
+        lang === 'en' ? GameExpEN[initialIndex].id : GameExpES[initialIndex].id
     )
 
     useEffect(() => {
@@ -22,7 +22,7 @@ export function GameExp() {
         setSelectedId(nextProjects[0].id)
     }, [lang])
 
-    const selected = projects.find((p) => p.id === selectedId) ?? projects[0]
+    const selected = projects.find((p) => p.id === selectedId) ?? projects[initialIndex]
 
     function handleDesc() {
         setProjects(prev =>

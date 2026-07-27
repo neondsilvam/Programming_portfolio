@@ -1,48 +1,49 @@
-import { useState } from 'react'
 import { LangProvider } from './context/LangContext'
+import { NavProvider, useNav } from './context/NavContext'
 import { Navbar } from './components/Navbar'
-import { Perfil } from './pages/Perfil'
+import { Profile } from './pages/Profile'
 import { WebProjects } from './pages/WebProjects'
-import { Contacto } from './pages/Contacto'
-import type {Page} from './types'
+import { Contact } from './pages/Contact'
 import { Footer } from './components/Footer'
-import {GameExp} from "./pages/GameExp.tsx";
+import { GameExp } from "./pages/GameExp.tsx"
 import './App.css'
-import {Loadder} from "./components/Loadder.tsx";
+import { Loadder } from "./components/Loadder.tsx"
 import { AnimatePresence } from 'motion/react'
 
 function AppContent() {
-  const [currentPage, setCurrentPage] = useState<Page>('profile')
+  const { page } = useNav()
 
   const renderPage = () => {
-    switch (currentPage) {
+    switch (page) {
       case 'profile':
-        return <Perfil />
+        return <Profile />
       case 'webExp':
         return <WebProjects />
       case 'gameExp':
-        return <GameExp />
+        return <GameExp initialIndex={0} />
       case 'contact':
-        return <Contacto />
+        return <Contact />
     }
   }
 
   return (
-    <div className="app">
-      <AnimatePresence>
-        <Loadder />
-        <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
-        <main className="main">{renderPage()}</main>
-        <Footer />
-      </AnimatePresence>
-    </div>
+      <div className="app">
+        <AnimatePresence>
+          <Loadder />
+          <Navbar />
+          <main className="main">{renderPage()}</main>
+          <Footer />
+        </AnimatePresence>
+      </div>
   )
 }
 
 export default function App() {
   return (
-    <LangProvider>
-      <AppContent />
-    </LangProvider>
+      <LangProvider>
+        <NavProvider>
+          <AppContent />
+        </NavProvider>
+      </LangProvider>
   )
 }

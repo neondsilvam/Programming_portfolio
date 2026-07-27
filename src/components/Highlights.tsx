@@ -3,10 +3,12 @@ import {HighlightsEN, HighlightsES} from "../data/projects.ts";
 import {useLang} from "../context/LangContext.tsx";
 import {useEffect, useState} from "react";
 import type {HighlightProjects} from "../types";
+import {useNav} from "../context/NavContext.tsx";
 
 export function Highlights()
 {
     const {t, lang} = useLang();
+    const { changePage } = useNav()
 
     const [projects, setProjects] = useState<HighlightProjects[]>(
         lang === 'en' ? HighlightsEN : HighlightsES
@@ -36,17 +38,11 @@ export function Highlights()
                             <p className={styles.description}>
                                 {project.description}
                             </p>
-                            <div className={styles.actions}>
-                                <button 
-                                    className={styles.button}>
-                                    See more
-                                </button>
-                                <button
-                                    className={styles.button}
-                                    onClick={() => {}}>
-                                    See all projects
-                                </button>
-                            </div>
+                            <button
+                                className={styles.button}
+                                onClick={() => changePage(project.section)}>
+                                {t.profilePage.seeMore}
+                            </button>
                         </div>
                     </div>
                 ))}

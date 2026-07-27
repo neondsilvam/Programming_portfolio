@@ -599,7 +599,7 @@ export const HighlightsES: HighlightProjects[] = [
         title: 'Proyecto base - Portafolio web',
         description: 'Este proyecto fue desarrollado en 2026, tras múltiples versiones previas construidas con diferentes herramientas. Este portafolio fue creado usando React y alojado en GitHub Pages. Refleja mi evolución como programador, así como mi nivel de organización y crecimiento a lo largo de los años.',
         imgSrc: IMGPort,
-        orID: "p1",
+        posInList: 0,
         section: "webExp"
     },
     {
@@ -608,7 +608,7 @@ export const HighlightsES: HighlightProjects[] = [
         description: 'EcoRanger es un proyecto desarrollado en Unity como entrega de mitad de programa del curso de Programación para Juegos, Web y Móvil de la Vancouver Film School. ' +
             'EcoRanger es un shooter 3D de conflicto ambiental que presenta a Ekko, un Ranger espacial enviado a la Tierra con la misión de impedir que los peligrosos Eco Breakers la destruyan mediante una contaminación masiva. ',
         imgSrc: PostEco1,
-        orID: "p2",
+        posInList: 1,
         section: "gameExp"
     },
 ]
@@ -619,7 +619,7 @@ export const HighlightsEN: HighlightProjects[] = [
         title: 'Base Project - Web Portfolio',
         description: 'This project was developed in 2026, following multiple previous versions built with different tools. This portfolio was created using React and hosted on GitHub Pages. It reflects my evolution as a developer, as well as my level of organization and personal growth over the years.',
         imgSrc: IMGPort,
-        orID: "p1",
+        posInList: 0,
         section: "webExp"
     },
     {
@@ -628,7 +628,7 @@ export const HighlightsEN: HighlightProjects[] = [
         description: 'EcoRanger is a project developed in Unity as a mid-program deliverable for the Game, Web & Mobile Programming course at Vancouver Film School. ' +
             'EcoRanger is a 3D environmental conflict shooter featuring Ekko, a space Ranger sent to Earth on a mission to prevent the dangerous Eco Breakers from destroying it through massive pollution. ',
         imgSrc: PostEco1,
-        orID: "p2",
+        posInList: 1,
         section: "gameExp"
     },
 ]
