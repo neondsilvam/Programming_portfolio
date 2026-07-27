@@ -1,12 +1,19 @@
 export type Lang = 'es' | 'en'
 
-export type Page = 'perfil' | 'web' | 'mobile' | 'gameExp' | 'uiExp' | 'contacto'
+export type Page = 'profile' | 'webExp' | 'gameExp' | 'contact'
+
+export interface NavbarProps {
+  currentPage: Page
+  onNavigate: (page: Page) => void
+}
 
 export interface HighlightProjects {
   id: string
   title: string
   description: string
   imgSrc: string
+  orID: string
+  section: Page
 }
 
 export interface Project {

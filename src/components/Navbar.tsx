@@ -1,25 +1,18 @@
 import { useLang } from '../context/LangContext'
-//import { motion } from "motion/react" -> Revisar pa animaciones
-import type {Page} from '../types'
+import type {NavbarProps, Page} from '../types'
 import styles from './Navbar.module.css'
 import {motion} from 'motion/react'
 import {ScrollVariant} from "../types/variants.ts";
 
-interface NavbarProps {
-  currentPage: Page
-  onNavigate: (page: Page) => void
-}
 
 export function Navbar({ currentPage, onNavigate }: NavbarProps) {
   const { t, toggleLang } = useLang()
 
   const pages: { key: Page; label: string }[] = [
-    { key: 'perfil', label: t.nav.profile },
-    { key: 'web', label: t.nav.web },
+    { key: 'profile', label: t.nav.profile },
+    { key: 'webExp', label: t.nav.web },
     { key: 'gameExp', label: t.nav.gameExp },
-    { key: 'uiExp', label: t.nav.uiExp },
-    { key: 'mobile', label: t.nav.mobile },
-    { key: 'contacto', label: t.nav.contact },
+    { key: 'contact', label: t.nav.contact },
   ]
 
   return (

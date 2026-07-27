@@ -1,5 +1,5 @@
 ﻿import styles from './Highlights.module.css'
-import {HighlightsES, HighlightsEN} from "../data/projects.ts";
+import {HighlightsEN, HighlightsES} from "../data/projects.ts";
 import {useLang} from "../context/LangContext.tsx";
 import {useEffect, useState} from "react";
 import type {HighlightProjects} from "../types";
@@ -37,10 +37,13 @@ export function Highlights()
                                 {project.description}
                             </p>
                             <div className={styles.actions}>
-                                <button className={styles.button}>
+                                <button 
+                                    className={styles.button}>
                                     See more
                                 </button>
-                                <button className={styles.button}>
+                                <button
+                                    className={styles.button}
+                                    onClick={() => {}}>
                                     See all projects
                                 </button>
                             </div>
@@ -48,7 +51,6 @@ export function Highlights()
                     </div>
                 ))}
             </div>
-            
         </div>
     )
 }
