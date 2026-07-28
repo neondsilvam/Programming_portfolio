@@ -38,7 +38,17 @@ import ProEco3 from '../assets/EcoRanger/process03.png'
 import PostEco1 from '../assets/EcoRanger/postprocess01.png'
 import PostEco2 from '../assets/EcoRanger/postprocess02.png'
 
-//Rekindled - TODO
+//Rekindled 
+import preprocesss1 from '../assets/Rekindled/preprocess01.png'
+import preprocesss2 from '../assets/Rekindled/preprocess02.png'
+import preprocesss3 from '../assets/Rekindled/preprocess03.png'
+import processs1 from '../assets/Rekindled/process01.png'
+import processs2 from '../assets/Rekindled/process02.png'
+import processs3 from '../assets/Rekindled/process03.png'
+import processs4 from '../assets/Rekindled/process04.png'
+import postprocesss1 from '../assets/Rekindled/current01.png'
+import postprocesss2 from '../assets/Rekindled/current02.png'
+
 
 export const WebProjectsES: Project[] = [
     {
@@ -468,6 +478,65 @@ export const GameExpES: Project[] = [
             footerLink: ""
         }
     },
+    {
+        id: 'p3',
+        title: 'Rekindled - Actualmente en desarrollo',
+        description:
+            'Este es un juego de combate a distancia en tercera persona, que combina personajes 2D dentro de un mundo 3D. ' +
+            'Aquí seguimos a Cinder, un mago con temática de fénix que debe escalar un volcán mortal para entregar el último huevo de fénix a la lava hirviente y salvar a su especie. ' +
+            'Deberá combinar distintos elementos para lanzar hechizos poderosos, usados para enfrentar a todos los monstruos mortales que habitan el volcán. ' +
+            'Este proyecto no solo es una de las cosas más ambiciosas en las que he trabajado hasta ahora, sino también uno de los pasos más importantes en mi carrera, tanto por el conocimiento como por las habilidades que obtuve durante su desarrollo. ' +
+            'Fue desarrollado en el motor Unity 3D, usando C# como lenguaje de programación principal. Está publicado en Steam, con actualizaciones por venir.',
+        isProjectDeployed: false,
+        iframeSrc: '',
+        imageSrc: postprocesss1,
+        section: '2026',
+        hasExternalLinks: true,
+        externalLinks: 'https://store.steampowered.com/app/4926530/Rekindled/',
+        isShowingTheProcess: false,
+        process: {
+            sections: {
+                preproduction: {
+                    title: "Contexto de creación",
+                    description: [
+                        'El proceso de preproducción del proyecto consistió en crear el concepto del juego. Aquí simplemente hicimos una lluvia de ideas con lo que teníamos y lo que queríamos hacer.',
+                        'Queríamos generar muchas ideas, como crear un juego de 4 elementos o un combate multijugador, y al final decidimos crear un juego con temática de fénix.',
+                        'Nuestro equipo tenía 3 programadores, por lo que tuvimos que distribuir las diferentes tareas, especialmente porque queríamos tener un prototipo totalmente funcional antes de terminarlo.',
+                        'Organizamos todos nuestros documentos dentro de un archivo de Notion, donde también establecimos convenciones de nomenclatura y estructuras de organización.',
+                        'Esto nos permitió no solo visualizar todo el potencial del proyecto, sino también entender la escala que necesitábamos manejar en relación con el tiempo que teníamos.'
+                    ],
+                    media: [preprocesss1, preprocesss2, preprocesss3],
+                },
+                production: {
+                    title: "Mayor desafío",
+                    description: [
+                        'Una de las principales cosas que nuestros diseñadores nos pidieron fue la persistencia de datos. Querían darle al jugador la posibilidad de guardar su progreso y volver más tarde a terminar su partida.',
+                        'Al implementarlo, hubo problemas para guardar y se sobrescribían valores dentro del juego. Este error hacía que los datos persistentes le dieran al jugador elementos del juego que aún no debían estar disponibles, como desbloquear hechizos poderosos o logros sin cumplir los requisitos necesarios.',
+                        'Esto se debía principalmente a que los datos guardaban el progreso según acciones específicas después del checkpoint, generando múltiples casos límite en los que, si el jugador moría, reaparecía con condiciones distintas a las que debería tener. Dependiendo del caso, el jugador podía saltarse zonas o quedar bloqueado por tener o no tener el progreso correcto de los datos.',
+                        'La forma de solucionarlo fue rastrear variables según los elementos específicos que el jugador necesitaba, y ver exactamente dónde y bajo qué acciones se estaban guardando. Esto llevó a tener una variable interna que funciona como rastreador de datos temporales, capaz de revertir los valores cuando el jugador moría.',
+                        'Llegué a esta decisión al darme cuenta de que el jugador tendría libertad para realizar un rango específico de acciones en el juego, lo que significaba que la única forma de asegurar que no faltaran pasos era rastrearlos individualmente.',
+                        'Aun así, seguía habiendo casos límite en los que los datos no eran precisos. Por eso, además de esto, decidí implementar una referencia de qué elementos debía tener el jugador en un punto específico y eliminar el aspecto persistente de esa parte.',
+                        'Al final, esto creó un bloqueo seguro para el progreso, donde para algunos aspectos directos, como los elementos o hechizos que el jugador había desbloqueado, decidí usar una referencia de los datos, ya que son más controlados y no dependen de las decisiones del jugador. Sin embargo, también usé un valor temporal, que se actualiza en cada checkpoint, para asegurarme de que las estadísticas solo se guarden ahí.',
+                        'El resultado de estas decisiones hizo que el juego funcionara correctamente con datos persistentes sin sobrescribir los elementos en el script. La única desventaja fue que la complejidad del script y del sistema aumentó, haciéndolo más reactivo a futuros cambios. Lamentablemente, esto también tuvo otra contrapartida, ya que este sistema necesita pulirse aún más en el futuro. Sin embargo, gracias a esto pude entender el flujo necesario que deben tener los datos y cómo resolverlo.'
+                    ],
+                    media: [processs1, processs2, processs3, processs4],
+                },
+                postproduction: {
+                    title: "Progreso actual",
+                    description: [
+                        'Aunque ya obtuvimos la aprobación de Steam, todavía necesitamos pulir algunos detalles.',
+                        'Queremos asegurarnos de que el juego esté lo más optimizado posible y lo más libre de errores que podamos.',
+                        'Acabamos de llegar a Alpha, y estamos a punto de llegar a Beta, para pronto lanzarlo oficialmente en Steam.',
+                        'Prelanzamiento el 6 de agosto de 2026'
+                    ],
+                    media: [postprocesss1, postprocesss2],
+                },
+            },
+            sectionFooter: "Un agradecimiento especial a VFS y al equipo de Rekindled por su apoyo durante todo el desarrollo de este proyecto.",
+            footerHasLink: false,
+            footerLink: ""
+        }
+    },
 ]
 
 export const GameExpEN: Project[] = [
@@ -587,6 +656,65 @@ export const GameExpEN: Project[] = [
                 },
             },
             sectionFooter: 'Special thanks to VFS and Kizuna Interactive for their support throughout the development of this project.',
+            footerHasLink: false,
+            footerLink: ""
+        }
+    },
+    {
+        id: 'p3',
+        title: 'Rekindled - Currently a Work in Progress',
+        description:
+            'This is a third-person ranged combat game, featuring 2D characters in a 3D world. ' +
+            'Here we follow Cinder, a phoenix-themed mage who has to climb a deadly volcano to deliver the last phoenix egg to the boiling lava and save his species. ' +
+            'He will have to combine different elements to cast powerful spells, used to fight all the deadly monsters that inhabit the volcano. ' +
+            'This project is not only one of the most ambitious things I have worked on so far, but also one of the biggest steps I have made in my career, both in the knowledge and the skill I obtained during this project. ' +
+            'This one was developed in the Unity 3D engine, using C# as the main programming language. It is deployed on Steam, with updates to come.',
+        isProjectDeployed: false,
+        iframeSrc: '',
+        imageSrc: postprocesss1,
+        section: '2026',
+        hasExternalLinks: true,
+        externalLinks: 'https://store.steampowered.com/app/4926530/Rekindled/',
+        isShowingTheProcess: false,
+        process: {
+            sections: {
+                preproduction: {
+                    title: "Context of creation",
+                    description: [
+                        'The pre-production process of the project was to create the concept of the game. Here, we were just brainstorming with what we had and what we wanted to do.',
+                        'We wanted to brainstorm a lot of ideas, like making a 4-element game or a multiplayer combat game, and in the end we decided to create a phoenix-themed game.',
+                        'Our team had 3 programmers, which is why we had to distribute the different assignments, especially because we wanted to have a fully working prototype before finishing it.',
+                        'We organized all of our documents inside a Notion file, where we also established naming conventions and organizational structures.',
+                        'This allowed us not only to visualize the full potential of the project, but also to understand the scale we needed to handle in relation to the time we had.'
+                    ],
+                    media: [preprocesss1, preprocesss2, preprocesss3],
+                },
+                production: {
+                    title: "Biggest challenge",
+                    description: [
+                        'One of the main things our designers asked us for was persistent data. They wanted to give the player the possibility to save their progress and return later to finish their run in the game.',
+                        'When implementing it, there were issues saving and overriding in-game values. This bug caused the persistent data to provide the player with elements of the game that were not yet available, like unlocking powerful spells or achievements without meeting the necessary requirements.',
+                        'This was mainly because the data was saving progress based on specific actions after the checkpoint, creating multiple edge cases where, if the player died, they respawned with conditions different from the ones they should have respawned with. Depending on each case, the player could skip areas or get soft-locked due to having or not having the correct progress data.',
+                        'The way to fix it was to track variables based on the specific elements the player needed, and to see specifically where and under what actions they were being saved. This led to having an internal variable that works as a tracker for temporary data, which could revert the values when the player died.',
+                        'I reached this decision after realizing that the player would have the freedom to take a specific range of actions in the game, which meant that the only way to ensure no steps were missing was to track them individually.',
+                        'Even with this, there were still edge cases where the data could not be accurate. Therefore, in addition to this, I decided to implement a reference of which elements the player should have at a specific point and remove the persistent aspect of it.',
+                        "In the end, this created a safe lock for the progress, where for some direct aspects, like the elements or spells the player had unlocked, I decided to use a reference of the data, because they are more controlled and don't depend on the player's decisions. However, I also used a temporary value, updated at each checkpoint, to make sure that the stats are only saved there.",
+                        "The result of these decisions made the game work correctly with persistent data without overriding the elements in the script. The only drawback was that the complexity of the script and the system increased, making it more reactive to future changes. Unfortunately, this also had another trade-off, because this system needs to be polished even further in the future. However, from this I was able to understand the necessary flow the data must have and how to resolve it."
+                    ],
+                    media: [processs1, processs2, processs3, processs4],
+                },
+                postproduction: {
+                    title: "Current progress",
+                    description: [
+                        'Although we already got the green light from Steam, we still need to polish some details.',
+                        'We want to make sure the game is as optimized as possible, and as bug-free as we can.',
+                        "We just reached Alpha, and we're about to get to Beta, in order to soon officially release it on Steam.",
+                        'Pre-release on August 6, 2026'
+                    ],
+                    media: [postprocesss1, postprocesss2],
+                },
+            },
+            sectionFooter: "Special thanks to VFS and Rekindled's team for their support throughout the development of this project.",
             footerHasLink: false,
             footerLink: ""
         }

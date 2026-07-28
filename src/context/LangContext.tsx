@@ -47,6 +47,7 @@ const translations: Record<Lang, Translations> = {
     gameExp: {
       sections: [
         { id: '2025', label: '2025' },
+        { id: '2026', label: '2026' },
       ],
       clarification: 'Experiencia en desarrollo de videojuegos.',
       projects: [
@@ -130,6 +131,7 @@ const translations: Record<Lang, Translations> = {
     gameExp: {
       sections: [
         { id: '2025', label: '2025' },
+        { id: '2026', label: '2026' },
       ],
       clarification: 'Experience in video game development.',
       projects: [
