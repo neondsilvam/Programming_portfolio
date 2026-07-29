@@ -1,19 +1,18 @@
 .section{
     padding: 2em;
-    max-width: 1000px;
     background-color: rgb(255 255 255 / 0.5);
     border-radius: 10px;
 }
 
 .title{
-    font-size: 44px;
+    font-size: 3em;
     font-weight: 700;
     color: #000000;
     margin: auto;
 }
 
 .subtitle{
-    font-size: 25px;
+    font-size: 1.5em;
     color: #000000;
     margin: auto;
 }
@@ -25,9 +24,8 @@
 
 /*Specific for each highlight*/
 
-
 .heading{
-    font-size: 20px;
+    font-size: 1em;
     font-weight: 350;
     color: #000000;
     background-color: rgb(191 189 189 / 0.57);
@@ -48,12 +46,12 @@
 }
 
 .container{
-    height: 350px;
+    height: 40vh;
     display: grid;
 }
 
 .description{
-    font-size: 12px;
+    font-size: 0.7em;
     color: #000000;
     text-align: center;
     vertical-align: center;
@@ -62,7 +60,7 @@
 }
 
 .media{
-    width: 250px;
+    width: 25vw;
     margin: auto;
     border-radius: 10px;
 }
@@ -70,11 +68,12 @@
 .actions{
     display: grid;
     grid-template-columns: 2fr 2fr;
+    justify-content: center;
 }
 
 .button{
     margin: auto;
-    padding: 15px;
+    padding: 1em;
     border-radius: 20px;
     border: none;
     background-color: rgba(255, 255, 255, 0.5);
