@@ -46,7 +46,7 @@ export function Navbar() {
     return (
         <nav
             ref={containerRef}
-            className={isOverflowing ? styles.navInnerFlow : styles.navOuterFlow}
+            className={isOverflowing ? styles.navOuterFlow : styles.navInnerFlow}
         >
             <span className={styles.logo}>{t.nav.logo}</span>
 
