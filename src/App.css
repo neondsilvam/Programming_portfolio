@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap');
 
+body{
+    min-width: 375px;
+    min-height: 600px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -19,6 +26,7 @@
 
 .app {
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   font-family: Cause, fantasy;
@@ -37,3 +45,9 @@ button {
 a {
   color: inherit;
 }
+
+@media screen and (max-width: 374px){
+body {
+    overflow-x: auto;
+}
+} 

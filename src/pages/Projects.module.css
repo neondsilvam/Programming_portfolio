@@ -118,11 +118,11 @@
   color: #6b7280;
   line-height: 1.6;
   margin: 0;
+  text-overflow: ellipsis;
 }
 
 .iframeWrapper {
   background: #f9fafb;
-  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,9 +134,10 @@
   border: none;
 }
 
-.iframePlaceholder {
-  font-size: 14px;
-  color: #9ca3af;
+.image{
+  width: 100%;
+  height: auto;
+  border: none;
 }
 
 .processArea{
@@ -207,8 +208,8 @@
 }
 
 .processMedia {
-  height: auto;  width: 100%;
-
+  height: auto;  
+  width: 100%;
   display: flex;
   padding: 1em;
   margin: 1em;

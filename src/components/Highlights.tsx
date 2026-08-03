@@ -30,10 +30,10 @@ export function Highlights()
             <div className={styles.organizer}>
                 {projects.map((project) => (
                     <div key={project.id} className={styles.highlights}>
-                        <h4 className={styles.heading}>
-                            {project.title}
-                        </h4>
                         <div className={styles.container}>
+                            <h4 className={styles.heading}>
+                                {project.title}
+                            </h4>
                             <img className={styles.media} src={project.imgSrc} />
                             <p className={styles.description}>
                                 {project.description}

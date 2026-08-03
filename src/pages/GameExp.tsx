@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import {useLang} from '../context/LangContext'
 import type {Project} from '../types'
 import {GameExpES, GameExpEN} from '../data/projects'
-import styles from './Proyectos.module.css'
+import styles from './Projects.module.css'
 import { motion } from "motion/react"
 import {IntroVariant} from "../types/variants.ts";
 
@@ -79,7 +79,7 @@ export function GameExp({ initialIndex }: { initialIndex: number }) {
                                 allowFullScreen
                             />
                         ) : (
-                            <img className={styles.iframe} src={selected.imageSrc}></img>
+                            <img className={styles.image} src={selected.imageSrc}></img>
                         )}
                     </div>
                     <button className={styles.processButton}
