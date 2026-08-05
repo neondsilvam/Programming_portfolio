@@ -358,62 +358,60 @@ export const WebProjectsEN: Project[] = [
 
 export const GameExpES: Project[] = [
     {
-        id: 'p1',
-        title: '(Des)Conectado - Un juego fuera del dispositivo',
+        id: 'p3',
+        title: 'Rekindled - Actualmente en desarrollo',
         description:
-            'Este proyecto fue desarrollado en colaboración con la Universidad de los Andes. ' +
-            'Presenta el DEMO de una novela gráfica interactiva para dispositivos móviles Android, centrada en Ashley, una joven con nomofobia que se pierde en un bosque mientras su familia acampa y debe encontrar el camino de regreso. ' +
-            'Este proyecto representa mi primer acercamiento profesional a Unity y mi inicio formal en el área de programación, ya que con anterioridad únicamente había realizado ejercicios menores. ' +
-            'Puedes descargar un DEMO del projecto en formato APK para dispositivos Android (Para esto es necesario autorizar el dispositivo para instalar aplicaciones externas.)',
+            'Este es un juego de combate a distancia en tercera persona, que combina personajes 2D dentro de un mundo 3D. ' +
+            'Aquí seguimos a Cinder, un mago con temática de fénix que debe escalar un volcán mortal para entregar el último huevo de fénix a la lava hirviente y salvar a su especie. ' +
+            'Deberá combinar distintos elementos para lanzar hechizos poderosos, usados para enfrentar a todos los monstruos mortales que habitan el volcán. ' +
+            'Este proyecto no solo es una de las cosas más ambiciosas en las que he trabajado hasta ahora, sino también uno de los pasos más importantes en mi carrera, tanto por el conocimiento como por las habilidades que obtuve durante su desarrollo. ' +
+            'Fue desarrollado en el motor Unity 3D, usando C# como lenguaje de programación principal. Está publicado en Steam, con actualizaciones por venir.',
         isProjectDeployed: false,
         iframeSrc: '',
-        imageSrc: DesConectado,
-        section: '2025',
+        imageSrc: postprocesss1,
+        section: '2026',
         hasExternalLinks: true,
-        externalLinks: 'https://drive.google.com/file/d/1n4myrYNwOT26SZzVxjacrb08SkOo9OlP/view?usp=sharing',
+        externalLinks: 'https://store.steampowered.com/app/4926530/Rekindled/',
         isShowingTheProcess: false,
         process: {
             sections: {
                 preproduction: {
-                    title: "Proceso de creación y diseño",
+                    title: "Contexto de creación",
                     description: [
-                        'El concepto inicial surgió de la idea de crear un juego que motivara a las personas a reducir la nomofobia, también conocida como el miedo a estar desconectado del mundo digital.',
-                        'Esto bajo el objetivo de fomentar hábitos responsables en el consumo de aplicaciones y tecnología.',
-                        'Con esto en mente, la preproducción se enfocó en construir la narrativa, investigar sobre los sistemas necesarios y generar un diseño sólido.',
-                        'En cuanto a la narrativa, el trabajo inicial consistió en definir los personajes, especialmente la protagonista: sus motivaciones, sus ambiciones y la manera de materializarlas.',
-                        'La investigación se orientó hacia la exploración de C#, el entorno de Unity y su adaptación para dispositivos móviles.',
-                        'Finalmente, se procedió a generar el concepto de diseño visual, construir el wireframe y establecer la base del frontend de la aplicación.'
+                        'El proceso de preproducción del proyecto consistió en crear el concepto del juego. Aquí simplemente hicimos una lluvia de ideas con lo que teníamos y lo que queríamos hacer.',
+                        'Queríamos generar muchas ideas, como crear un juego de 4 elementos o un combate multijugador, y al final decidimos crear un juego con temática de fénix.',
+                        'Nuestro equipo tenía 3 programadores, por lo que tuvimos que distribuir las diferentes tareas, especialmente porque queríamos tener un prototipo totalmente funcional antes de terminarlo.',
+                        'Organizamos todos nuestros documentos dentro de un archivo de Notion, donde también establecimos convenciones de nomenclatura y estructuras de organización.',
+                        'Esto nos permitió no solo visualizar todo el potencial del proyecto, sino también entender la escala que necesitábamos manejar en relación con el tiempo que teníamos.'
                     ],
-                    media: [PreDes1, PreDes2, PreDes3],
+                    media: [preprocesss1, preprocesss2, preprocesss3],
                 },
                 production: {
-                    title: "Producción de la aplicación",
+                    title: "Mayor desafío",
                     description: [
-                        'Como único desarrollador de este proyecto, fui responsable de comprender y crear todos los aspectos del juego.',
-                        'En cuanto al arte, mediante el uso de referentes reales y la construcción de elementos combinados, logré generar paneles sólidos para la narrativa, siguiendo fielmente el estilo de una novela gráfica.',
-                        'Esto incluye todos los personajes, los objetos interactivos, la interfaz de usuario, los fondos y las texturas.',
-                        'Desde el ámbito del código, el trabajo se centró principalmente en el control de la interfaz y la narrativa, gestionando el avance de los eventos a través de puntos específicos dentro del nivel.',
-                        'Los aspectos más complejos se relacionaron con la persistencia de datos mediante PlayerPrefs, los minijuegos, cada uno con su mecánica única, y el sistema general de control del juego.',
-                        'Como característica adicional, la aplicación contaba con un sistema que leía el tiempo de uso del teléfono y lo empleaba como penalización para otorgar una segunda oportunidad al jugador.',
-                        'El resto de los detalles consistió principalmente en implementar el audio, las transiciones entre escenas y las opciones de configuración.',
-                        'Este proceso no fue lineal; requirió múltiples prototipos y versiones hasta alcanzar el demo actual.'
+                        'Una de las principales cosas que nuestros diseñadores nos pidieron fue la persistencia de datos. Querían darle al jugador la posibilidad de guardar su progreso y volver más tarde a terminar su partida.',
+                        'Al implementarlo, hubo problemas para guardar y se sobrescribían valores dentro del juego. Este error hacía que los datos persistentes le dieran al jugador elementos del juego que aún no debían estar disponibles, como desbloquear hechizos poderosos o logros sin cumplir los requisitos necesarios.',
+                        'Esto se debía principalmente a que los datos guardaban el progreso según acciones específicas después del checkpoint, generando múltiples casos límite en los que, si el jugador moría, reaparecía con condiciones distintas a las que debería tener. Dependiendo del caso, el jugador podía saltarse zonas o quedar bloqueado por tener o no tener el progreso correcto de los datos.',
+                        'La forma de solucionarlo fue rastrear variables según los elementos específicos que el jugador necesitaba, y ver exactamente dónde y bajo qué acciones se estaban guardando. Esto llevó a tener una variable interna que funciona como rastreador de datos temporales, capaz de revertir los valores cuando el jugador moría.',
+                        'Llegué a esta decisión al darme cuenta de que el jugador tendría libertad para realizar un rango específico de acciones en el juego, lo que significaba que la única forma de asegurar que no faltaran pasos era rastrearlos individualmente.',
+                        'Aun así, seguía habiendo casos límite en los que los datos no eran precisos. Por eso, además de esto, decidí implementar una referencia de qué elementos debía tener el jugador en un punto específico y eliminar el aspecto persistente de esa parte.',
+                        'Al final, esto creó un bloqueo seguro para el progreso, donde para algunos aspectos directos, como los elementos o hechizos que el jugador había desbloqueado, decidí usar una referencia de los datos, ya que son más controlados y no dependen de las decisiones del jugador. Sin embargo, también usé un valor temporal, que se actualiza en cada checkpoint, para asegurarme de que las estadísticas solo se guarden ahí.',
+                        'El resultado de estas decisiones hizo que el juego funcionara correctamente con datos persistentes sin sobrescribir los elementos en el script. La única desventaja fue que la complejidad del script y del sistema aumentó, haciéndolo más reactivo a futuros cambios. Lamentablemente, esto también tuvo otra contrapartida, ya que este sistema necesita pulirse aún más en el futuro. Sin embargo, gracias a esto pude entender el flujo necesario que deben tener los datos y cómo resolverlo.'
                     ],
-                    media: [ProDes1, ProDes2, ProDes3],
+                    media: [processs1, processs2, processs3, processs4],
                 },
                 postproduction: {
-                    title: "Playtest y correcciones",
+                    title: "Progreso actual",
                     description: [
-                        'Una vez finalizado el demo, se inició la fase de pruebas para observar la reacción de los usuarios.',
-                        'Durante este proceso identifiqué un error de diseño: no realicé pruebas durante la producción misma.',
-                        'Esta experiencia me permitió entender que era necesaria una mayor investigación para comprender al usuario objetivo, además de mejorar la optimización de varios sistemas.',
-                        'Dado que este proyecto fue desarrollado en colaboración con la universidad, no me está permitido continuarlo por el momento.',
-                        'No obstante, esta experiencia me dejó clara mi capacidad de desarrollo y la dirección hacia la cual puedo orientarla. ',
-                        'Pueden probar el demo escaneando el código QR o accediendo al enlace del proyecto (Es requerido autorizar aplicaciones externas).'
+                        'Aunque ya obtuvimos la aprobación de Steam, todavía necesitamos pulir algunos detalles.',
+                        'Queremos asegurarnos de que el juego esté lo más optimizado posible y lo más libre de errores que podamos.',
+                        'Acabamos de llegar a Alpha, y estamos a punto de llegar a Beta, para pronto lanzarlo oficialmente en Steam.',
+                        'Prelanzamiento el 6 de agosto de 2026'
                     ],
-                    media: [PostDes1, PostDes2],
+                    media: [postprocesss1, postprocesss2],
                 },
             },
-            sectionFooter: "Agradecimientos especiales a la Universidad de los Andes por la colaboración.",
+            sectionFooter: "Un agradecimiento especial a VFS y al equipo de Rekindled por su apoyo durante todo el desarrollo de este proyecto.",
             footerHasLink: false,
             footerLink: ""
         }
@@ -479,74 +477,13 @@ export const GameExpES: Project[] = [
         }
     },
     {
-        id: 'p3',
-        title: 'Rekindled - Actualmente en desarrollo',
-        description:
-            'Este es un juego de combate a distancia en tercera persona, que combina personajes 2D dentro de un mundo 3D. ' +
-            'Aquí seguimos a Cinder, un mago con temática de fénix que debe escalar un volcán mortal para entregar el último huevo de fénix a la lava hirviente y salvar a su especie. ' +
-            'Deberá combinar distintos elementos para lanzar hechizos poderosos, usados para enfrentar a todos los monstruos mortales que habitan el volcán. ' +
-            'Este proyecto no solo es una de las cosas más ambiciosas en las que he trabajado hasta ahora, sino también uno de los pasos más importantes en mi carrera, tanto por el conocimiento como por las habilidades que obtuve durante su desarrollo. ' +
-            'Fue desarrollado en el motor Unity 3D, usando C# como lenguaje de programación principal. Está publicado en Steam, con actualizaciones por venir.',
-        isProjectDeployed: false,
-        iframeSrc: '',
-        imageSrc: postprocesss1,
-        section: '2026',
-        hasExternalLinks: true,
-        externalLinks: 'https://store.steampowered.com/app/4926530/Rekindled/',
-        isShowingTheProcess: false,
-        process: {
-            sections: {
-                preproduction: {
-                    title: "Contexto de creación",
-                    description: [
-                        'El proceso de preproducción del proyecto consistió en crear el concepto del juego. Aquí simplemente hicimos una lluvia de ideas con lo que teníamos y lo que queríamos hacer.',
-                        'Queríamos generar muchas ideas, como crear un juego de 4 elementos o un combate multijugador, y al final decidimos crear un juego con temática de fénix.',
-                        'Nuestro equipo tenía 3 programadores, por lo que tuvimos que distribuir las diferentes tareas, especialmente porque queríamos tener un prototipo totalmente funcional antes de terminarlo.',
-                        'Organizamos todos nuestros documentos dentro de un archivo de Notion, donde también establecimos convenciones de nomenclatura y estructuras de organización.',
-                        'Esto nos permitió no solo visualizar todo el potencial del proyecto, sino también entender la escala que necesitábamos manejar en relación con el tiempo que teníamos.'
-                    ],
-                    media: [preprocesss1, preprocesss2, preprocesss3],
-                },
-                production: {
-                    title: "Mayor desafío",
-                    description: [
-                        'Una de las principales cosas que nuestros diseñadores nos pidieron fue la persistencia de datos. Querían darle al jugador la posibilidad de guardar su progreso y volver más tarde a terminar su partida.',
-                        'Al implementarlo, hubo problemas para guardar y se sobrescribían valores dentro del juego. Este error hacía que los datos persistentes le dieran al jugador elementos del juego que aún no debían estar disponibles, como desbloquear hechizos poderosos o logros sin cumplir los requisitos necesarios.',
-                        'Esto se debía principalmente a que los datos guardaban el progreso según acciones específicas después del checkpoint, generando múltiples casos límite en los que, si el jugador moría, reaparecía con condiciones distintas a las que debería tener. Dependiendo del caso, el jugador podía saltarse zonas o quedar bloqueado por tener o no tener el progreso correcto de los datos.',
-                        'La forma de solucionarlo fue rastrear variables según los elementos específicos que el jugador necesitaba, y ver exactamente dónde y bajo qué acciones se estaban guardando. Esto llevó a tener una variable interna que funciona como rastreador de datos temporales, capaz de revertir los valores cuando el jugador moría.',
-                        'Llegué a esta decisión al darme cuenta de que el jugador tendría libertad para realizar un rango específico de acciones en el juego, lo que significaba que la única forma de asegurar que no faltaran pasos era rastrearlos individualmente.',
-                        'Aun así, seguía habiendo casos límite en los que los datos no eran precisos. Por eso, además de esto, decidí implementar una referencia de qué elementos debía tener el jugador en un punto específico y eliminar el aspecto persistente de esa parte.',
-                        'Al final, esto creó un bloqueo seguro para el progreso, donde para algunos aspectos directos, como los elementos o hechizos que el jugador había desbloqueado, decidí usar una referencia de los datos, ya que son más controlados y no dependen de las decisiones del jugador. Sin embargo, también usé un valor temporal, que se actualiza en cada checkpoint, para asegurarme de que las estadísticas solo se guarden ahí.',
-                        'El resultado de estas decisiones hizo que el juego funcionara correctamente con datos persistentes sin sobrescribir los elementos en el script. La única desventaja fue que la complejidad del script y del sistema aumentó, haciéndolo más reactivo a futuros cambios. Lamentablemente, esto también tuvo otra contrapartida, ya que este sistema necesita pulirse aún más en el futuro. Sin embargo, gracias a esto pude entender el flujo necesario que deben tener los datos y cómo resolverlo.'
-                    ],
-                    media: [processs1, processs2, processs3, processs4],
-                },
-                postproduction: {
-                    title: "Progreso actual",
-                    description: [
-                        'Aunque ya obtuvimos la aprobación de Steam, todavía necesitamos pulir algunos detalles.',
-                        'Queremos asegurarnos de que el juego esté lo más optimizado posible y lo más libre de errores que podamos.',
-                        'Acabamos de llegar a Alpha, y estamos a punto de llegar a Beta, para pronto lanzarlo oficialmente en Steam.',
-                        'Prelanzamiento el 6 de agosto de 2026'
-                    ],
-                    media: [postprocesss1, postprocesss2],
-                },
-            },
-            sectionFooter: "Un agradecimiento especial a VFS y al equipo de Rekindled por su apoyo durante todo el desarrollo de este proyecto.",
-            footerHasLink: false,
-            footerLink: ""
-        }
-    },
-]
-
-export const GameExpEN: Project[] = [
-    {
         id: 'p1',
-        title: '(Dis)Connected - An Off-Device Game',
+        title: '(Des)Conectado - Un juego fuera del dispositivo',
         description:
-            'This project was developed in collaboration with Universidad de los Andes. ' +
-            'It presents the DEMO of an interactive graphic novel for Android mobile devices, centered on Ashley, a young woman with nomophobia who gets lost in a forest while her family goes camping and must find her way back. ' +
-            'This project represents my first professional approach to Unity and my formal entry into software development, as I had previously only completed minor exercises.',
+            'Este proyecto fue desarrollado en colaboración con la Universidad de los Andes. ' +
+            'Presenta el DEMO de una novela gráfica interactiva para dispositivos móviles Android, centrada en Ashley, una joven con nomofobia que se pierde en un bosque mientras su familia acampa y debe encontrar el camino de regreso. ' +
+            'Este proyecto representa mi primer acercamiento profesional a Unity y mi inicio formal en el área de programación, ya que con anterioridad únicamente había realizado ejercicios menores. ' +
+            'Puedes descargar un DEMO del projecto en formato APK para dispositivos Android (Para esto es necesario autorizar el dispositivo para instalar aplicaciones externas.)',
         isProjectDeployed: false,
         iframeSrc: '',
         imageSrc: DesConectado,
@@ -557,45 +494,107 @@ export const GameExpEN: Project[] = [
         process: {
             sections: {
                 preproduction: {
-                    title: "Creation and Design Process",
+                    title: "Proceso de creación y diseño",
                     description: [
-                        'The initial concept emerged from the idea of creating a game that would motivate people to reduce nomophobia, the fear of being disconnected from the digital world.',
-                        'This was guided by the objective of encouraging responsible consumption habits around applications and technology.',
-                        'With this in mind, pre-production focused on building the narrative, researching the necessary systems, and establishing a solid design foundation.',
-                        'Regarding the narrative, early work involved defining the characters; especially the protagonist, including her motivations, ambitions, and the means to achieve them.',
-                        'Research was directed toward exploring C#, the Unity environment, and its adaptation for mobile devices.',
-                        'Finally, the visual design concept was developed, the wireframe was constructed, and the frontend of the application was laid out.'
+                        'El concepto inicial surgió de la idea de crear un juego que motivara a las personas a reducir la nomofobia, también conocida como el miedo a estar desconectado del mundo digital.',
+                        'Esto bajo el objetivo de fomentar hábitos responsables en el consumo de aplicaciones y tecnología.',
+                        'Con esto en mente, la preproducción se enfocó en construir la narrativa, investigar sobre los sistemas necesarios y generar un diseño sólido.',
+                        'En cuanto a la narrativa, el trabajo inicial consistió en definir los personajes, especialmente la protagonista: sus motivaciones, sus ambiciones y la manera de materializarlas.',
+                        'La investigación se orientó hacia la exploración de C#, el entorno de Unity y su adaptación para dispositivos móviles.',
+                        'Finalmente, se procedió a generar el concepto de diseño visual, construir el wireframe y establecer la base del frontend de la aplicación.'
                     ],
                     media: [PreDes1, PreDes2, PreDes3],
                 },
                 production: {
-                    title: "Application Production",
+                    title: "Producción de la aplicación",
                     description: [
-                        'As the sole developer of this project, I was responsible for understanding and creating every aspect of the game.',
-                        'Regarding the art, by using real references and combining design elements, I was able to generate solid panels for the narrative in the style of a traditional graphic novel.',
-                        'This includes all characters, interactive objects, the user interface, backgrounds, and textures.',
-                        'On the code side, the work focused primarily on UI and narrative control, managing event progression through specific trigger points within each level.',
-                        'The most complex aspects involved persistent data management using PlayerPrefs, the minigames, each with its own unique mechanic, and the overall game control system.',
-                        'As an additional feature, the application included a system that tracked the phone\'s screen-on time and used it as a penalty mechanic to grant the player a second chance.',
-                        'The remaining details consisted primarily of implementing audio, scene transitions, and configuration options.',
-                        'This process was not linear; it required multiple prototypes and iterations to arrive at the current demo.',
+                        'Como único desarrollador de este proyecto, fui responsable de comprender y crear todos los aspectos del juego.',
+                        'En cuanto al arte, mediante el uso de referentes reales y la construcción de elementos combinados, logré generar paneles sólidos para la narrativa, siguiendo fielmente el estilo de una novela gráfica.',
+                        'Esto incluye todos los personajes, los objetos interactivos, la interfaz de usuario, los fondos y las texturas.',
+                        'Desde el ámbito del código, el trabajo se centró principalmente en el control de la interfaz y la narrativa, gestionando el avance de los eventos a través de puntos específicos dentro del nivel.',
+                        'Los aspectos más complejos se relacionaron con la persistencia de datos mediante PlayerPrefs, los minijuegos, cada uno con su mecánica única, y el sistema general de control del juego.',
+                        'Como característica adicional, la aplicación contaba con un sistema que leía el tiempo de uso del teléfono y lo empleaba como penalización para otorgar una segunda oportunidad al jugador.',
+                        'El resto de los detalles consistió principalmente en implementar el audio, las transiciones entre escenas y las opciones de configuración.',
+                        'Este proceso no fue lineal; requirió múltiples prototipos y versiones hasta alcanzar el demo actual.'
                     ],
                     media: [ProDes1, ProDes2, ProDes3],
                 },
                 postproduction: {
-                    title: "Playtesting and Fixes",
+                    title: "Playtest y correcciones",
                     description: [
-                        'Once the demo was complete, the testing phase began to observe how users interacted with it.',
-                        'During this process, I identified a design mistake: I had not conducted tests throughout the production phase itself.',
-                        'This experience made it clear that further research was needed to better understand the target user, in addition to improving the optimization of several systems.',
-                        'Since this project was developed in collaboration with the university, I am not permitted to continue it at this time.',
-                        'Nevertheless, this experience gave me a clear sense of my development potential and the direction in which I can channel it.',
-                        'You can try the demo by scanning the QR code or accessing the project link. (It is required to allow external apps to install in order to test it.)'
+                        'Una vez finalizado el demo, se inició la fase de pruebas para observar la reacción de los usuarios.',
+                        'Durante este proceso identifiqué un error de diseño: no realicé pruebas durante la producción misma.',
+                        'Esta experiencia me permitió entender que era necesaria una mayor investigación para comprender al usuario objetivo, además de mejorar la optimización de varios sistemas.',
+                        'Dado que este proyecto fue desarrollado en colaboración con la universidad, no me está permitido continuarlo por el momento.',
+                        'No obstante, esta experiencia me dejó clara mi capacidad de desarrollo y la dirección hacia la cual puedo orientarla. ',
+                        'Pueden probar el demo escaneando el código QR o accediendo al enlace del proyecto (Es requerido autorizar aplicaciones externas).'
                     ],
                     media: [PostDes1, PostDes2],
                 },
             },
-            sectionFooter: "Special thanks to Universidad de los Andes for the collaboration.",
+            sectionFooter: "Agradecimientos especiales a la Universidad de los Andes por la colaboración.",
+            footerHasLink: false,
+            footerLink: ""
+        }
+    },
+]
+
+export const GameExpEN: Project[] = [
+    {
+        id: 'p3',
+        title: 'Rekindled - Currently a Work in Progress',
+        description:
+            'This is a third-person ranged combat game, featuring 2D characters in a 3D world. ' +
+            'Here we follow Cinder, a phoenix-themed mage who has to climb a deadly volcano to deliver the last phoenix egg to the boiling lava and save his species. ' +
+            'He will have to combine different elements to cast powerful spells, used to fight all the deadly monsters that inhabit the volcano. ' +
+            'This project is not only one of the most ambitious things I have worked on so far, but also one of the biggest steps I have made in my career, both in the knowledge and the skill I obtained during this project. ' +
+            'This one was developed in the Unity 3D engine, using C# as the main programming language. It is deployed on Steam, with updates to come.',
+        isProjectDeployed: false,
+        iframeSrc: '',
+        imageSrc: postprocesss1,
+        section: '2026',
+        hasExternalLinks: true,
+        externalLinks: 'https://store.steampowered.com/app/4926530/Rekindled/',
+        isShowingTheProcess: false,
+        process: {
+            sections: {
+                preproduction: {
+                    title: "Context of creation",
+                    description: [
+                        'The pre-production process of the project was to create the concept of the game. Here, we were just brainstorming with what we had and what we wanted to do.',
+                        'We wanted to brainstorm a lot of ideas, like making a 4-element game or a multiplayer combat game, and in the end we decided to create a phoenix-themed game.',
+                        'Our team had 3 programmers, which is why we had to distribute the different assignments, especially because we wanted to have a fully working prototype before finishing it.',
+                        'We organized all of our documents inside a Notion file, where we also established naming conventions and organizational structures.',
+                        'This allowed us not only to visualize the full potential of the project, but also to understand the scale we needed to handle in relation to the time we had.'
+                    ],
+                    media: [preprocesss1, preprocesss2, preprocesss3],
+                },
+                production: {
+                    title: "Biggest challenge",
+                    description: [
+                        'One of the main things our designers asked us for was persistent data. They wanted to give the player the possibility to save their progress and return later to finish their run in the game.',
+                        'When implementing it, there were issues saving and overriding in-game values. This bug caused the persistent data to provide the player with elements of the game that were not yet available, like unlocking powerful spells or achievements without meeting the necessary requirements.',
+                        'This was mainly because the data was saving progress based on specific actions after the checkpoint, creating multiple edge cases where, if the player died, they respawned with conditions different from the ones they should have respawned with. Depending on each case, the player could skip areas or get soft-locked due to having or not having the correct progress data.',
+                        'The way to fix it was to track variables based on the specific elements the player needed, and to see specifically where and under what actions they were being saved. This led to having an internal variable that works as a tracker for temporary data, which could revert the values when the player died.',
+                        'I reached this decision after realizing that the player would have the freedom to take a specific range of actions in the game, which meant that the only way to ensure no steps were missing was to track them individually.',
+                        'Even with this, there were still edge cases where the data could not be accurate. Therefore, in addition to this, I decided to implement a reference of which elements the player should have at a specific point and remove the persistent aspect of it.',
+                        "In the end, this created a safe lock for the progress, where for some direct aspects, like the elements or spells the player had unlocked, I decided to use a reference of the data, because they are more controlled and don't depend on the player's decisions. However, I also used a temporary value, updated at each checkpoint, to make sure that the stats are only saved there.",
+                        "The result of these decisions made the game work correctly with persistent data without overriding the elements in the script. The only drawback was that the complexity of the script and the system increased, making it more reactive to future changes. Unfortunately, this also had another trade-off, because this system needs to be polished even further in the future. However, from this I was able to understand the necessary flow the data must have and how to resolve it."
+                    ],
+                    media: [processs1, processs2, processs3, processs4],
+                },
+                postproduction: {
+                    title: "Current progress",
+                    description: [
+                        'Although we already got the green light from Steam, we still need to polish some details.',
+                        'We want to make sure the game is as optimized as possible, and as bug-free as we can.',
+                        "We just reached Alpha, and we're about to get to Beta, in order to soon officially release it on Steam.",
+                        'Pre-release on August 6, 2026'
+                    ],
+                    media: [postprocesss1, postprocesss2],
+                },
+            },
+            sectionFooter: "Special thanks to VFS and Rekindled's team for their support throughout the development of this project.",
             footerHasLink: false,
             footerLink: ""
         }
@@ -661,60 +660,61 @@ export const GameExpEN: Project[] = [
         }
     },
     {
-        id: 'p3',
-        title: 'Rekindled - Currently a Work in Progress',
+        id: 'p1',
+        title: '(Dis)Connected - An Off-Device Game',
         description:
-            'This is a third-person ranged combat game, featuring 2D characters in a 3D world. ' +
-            'Here we follow Cinder, a phoenix-themed mage who has to climb a deadly volcano to deliver the last phoenix egg to the boiling lava and save his species. ' +
-            'He will have to combine different elements to cast powerful spells, used to fight all the deadly monsters that inhabit the volcano. ' +
-            'This project is not only one of the most ambitious things I have worked on so far, but also one of the biggest steps I have made in my career, both in the knowledge and the skill I obtained during this project. ' +
-            'This one was developed in the Unity 3D engine, using C# as the main programming language. It is deployed on Steam, with updates to come.',
+            'This project was developed in collaboration with Universidad de los Andes. ' +
+            'It presents the DEMO of an interactive graphic novel for Android mobile devices, centered on Ashley, a young woman with nomophobia who gets lost in a forest while her family goes camping and must find her way back. ' +
+            'This project represents my first professional approach to Unity and my formal entry into software development, as I had previously only completed minor exercises.',
         isProjectDeployed: false,
         iframeSrc: '',
-        imageSrc: postprocesss1,
-        section: '2026',
+        imageSrc: DesConectado,
+        section: '2025',
         hasExternalLinks: true,
-        externalLinks: 'https://store.steampowered.com/app/4926530/Rekindled/',
+        externalLinks: 'https://drive.google.com/file/d/1n4myrYNwOT26SZzVxjacrb08SkOo9OlP/view?usp=sharing',
         isShowingTheProcess: false,
         process: {
             sections: {
                 preproduction: {
-                    title: "Context of creation",
+                    title: "Creation and Design Process",
                     description: [
-                        'The pre-production process of the project was to create the concept of the game. Here, we were just brainstorming with what we had and what we wanted to do.',
-                        'We wanted to brainstorm a lot of ideas, like making a 4-element game or a multiplayer combat game, and in the end we decided to create a phoenix-themed game.',
-                        'Our team had 3 programmers, which is why we had to distribute the different assignments, especially because we wanted to have a fully working prototype before finishing it.',
-                        'We organized all of our documents inside a Notion file, where we also established naming conventions and organizational structures.',
-                        'This allowed us not only to visualize the full potential of the project, but also to understand the scale we needed to handle in relation to the time we had.'
+                        'The initial concept emerged from the idea of creating a game that would motivate people to reduce nomophobia, the fear of being disconnected from the digital world.',
+                        'This was guided by the objective of encouraging responsible consumption habits around applications and technology.',
+                        'With this in mind, pre-production focused on building the narrative, researching the necessary systems, and establishing a solid design foundation.',
+                        'Regarding the narrative, early work involved defining the characters; especially the protagonist, including her motivations, ambitions, and the means to achieve them.',
+                        'Research was directed toward exploring C#, the Unity environment, and its adaptation for mobile devices.',
+                        'Finally, the visual design concept was developed, the wireframe was constructed, and the frontend of the application was laid out.'
                     ],
-                    media: [preprocesss1, preprocesss2, preprocesss3],
+                    media: [PreDes1, PreDes2, PreDes3],
                 },
                 production: {
-                    title: "Biggest challenge",
+                    title: "Application Production",
                     description: [
-                        'One of the main things our designers asked us for was persistent data. They wanted to give the player the possibility to save their progress and return later to finish their run in the game.',
-                        'When implementing it, there were issues saving and overriding in-game values. This bug caused the persistent data to provide the player with elements of the game that were not yet available, like unlocking powerful spells or achievements without meeting the necessary requirements.',
-                        'This was mainly because the data was saving progress based on specific actions after the checkpoint, creating multiple edge cases where, if the player died, they respawned with conditions different from the ones they should have respawned with. Depending on each case, the player could skip areas or get soft-locked due to having or not having the correct progress data.',
-                        'The way to fix it was to track variables based on the specific elements the player needed, and to see specifically where and under what actions they were being saved. This led to having an internal variable that works as a tracker for temporary data, which could revert the values when the player died.',
-                        'I reached this decision after realizing that the player would have the freedom to take a specific range of actions in the game, which meant that the only way to ensure no steps were missing was to track them individually.',
-                        'Even with this, there were still edge cases where the data could not be accurate. Therefore, in addition to this, I decided to implement a reference of which elements the player should have at a specific point and remove the persistent aspect of it.',
-                        "In the end, this created a safe lock for the progress, where for some direct aspects, like the elements or spells the player had unlocked, I decided to use a reference of the data, because they are more controlled and don't depend on the player's decisions. However, I also used a temporary value, updated at each checkpoint, to make sure that the stats are only saved there.",
-                        "The result of these decisions made the game work correctly with persistent data without overriding the elements in the script. The only drawback was that the complexity of the script and the system increased, making it more reactive to future changes. Unfortunately, this also had another trade-off, because this system needs to be polished even further in the future. However, from this I was able to understand the necessary flow the data must have and how to resolve it."
+                        'As the sole developer of this project, I was responsible for understanding and creating every aspect of the game.',
+                        'Regarding the art, by using real references and combining design elements, I was able to generate solid panels for the narrative in the style of a traditional graphic novel.',
+                        'This includes all characters, interactive objects, the user interface, backgrounds, and textures.',
+                        'On the code side, the work focused primarily on UI and narrative control, managing event progression through specific trigger points within each level.',
+                        'The most complex aspects involved persistent data management using PlayerPrefs, the minigames, each with its own unique mechanic, and the overall game control system.',
+                        'As an additional feature, the application included a system that tracked the phone\'s screen-on time and used it as a penalty mechanic to grant the player a second chance.',
+                        'The remaining details consisted primarily of implementing audio, scene transitions, and configuration options.',
+                        'This process was not linear; it required multiple prototypes and iterations to arrive at the current demo.',
                     ],
-                    media: [processs1, processs2, processs3, processs4],
+                    media: [ProDes1, ProDes2, ProDes3],
                 },
                 postproduction: {
-                    title: "Current progress",
+                    title: "Playtesting and Fixes",
                     description: [
-                        'Although we already got the green light from Steam, we still need to polish some details.',
-                        'We want to make sure the game is as optimized as possible, and as bug-free as we can.',
-                        "We just reached Alpha, and we're about to get to Beta, in order to soon officially release it on Steam.",
-                        'Pre-release on August 6, 2026'
+                        'Once the demo was complete, the testing phase began to observe how users interacted with it.',
+                        'During this process, I identified a design mistake: I had not conducted tests throughout the production phase itself.',
+                        'This experience made it clear that further research was needed to better understand the target user, in addition to improving the optimization of several systems.',
+                        'Since this project was developed in collaboration with the university, I am not permitted to continue it at this time.',
+                        'Nevertheless, this experience gave me a clear sense of my development potential and the direction in which I can channel it.',
+                        'You can try the demo by scanning the QR code or accessing the project link. (It is required to allow external apps to install in order to test it.)'
                     ],
-                    media: [postprocesss1, postprocesss2],
+                    media: [PostDes1, PostDes2],
                 },
             },
-            sectionFooter: "Special thanks to VFS and Rekindled's team for their support throughout the development of this project.",
+            sectionFooter: "Special thanks to Universidad de los Andes for the collaboration.",
             footerHasLink: false,
             footerLink: ""
         }
@@ -732,10 +732,11 @@ export const HighlightsES: HighlightProjects[] = [
     },
     {
         id: 'p2',
-        title: 'EcoRanger',
-        description: 'EcoRanger es un proyecto desarrollado en Unity como entrega de mitad de programa del curso de Programación para Juegos, Web y Móvil de la Vancouver Film School. ' +
-            'EcoRanger es un shooter 3D de conflicto ambiental que presenta a Ekko, un Ranger espacial enviado a la Tierra con la misión de impedir que los peligrosos Eco Breakers la destruyan mediante una contaminación masiva. ',
-        imgSrc: PostEco1,
+        title: 'Rekindled',
+        description: 'Este es un juego de combate a distancia en tercera persona, que combina personajes 2D dentro de un mundo 3D. ' +
+            'Aquí seguimos a Cinder, un mago con temática de fénix que debe escalar un volcán mortal para entregar el último huevo de fénix a la lava hirviente y salvar a su especie. ' +
+            'Deberá combinar distintos elementos para lanzar hechizos poderosos, usados para enfrentar a todos los monstruos mortales que habitan el volcán. ',
+        imgSrc: postprocesss1,
         posInList: 1,
         section: "gameExp"
     },
@@ -752,10 +753,11 @@ export const HighlightsEN: HighlightProjects[] = [
     },
     {
         id: 'p2',
-        title: 'EcoRanger',
-        description: 'EcoRanger is a project developed in Unity as a mid-program deliverable for the Game, Web & Mobile Programming course at Vancouver Film School. ' +
-            'EcoRanger is a 3D environmental conflict shooter featuring Ekko, a space Ranger sent to Earth on a mission to prevent the dangerous Eco Breakers from destroying it through massive pollution. ',
-        imgSrc: PostEco1,
+        title: 'Rekindled',
+        description: 'This is a third-person ranged combat game, featuring 2D characters in a 3D world. ' +
+            'Here we follow Cinder, a phoenix-themed mage who has to climb a deadly volcano to deliver the last phoenix egg to the boiling lava and save his species. ' +
+            'He will have to combine different elements to cast powerful spells, used to fight all the deadly monsters that inhabit the volcano. ',
+        imgSrc: postprocesss1,
         posInList: 1,
         section: "gameExp"
     },
