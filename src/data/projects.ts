@@ -61,7 +61,7 @@ export const WebProjectsES: Project[] = [
         imageSrc: IMGPort,
         section: '2026',
         hasExternalLinks: true,
-        externalLinks: "https://github.com/neondsilvam/Web_Framework_portfolio",
+        externalLinks: "https://github.com/neondsilvam/Programming_portfolio",
         isShowingTheProcess: false,
         process: {
             sections: {
@@ -214,7 +214,7 @@ export const WebProjectsEN: Project[] = [
         imageSrc: IMGPort,
         section: '2026',
         hasExternalLinks: true,
-        externalLinks: "https://github.com/neondsilvam/Web_Framework_portfolio",
+        externalLinks: "https://github.com/neondsilvam/Programming_portfolio",
         isShowingTheProcess: false,
         process: {
             sections: {
