@@ -5,6 +5,7 @@ import {GameExpES, GameExpEN} from '../data/projects'
 import styles from './Projects.module.css'
 import { motion } from "motion/react"
 import {IntroVariant} from "../types/variants.ts";
+import {CVButtonComponent} from "../components/CVButtonComponent.tsx";
 
 export function GameExp({ initialIndex }: { initialIndex: number }) {
     const {t, lang} = useLang()
@@ -61,6 +62,7 @@ export function GameExp({ initialIndex }: { initialIndex: number }) {
                         )
                     })}
                     <h5 className={styles.sectionSubTitle}>{t.gameExp.clarification}</h5>
+                    <CVButtonComponent currentPage={"gameExp"} />
                 </aside>
 
                 <div className={styles.detail}>

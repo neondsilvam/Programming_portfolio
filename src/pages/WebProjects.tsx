@@ -5,6 +5,7 @@ import {WebProjectsES, WebProjectsEN} from '../data/projects'
 import styles from './Projects.module.css'
 import { motion } from "motion/react"
 import {IntroVariant} from "../types/variants.ts";
+import {CVButtonComponent} from "../components/CVButtonComponent.tsx";
 
 export function WebProjects() {
     const {t, lang} = useLang()
@@ -61,6 +62,7 @@ export function WebProjects() {
                         )
                     })}
                     <h5 className={styles.sectionSubTitle}>{t.webProjects.clarification}</h5>
+                    <CVButtonComponent currentPage={"webExp"} />
                 </aside>
 
                 <div className={styles.detail}>

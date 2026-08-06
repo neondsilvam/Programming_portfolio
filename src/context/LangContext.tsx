@@ -43,17 +43,18 @@ const translations: Record<Lang, Translations> = {
       projects: [],
       showingProcessButtonTextFalse: "Mostrar proceso",
       showingProcessButtonTextTrue: "Ocultar proceso",
+      CVText: "Descarga mi CV"
     },
     gameExp: {
       sections: [
-        { id: '2026', label: '2026' },
-        { id: '2025', label: '2025' },
+        {id: '2026', label: '2026'},
+        {id: '2025', label: '2025'},
       ],
       clarification: 'Experiencia en desarrollo de videojuegos.',
-      projects: [
-      ],
+      projects: [],
       showingProcessButtonTextFalse: "Mostrar proceso",
       showingProcessButtonTextTrue: "Ocultar proceso",
+      CVText: "Descarga mi CV"
     },
     contactPage: {
       title: 'Información de contacto',
@@ -112,6 +113,7 @@ const translations: Record<Lang, Translations> = {
       projects: [],
       showingProcessButtonTextFalse: "Show Process",
       showingProcessButtonTextTrue: "Hide Process",
+      CVText: "Download my CV"
     },
     contactPage: {
       title: 'Contact info',
@@ -130,14 +132,14 @@ const translations: Record<Lang, Translations> = {
     },
     gameExp: {
       sections: [
-        { id: '2026', label: '2026' },
-        { id: '2025', label: '2025' },
+        {id: '2026', label: '2026'},
+        {id: '2025', label: '2025'},
       ],
       clarification: 'Experience in video game development.',
-      projects: [
-      ],
+      projects: [],
       showingProcessButtonTextFalse: "Show Process",
       showingProcessButtonTextTrue: "Hide Process",
+      CVText: "Download my CV"
     },
   },
 }

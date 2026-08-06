@@ -92,6 +92,7 @@ export interface Translations {
       projects: ProjectTranslation[]
       showingProcessButtonTextFalse: string
       showingProcessButtonTextTrue: string
+      CVText: string
   }
   gameExp: {
     sections: Section[]
@@ -99,6 +100,7 @@ export interface Translations {
     projects: ProjectTranslation[]
     showingProcessButtonTextFalse: string
     showingProcessButtonTextTrue: string
+    CVText: string
   }
   contactPage: {
     title: string
@@ -115,4 +117,8 @@ export interface Translations {
       SecondaryGithub: string
     }
   }
+}
+
+export type PagePops = {
+  currentPage: Page;
 }
