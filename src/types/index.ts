@@ -2,11 +2,6 @@ export type Lang = 'es' | 'en'
 
 export type Page = 'profile' | 'webExp' | 'gameExp' | 'contact'
 
-export interface NavbarProps {
-  currentPage: Page
-  onNavigate: (page: Page) => void
-}
-
 export interface HighlightProjects {
   id: string
   title: string
@@ -48,6 +43,8 @@ export interface Project {
     sectionFooter: string,
     footerHasLink: boolean,
     footerLink: string,
+    itHasBeenPublished: boolean
+    publishedLink: string
   }
 }
 
@@ -121,4 +118,8 @@ export interface Translations {
 
 export type PagePops = {
   currentPage: Page;
+}
+
+export type STEAMProps = {
+  id: string
 }

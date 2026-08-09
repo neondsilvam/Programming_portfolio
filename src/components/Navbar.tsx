@@ -23,7 +23,7 @@ export function Navbar() {
     // For the scroll animation
     useMotionValueEvent(scrollY, "change", (current) => {
         const prev = scrollY.getPrevious() ?? 0
-        setScroll(current > prev && current > 150)
+        setScroll(current > prev && current > 20)
     })
     
 

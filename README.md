@@ -2,15 +2,15 @@
 
 
 
-##### Last Updated: *05/08/2026*
+##### Last Updated: *08/08/2026*
 
 
 
 ###### Dev Log Recent Changes:
 
-* NavBar and Footer Animation Updated
-* Highlihghts projects updated
-* Deployed link for game projects updated
+* Steam Component added
+* Steam linked bind
+* Steam component added responsiveness
 
 
 

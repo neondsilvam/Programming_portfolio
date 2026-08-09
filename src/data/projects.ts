@@ -100,6 +100,8 @@ export const WebProjectsES: Project[] = [
             sectionFooter: "Todo el contenido web y visual es de creación propia, salvo que se indique lo contrario.",
             footerHasLink: false,
             footerLink: '',
+            itHasBeenPublished: false,
+            publishedLink: ""
         }
     },
     {
@@ -151,6 +153,8 @@ export const WebProjectsES: Project[] = [
             sectionFooter: "",
             footerHasLink: false,
             footerLink: '',
+            itHasBeenPublished: false,
+            publishedLink: ""
         }
     },
     {
@@ -196,9 +200,11 @@ export const WebProjectsES: Project[] = [
                     media: [postCocktail],
                 },
             },
-            sectionFooter:'Hay un prototipo de la app en el siguiente link:',
+            sectionFooter: 'Hay un prototipo de la app en el siguiente link:',
             footerHasLink: true,
             footerLink: 'https://snack.expo.dev/@pg29julians/cocktail-app---final',
+            itHasBeenPublished: false,
+            publishedLink: ""
         }
     },
 ]
@@ -253,6 +259,8 @@ export const WebProjectsEN: Project[] = [
             sectionFooter: "All web and visual content is original and self-authored, unless otherwise stated.",
             footerHasLink: false,
             footerLink: '',
+            itHasBeenPublished: false,
+            publishedLink: ""
         }
     },
     {
@@ -304,6 +312,8 @@ export const WebProjectsEN: Project[] = [
             sectionFooter: "",
             footerHasLink: false,
             footerLink: '',
+            itHasBeenPublished: false,
+            publishedLink: ""
         }
     },
     {
@@ -349,9 +359,11 @@ export const WebProjectsEN: Project[] = [
                     media: [postCocktail],
                 },
             },
-            sectionFooter:'Also to test an early prototype on here:',
+            sectionFooter: 'Also to test an early prototype on here:',
             footerHasLink: true,
             footerLink: 'https://snack.expo.dev/@pg29julians/cocktail-app---final',
+            itHasBeenPublished: false,
+            publishedLink: ""
         }
     },
 ]
@@ -370,7 +382,7 @@ export const GameExpES: Project[] = [
         iframeSrc: '',
         imageSrc: postprocesss1,
         section: '2026',
-        hasExternalLinks: true,
+        hasExternalLinks: false,
         externalLinks: 'https://store.steampowered.com/app/4926530/Rekindled/',
         isShowingTheProcess: false,
         process: {
@@ -413,7 +425,9 @@ export const GameExpES: Project[] = [
             },
             sectionFooter: "Un agradecimiento especial a VFS y al equipo de Rekindled por su apoyo durante todo el desarrollo de este proyecto.",
             footerHasLink: false,
-            footerLink: ""
+            footerLink: "",
+            itHasBeenPublished: true,
+            publishedLink: "https://store.steampowered.com/widget/4926530/"
         }
     },
     {
@@ -473,7 +487,9 @@ export const GameExpES: Project[] = [
             },
             sectionFooter: 'Agradecimientos especiales a VFS y a Kizuna Interactive por su apoyo en el desarrollo de este proyecto.',
             footerHasLink: false,
-            footerLink: ""
+            footerLink: "",
+            itHasBeenPublished: false,
+            publishedLink: ""
         }
     },
     {
@@ -534,7 +550,9 @@ export const GameExpES: Project[] = [
             },
             sectionFooter: "Agradecimientos especiales a la Universidad de los Andes por la colaboración.",
             footerHasLink: false,
-            footerLink: ""
+            footerLink: "",
+            itHasBeenPublished: false,
+            publishedLink: ""
         }
     },
 ]
@@ -553,7 +571,7 @@ export const GameExpEN: Project[] = [
         iframeSrc: '',
         imageSrc: postprocesss1,
         section: '2026',
-        hasExternalLinks: true,
+        hasExternalLinks: false,
         externalLinks: 'https://store.steampowered.com/app/4926530/Rekindled/',
         isShowingTheProcess: false,
         process: {
@@ -596,7 +614,9 @@ export const GameExpEN: Project[] = [
             },
             sectionFooter: "Special thanks to VFS and Rekindled's team for their support throughout the development of this project.",
             footerHasLink: false,
-            footerLink: ""
+            footerLink: "",
+            itHasBeenPublished: true,
+            publishedLink: "https://store.steampowered.com/widget/4926530/"
         }
     },
     {
@@ -656,7 +676,9 @@ export const GameExpEN: Project[] = [
             },
             sectionFooter: 'Special thanks to VFS and Kizuna Interactive for their support throughout the development of this project.',
             footerHasLink: false,
-            footerLink: ""
+            footerLink: "",
+            itHasBeenPublished: false,
+            publishedLink: ""
         }
     },
     {
@@ -716,7 +738,9 @@ export const GameExpEN: Project[] = [
             },
             sectionFooter: "Special thanks to Universidad de los Andes for the collaboration.",
             footerHasLink: false,
-            footerLink: ""
+            footerLink: "",
+            itHasBeenPublished: false,
+            publishedLink: ""
         }
     },
 ]
