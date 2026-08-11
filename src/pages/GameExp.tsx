@@ -6,7 +6,7 @@ import styles from './Projects.module.css'
 import { motion } from "motion/react"
 import {IntroVariant} from "../types/variants.ts";
 import {CVButtonComponent} from "../components/CVButtonComponent.tsx";
-import {STEAMCustomComponent} from "../components/STEAMCustomComponent.tsx";
+import {GameDownloadWidgetCustomComponent} from "../components/GameDownloadWidgetCustomComponent.tsx";
 
 export function GameExp({ initialIndex }: { initialIndex: number }) {
     const {t, lang} = useLang()
@@ -85,7 +85,7 @@ export function GameExp({ initialIndex }: { initialIndex: number }) {
                             <img className={styles.image} src={selected.imageSrc}></img>
                         )}
                     </div>
-                    {selected.process.itHasBeenPublished ? <STEAMCustomComponent id={selected.process.publishedLink}/> : <></>}
+                    {selected.process.itHasBeenPublished ? <GameDownloadWidgetCustomComponent id={selected.process.publishedLink}/> : <></>}
                     <button className={styles.processButton}
                             onClick={handleDesc}>{selected.isShowingTheProcess ? t.gameExp.showingProcessButtonTextTrue : t.gameExp.showingProcessButtonTextFalse}</button>
                     {selected.isShowingTheProcess ? (

@@ -120,6 +120,6 @@ export type PagePops = {
   currentPage: Page;
 }
 
-export type STEAMProps = {
+export type GameWidgetProps = {
   id: string
 }

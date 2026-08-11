@@ -446,7 +446,7 @@ export const GameExpES: Project[] = [
         imageSrc: PostEco1,
         section: '2025',
         hasExternalLinks: true,
-        externalLinks: "https://drive.google.com/file/d/1GoQA0IisxHC7e2BwZPhe3x2339Xcieno/view?usp=sharing",
+        externalLinks: "https://vi-tran.itch.io/eco-ranger",
         isShowingTheProcess: false,
         process: {
             sections: {
@@ -635,7 +635,7 @@ export const GameExpEN: Project[] = [
         imageSrc: PostEco1,
         section: '2025',
         hasExternalLinks: true,
-        externalLinks: "https://drive.google.com/file/d/1GoQA0IisxHC7e2BwZPhe3x2339Xcieno/view?usp=sharing",
+        externalLinks: "https://vi-tran.itch.io/eco-ranger",
         isShowingTheProcess: false,
         process: {
             sections: {
