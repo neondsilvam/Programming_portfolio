@@ -24,7 +24,7 @@ import PostDes2 from '../assets/(Des)conectado/postdes2.png'
 import DesConectado from '../assets/(Des)conectado/(des)conectado.jpg'
 
 //CocktailApp
-import imgCocktail from '../assets/CocktailApp/cocktailAppIMG.png'
+import imgCocktail from '../assets/CocktailApp/JulianDSilva.png'
 import preCocktail from '../assets/CocktailApp/preprocess.png'
 import proCocktail from '../assets/CocktailApp/process.png'
 import postCocktail from '../assets/CocktailApp/postprocess.png'

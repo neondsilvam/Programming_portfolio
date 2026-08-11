@@ -69,7 +69,7 @@
 }
 
 
-.link{
+.button{
     margin: 0.8em;
     padding: 1em;
     border-radius: 20px;
@@ -77,7 +77,13 @@
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+.button:hover {
+    background: #f3f4f6;
+    color: #000500;
+}
+
 /*For the responsive area*/
+
 
 @media screen and (min-width: 800px) {
     .organizer{
