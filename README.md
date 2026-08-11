@@ -2,15 +2,15 @@
 
 
 
-##### Last Updated: *08/08/2026*
+##### Last Updated: *10/08/2026*
 
 
 
 ###### Dev Log Recent Changes:
 
-* Steam Component added
-* Steam linked bind
-* Steam component added responsiveness
+* FIX: Button Styles
+* FIX: GitHub Link Styles
+* UPDATE: Media for Project
 
 
 
