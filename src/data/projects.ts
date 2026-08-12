@@ -102,7 +102,33 @@ export const WebProjectsES: Project[] = [
             itHasBeenPublished: false,
             publishedLink: ""
         },
-        CaseStudy: []
+        CaseStudy: [
+            {
+                id: "p1",
+                title: "Nav",
+                description: {
+                    context: "Durante el desarrollo de este portafolio, uno de los desafíos recurrentes estuvo relacionado con la gestión del sistema de navegación. Inicialmente, implementé la lógica de navegación directamente dentro de un componente específico, lo que generaba un acoplamiento considerable entre la funcionalidad de navegación y dicho componente.\n" +
+                        "\n" +
+                        "A medida que el portafolio creció, este enfoque comenzó a generar restricciones cuando diferentes componentes necesitaban interactuar con el sistema de navegación o responder a sus cambios.",
+                    problem: "La arquitectura inicial dificultaba que otros componentes y páginas pudieran acceder o interactuar con el sistema de navegación.\n" +
+                        "\n" +
+                        "Debido a que la lógica estaba directamente vinculada a un componente específico, algunos componentes no podían responder fácilmente a los cambios de navegación ni utilizar el mismo estado sin introducir dependencias adicionales.",
+                    possibilities: "La primera solución consistía en trasladar la lógica de navegación a un React Context. Aunque esto implicaría introducir una capa adicional de abstracción y aumentar inicialmente la complejidad de la arquitectura, permitiría compartir el estado de navegación a lo largo de toda la aplicación sin acoplar directamente los diferentes componentes al componente de navegación.\n" +
+                        "\n" +
+                        "La segunda alternativa consistía en modificar individualmente los componentes para que pudieran leer o interactuar directamente con el componente de navegación cuando fuera necesario. Aunque este enfoque requeriría menos cambios estructurales, introduciría redundancia y aumentaría las dependencias entre componentes.",
+                    decision: "Finalmente, decidí implementar el sistema de navegación utilizando un React Context.\n" +
+                        "\n" +
+                        "Este enfoque permitió compartir el estado y las funcionalidades de navegación a lo largo de la aplicación sin depender de un uso extensivo de prop drilling ni crear dependencias innecesarias entre componentes.\n" +
+                        "\n" +
+                        "Además, ayudó a mantener un estado de navegación consistente a lo largo del portafolio y proporcionó una base más escalable para futuros componentes y funcionalidades.",
+                    outcome: "La nueva arquitectura facilitó considerablemente la gestión de la navegación y permitió que diferentes componentes interactuaran con el sistema de manera más independiente.\n" +
+                        "\n" +
+                        "También simplificó la implementación de funcionalidades adicionales, como el indicador de resaltado (highlight) de navegación, ya que estos componentes podían acceder directamente al estado compartido mediante el Context.\n" +
+                        "\n" +
+                        "Esta experiencia reforzó mi comprensión sobre la importancia de separar el estado compartido de la interfaz de usuario individual. Al trasladar la navegación a un contexto centralizado, pude reducir las dependencias entre componentes, mejorar la reutilización del código y establecer una arquitectura más mantenible para el portafolio."
+                }
+            }
+        ]
     },
     {
         id: 'p2',
@@ -155,7 +181,35 @@ export const WebProjectsES: Project[] = [
             itHasBeenPublished: false,
             publishedLink: ""
         },
-        CaseStudy: []
+        CaseStudy: [{
+            id: "p1",
+            title: "Telemetria y admin",
+            description: {
+                context: "Durante este proyecto de desarrollo web, necesitábamos implementar un sistema de acceso restringido que permitiera únicamente a los administradores autorizados acceder al sistema de telemetría. En ese momento, todavía no tenía un conocimiento profundo de las diferentes librerías y soluciones de autenticación disponibles para implementar este tipo de funcionalidad de manera segura.\n" +
+                    "\n" +
+                    "El objetivo principal era crear un sistema de acceso administrativo para Firebase y los datos de telemetría sin depender de usuarios específicos definidos directamente en el código, permitiendo que el sistema fuera flexible y fácil de mantener.",
+                problem: "El principal desafío consistía en implementar un sistema de acceso administrativo que pudiera restringir el acceso a Firebase y a las funcionalidades de telemetría, manteniendo al mismo tiempo la flexibilidad necesaria para admitir múltiples administradores.\n" +
+                    "\n" +
+                    "Además, el sistema debía evitar comprobaciones de usuarios codificadas directamente en el frontend, ya que esto dificultaría su mantenimiento y expansión.",
+                possibilities: "La primera solución consistía en utilizar las Firebase Security Rules para restringir el acceso según los permisos o el rol del usuario autenticado. Este enfoque habría proporcionado una capa de seguridad más sólida, ya que el control de acceso se realizaría a nivel del backend y no dependería exclusivamente del frontend.\n" +
+                    "\n" +
+                    "La segunda alternativa consistía en crear una lista blanca (whitelist) de administradores dentro de la base de datos. De esta manera, el sistema podría almacenar múltiples administradores autorizados y comprobar si el usuario actual formaba parte de dicha lista.\n" +
+                    "\n" +
+                    "Aunque el enfoque basado en una lista blanca implicaba operaciones adicionales sobre la base de datos y era técnicamente más pesado, resultaba considerablemente más sencillo de implementar teniendo en cuenta el tiempo disponible para el proyecto.",
+                decision: "Debido a las limitaciones de tiempo del proyecto y a mi experiencia limitada en ese momento con las funcionalidades avanzadas de autorización de Firebase, decidí implementar la lista blanca de administradores.\n" +
+                    "\n" +
+                    "Esto permitió que el frontend determinara dinámicamente si un usuario contaba con permisos administrativos sin necesidad de definir individualmente a cada usuario directamente dentro del código de la aplicación. Además, era posible añadir o eliminar administradores sin modificar el código fuente.",
+                outcome: "La solución funcionó correctamente para controlar el acceso desde el frontend y proporcionó la funcionalidad necesaria dentro del alcance del proyecto.\n" +
+                    "\n" +
+                    "Sin embargo, esta implementación también evidenció una limitación importante de seguridad: el control de acceso realizado exclusivamente desde el frontend no debe considerarse un mecanismo suficiente para proteger información sensible o funcionalidades administrativas. Un usuario con suficientes conocimientos podría potencialmente evadir las restricciones del frontend si los recursos subyacentes de Firebase no cuentan con reglas de autorización adecuadas.\n" +
+                    "\n" +
+                    "Mirando el proyecto en retrospectiva, reconozco que una solución más robusta habría consistido en implementar la autorización mediante las reglas de seguridad de Firebase o mediante un sistema de autorización en el backend, de manera que las restricciones de acceso fueran aplicadas independientemente del frontend.\n" +
+                    "\n" +
+                    "Esta experiencia me permitió comprender mejor la diferencia entre control de acceso en el frontend y autorización real. También reforzó la importancia de investigar las buenas prácticas de seguridad y los sistemas de autenticación y autorización específicos de cada plataforma antes de implementar funcionalidades administrativas.\n" +
+                    "\n" +
+                    "En futuros proyectos, priorizaría la implementación de la autorización a nivel del backend o de la seguridad de la base de datos, utilizando el frontend principalmente como una interfaz para reflejar los permisos del usuario y no como la capa principal de seguridad."
+            }
+        }]
     },
     {
         id: 'p3',
@@ -205,7 +259,9 @@ export const WebProjectsES: Project[] = [
             itHasBeenPublished: false,
             publishedLink: ""
         },
-        CaseStudy: []
+        CaseStudy: [
+            
+        ]
     },
 ]
 
@@ -261,7 +317,31 @@ export const WebProjectsEN: Project[] = [
             itHasBeenPublished: false,
             publishedLink: ""
         },
-        CaseStudy: []
+        CaseStudy: [{
+            id: "p1",
+            title: "Nav",
+            description: {
+                context: "During the development of this portfolio, one of the recurring challenges was managing the navigation system. Initially, I implemented the navigation logic directly within a specific component, which tightly coupled the navigation functionality to that component and limited its accessibility from other parts of the application.\n" +
+                    "\n" +
+                    "As the portfolio grew, this approach began to create restrictions when different components needed to interact with or respond to the navigation state.",
+                problem: "The existing navigation architecture made it difficult for other components and pages to access or interact with the navigation system.\n" +
+                    "\n" +
+                    "Because the navigation logic was tied directly to a specific component, certain components could not easily respond to navigation changes or use the same navigation state without introducing additional dependencies.",
+                possibilities: "The first solution was to move the navigation logic into a React Context. Although this would introduce an additional layer of abstraction and increase the initial complexity of the architecture, it would make the navigation state accessible throughout the application without tightly coupling individual components to the navigation component.\n" +
+                    "\n" +
+                    "The second option was to modify individual components so that they could directly read or interact with the navigation component when necessary. While this approach would require fewer architectural changes, it would introduce redundancy and increase dependencies between components.",
+                decision: "Ultimately, I decided to implement the navigation system using a React Context.\n" +
+                    "\n" +
+                    "This approach allowed the navigation state and functionality to be shared across the application without relying on extensive prop drilling or creating unnecessary dependencies between components.\n" +
+                    "\n" +
+                    "It also helped maintain a consistent navigation state throughout the portfolio and provided a more scalable foundation for future components and features.",
+                outcome: "The new architecture made navigation significantly easier to manage and allowed different components to interact with the navigation system more independently.\n" +
+                    "\n" +
+                    "It also simplified the implementation of additional features, such as the navigation highlight indicator, because these components could access the shared navigation state directly through the Context.\n" +
+                    "\n" +
+                    "This experience reinforced my understanding of the importance of separating shared application state from individual UI components. By moving navigation into a centralized context, I was able to reduce component dependencies, improve reusability, and create a more maintainable architecture for the portfolio."
+            }
+        }]
     },
     {
         id: 'p2',
@@ -314,7 +394,37 @@ export const WebProjectsEN: Project[] = [
             itHasBeenPublished: false,
             publishedLink: ""
         },
-        CaseStudy: []
+        CaseStudy: [
+            {
+                id: "p1",
+                title: "Telemtry and admin access",
+                description: {
+                    context: "During this web development project, we needed to implement a restricted access system that would allow only authorized administrators to access the telemetry system. At the time, I was not yet familiar with the different libraries and authentication solutions available for implementing this type of functionality securely.\n" +
+                        "\n" +
+                        "The main objective was to create an administrative access system for Firebase and the telemetry data without hardcoding specific users into the application, allowing the system to remain flexible and maintainable.",
+                    problem: "The main challenge was implementing an administrator access system that could restrict access to Firebase and telemetry functionality while remaining flexible enough to support multiple administrators.\n" +
+                        "\n" +
+                        "The system also needed to avoid hardcoded user checks within the frontend, as this would make the application more difficult to maintain and expand.",
+                    possibilities: "The first solution was to use Firebase Security Rules to restrict access based on the authenticated user's permissions or role. This approach would provide a stronger security layer by enforcing access control at the backend level rather than relying exclusively on the frontend.\n" +
+                        "\n" +
+                        "The second solution was to create an administrator whitelist within the database. This would allow the system to store multiple authorized administrators and check whether the current user was included in that list.\n" +
+                        "\n" +
+                        "Although the whitelist approach introduced additional database operations and was technically heavier, it was considerably simpler to implement within the project's available time.",
+                    decision: "Due to the project's time constraints and my limited experience with Firebase's more advanced authorization features at the time, I decided to implement the administrator whitelist.\n" +
+                        "\n" +
+                        "This allowed the frontend to dynamically determine whether a user had administrator privileges without requiring individual users to be hardcoded directly into the application. It also made it possible to add or remove administrators from the system without modifying the application's source code.",
+                    outcome: "The solution worked effectively for controlling access from the frontend and provided the required functionality for the project's scope.\n" +
+                        "\n" +
+                        "However, this implementation also exposed an important security limitation: frontend-based access control should not be considered a sufficient security mechanism for protecting sensitive data or administrative functionality. A determined user could potentially bypass frontend restrictions if the underlying Firebase resources were not protected by appropriate backend authorization rules.\n" +
+                        "\n" +
+                        "Looking back, I recognize that a more robust solution would have involved implementing server-side or Firebase Security Rules-based authorization to ensure that access restrictions were enforced independently of the frontend.\n" +
+                        "\n" +
+                        "This experience highlighted the distinction between frontend access control and actual authorization. It also reinforced the importance of researching security practices and platform-specific authentication and authorization systems before implementing administrative functionality.\n" +
+                        "\n" +
+                        "In future projects, I would prioritize implementing authorization at the backend or database-security level and use the frontend primarily as an interface for communicating the user's permissions rather than as the primary security layer."
+                }
+            }
+        ]
     },
     {
         id: 'p3',
@@ -460,6 +570,40 @@ export const GameExpES: Project[] = [
                     "\n" +
                     "Como resultado, ahora busco aplicar este enfoque de manera más frecuente al diseñar sistemas de juego, especialmente aquellos relacionados con datos persistentes, progresión modular y funcionalidades que probablemente evolucionarán durante el desarrollo."
             }
+        }, {
+            id: "p2",
+            title: "Sistema de Logros",
+            description: {
+                context: "Uno de los sistemas más complejos que desarrollé fue el sistema de logros. Su complejidad se debía principalmente a que los logros dependían de acciones muy específicas realizadas por el jugador, las cuales no podían generalizarse fácilmente dentro de un único conjunto de condiciones.\n" +
+                    "\n" +
+                    "Además, cada logro debía interactuar correctamente con el resto de los sistemas del juego y con sus respectivos tiempos de ejecución, incluyendo enemigos, hechizos, transiciones entre escenas y otros eventos de gameplay. Por esta razón, era necesario desarrollar un sistema capaz de responder a una gran variedad de condiciones sin interferir con las funcionalidades principales del juego.",
+                problem: "El principal desafío consistía en crear un sistema que pudiera integrarse fácilmente con diferentes tipos de código y componentes de gameplay, al mismo tiempo que permitiera que otros programadores continuaran trabajando de manera independiente sobre esos mismos sistemas.\n" +
+                    "\n" +
+                    "Debido a que varios programadores trabajaban simultáneamente en diferentes partes del proyecto, modificar directamente los sistemas existentes para implementar las condiciones de los logros podía generar conflictos innecesarios durante la integración del código y dificultar el mantenimiento futuro.\n" +
+                    "\n" +
+                    "Por lo tanto, el sistema de logros debía ser modular, fácil de integrar y suficientemente flexible como para incorporar nuevas condiciones sin requerir modificaciones significativas en el código existente.",
+                possibilities: "La primera solución consistía en crear una arquitectura modular en la que cada condición de logro fuera implementada como un componente independiente que pudiera añadirse al prefab o al objeto de gameplay correspondiente.\n" +
+                    "\n" +
+                    "Aunque este enfoque podía generar una mayor cantidad de componentes individuales y potencialmente resultar más difícil de organizar a medida que el proyecto creciera, reducía significativamente el riesgo de conflictos durante la integración del código y facilitaba la modificación o sustitución de condiciones individuales.\n" +
+                    "\n" +
+                    "La segunda alternativa consistía en implementar las condiciones de los logros directamente dentro de los sistemas de gameplay existentes y organizarlas mediante variables, métodos o condiciones claramente definidas.\n" +
+                    "\n" +
+                    "Este enfoque habría permitido mantener la lógica más centralizada y potencialmente más organizada dentro de cada sistema. Sin embargo, también habría aumentado el riesgo de conflictos durante la integración y habría generado una mayor dependencia entre la lógica de los logros y los sistemas en los que estuviera implementada. Como consecuencia, depurar y modificar los logros posteriormente habría sido más complejo.",
+                decision: "Finalmente, decidimos implementar el enfoque modular.\n" +
+                    "\n" +
+                    "Esta arquitectura permitió que las condiciones de los logros existieran de manera independiente respecto a los sistemas principales de gameplay, mientras que seguían teniendo la capacidad de escuchar y responder a los eventos necesarios para activarse.\n" +
+                    "\n" +
+                    "También proporcionó a los diseñadores una mayor libertad para modificar y configurar los logros sin requerir cambios significativos en el código principal del juego. Más importante aún, la estructura modular hizo que el sistema fuera altamente mutable, permitiendo introducir nuevos tipos de logros sin necesidad de reestructurar los sistemas existentes.",
+                outcome: "Aunque la implementación final dio como resultado múltiples componentes únicos, todos ellos heredaban de un componente base común. Esto nos permitió mantener una estructura consistente mientras cada logro podía implementar la lógica específica que necesitaba.\n" +
+                    "\n" +
+                    "El resultado fue un sistema de logros más limpio y fácil de mantener, que también podía ser depurado y modificado con mayor facilidad. Cada logro podía aislarse y probarse de manera independiente, reduciendo la necesidad de investigar sistemas de gameplay no relacionados cuando un logro no se activaba correctamente.\n" +
+                    "\n" +
+                    "Los beneficios de esta arquitectura fueron aún más evidentes posteriormente, cuando decidimos ampliar el número de logros disponibles. Debido a que el sistema ya era modular, agregar nuevos logros se volvió considerablemente más rápido y requirió modificaciones mínimas sobre el código existente.\n" +
+                    "\n" +
+                    "Este proyecto reforzó mi comprensión sobre la importancia de priorizar la mutabilidad y modularidad del código. Los sistemas no deberían diseñarse únicamente para resolver los requerimientos inmediatos, sino también para adaptarse a cambios futuros sin obligar a los desarrolladores a modificar o reestructurar partes del proyecto que no están directamente relacionadas.\n" +
+                    "\n" +
+                    "Al diseñar sistemas alrededor de componentes independientes y reutilizables, es posible reducir las dependencias técnicas, minimizar los conflictos dentro de un equipo y hacer que las futuras iteraciones sean considerablemente más eficientes."
+            }
         }]
     },
     {
@@ -548,6 +692,30 @@ export const GameExpES: Project[] = [
                     "En última instancia, este proyecto representó una experiencia fundamental para mi aprendizaje sobre sistemas de inteligencia artificial, depuración, toma de decisiones técnicas y gestión del alcance de un proyecto en relación con los recursos y el tiempo disponibles.",
                 problem: "Uno de los principales desafíos técnicos estuvo relacionado con la inteligencia artificial de los enemigos. Estos presentaban comportamientos inconsistentes tanto durante el desplazamiento como al momento de detenerse. Durante el desarrollo identificamos múltiples casos límite en los que la IA no se comportaba de acuerdo con lo establecido en el diseño. El problema se originaba principalmente en las transiciones entre los diferentes estados de la inteligencia artificial. Esto no solamente estaba causando bugs sino tambien rompiendo el juego."
             }
+        }, {
+            id: "p2",
+            title: "Spawn de enemigos y la dificultad",
+            description: {
+                context: "Uno de los principales desafíos durante el desarrollo del juego fue gestionar la aparición y eliminación de los enemigos a lo largo de los cinco minutos de duración de la partida. El sistema debía distribuir los enemigos de manera consistente, evitando tanto una cantidad excesiva como una presencia insuficiente de enemigos.\n" +
+                    "\n" +
+                    "Esto era especialmente importante debido a que el jugador no podía simplemente ignorar a los enemigos presentes en la arena y continuar jugando de manera efectiva. Por esta razón, la cantidad y frecuencia de aparición de enemigos tenían un impacto directo tanto en la dificultad del juego como en la experiencia general del jugador.",
+                problem: "La aparición simultánea de demasiados enemigos generaba problemas de rendimiento, balance de juego y experiencia del usuario. Por otro lado, generar una cantidad insuficiente de enemigos reducía el nivel de desafío esperado y podía hacer que la experiencia resultara vacía o repetitiva.\n" +
+                    "\n" +
+                    "Por lo tanto, el sistema debía encontrar un equilibrio entre el rendimiento técnico y una experiencia de juego atractiva.",
+                possibilities: "Una de las posibles soluciones consistía en implementar una cantidad fija de enemigos a lo largo del nivel. Este enfoque habría sido relativamente sencillo y predecible de gestionar, pero también habría hecho que la experiencia fuera más repetitiva y habría reducido la posibilidad de ajustar dinámicamente la dificultad.\n" +
+                    "\n" +
+                    "Otra alternativa consistía en implementar un sistema de aparición basado en temporizadores, que permitiera a los diseñadores modificar tanto la cantidad como la frecuencia de aparición de los enemigos durante el proceso de producción. Este enfoque proporcionaba una flexibilidad considerablemente mayor, aunque también implicaba un mayor riesgo de generar errores e inconsistencias a medida que el sistema fuera modificado durante el desarrollo.",
+                decision: "Decidimos implementar un sistema de aparición basado en temporizadores que generara una cantidad específica de enemigos en posiciones aleatorias a intervalos determinados.\n" +
+                    "\n" +
+                    "Esta decisión estuvo principalmente relacionada con el hecho de que el balance del juego todavía se encontraba sujeto a cambios. Debido a que esperábamos que los diseñadores continuaran realizando pruebas y ajustando la dificultad, el sistema de aparición debía ser flexible y fácil de modificar.\n" +
+                    "\n" +
+                    "En lugar de optimizar el sistema exclusivamente para su configuración inicial, priorizamos la creación de una estructura capaz de adaptarse a futuros cambios de diseño sin requerir modificaciones significativas en su funcionamiento interno.",
+                outcome: "Aunque el sistema introdujo algunos errores adicionales durante el desarrollo, finalmente funcionó de acuerdo con lo esperado y proporcionó a los diseñadores la flexibilidad necesaria para probar y modificar el balance de dificultad del juego. Esto permitió ajustar posteriormente la progresión de dificultad a partir de las pruebas de juego y los comentarios obtenidos durante la producción.\n" +
+                    "\n" +
+                    "En comparación con el sistema de cantidad fija de enemigos, la otra alternativa probablemente habría sido más segura desde el punto de vista técnico y más sencilla de controlar. Sin embargo, habría generado una experiencia de juego más predecible y habría sido considerablemente más difícil de adaptar si los requisitos de diseño hubieran cambiado.\n" +
+                    "\n" +
+                    "Esta experiencia me permitió comprender la importancia de encontrar un equilibrio entre estabilidad técnica y flexibilidad del sistema. Una solución no debería limitarse a resolver el problema inmediato, sino que también debe considerar la posibilidad de que los requerimientos cambien durante el desarrollo. En este caso, aceptar un pequeño nivel adicional de riesgo técnico nos permitió crear un sistema que apoyaba mejor la iteración y la colaboración entre programación y diseño de videojuegos."
+            }
         }]
     },
     {
@@ -611,7 +779,39 @@ export const GameExpES: Project[] = [
             itHasBeenPublished: false,
             publishedLink: ""
         },
-        CaseStudy: []
+        CaseStudy: [
+            {
+                id: "p1",
+                title: "Assets y dispositivo movil",
+                description: {
+                    context: "Durante la gestión de los assets del juego, particularmente de los elementos correspondientes al fondo, uno de los principales desafíos que encontré durante el desarrollo para dispositivos móviles fue garantizar que los elementos visuales se adaptaran correctamente a las diferentes dimensiones de pantalla.\n" +
+                        "\n" +
+                        "Este problema se originó a partir de un error de diseño de mi parte. Durante el desarrollo, realicé múltiples pruebas utilizando un único dispositivo y diseñé los assets específicamente alrededor de sus dimensiones. Inicialmente asumí que Unity adaptaría automáticamente estos elementos a diferentes tamaños de pantalla, lo cual no ocurrió.",
+                    problem: "Los assets no se escalaban ni se adaptaban correctamente a las diferentes dimensiones de los dispositivos, lo que generaba espacios blancos visibles e inconsistencias en la presentación visual del juego.\n" +
+                        "\n" +
+                        "Debido a que el proyecto estaba destinado a dispositivos móviles, garantizar una experiencia visual consistente independientemente del tamaño de pantalla y la relación de aspecto era fundamental.",
+                    possibilities: "La primera solución consistía en crear diferentes variantes de los assets para cada una de las dimensiones o relaciones de aspecto relevantes. Esto habría proporcionado un mayor control visual y habría permitido adaptar correctamente los elementos a cada dispositivo.\n" +
+                        "\n" +
+                        "Sin embargo, esta alternativa habría requerido una cantidad considerable de trabajo adicional y, para ese momento del desarrollo, el proyecto contaba con un tiempo muy limitado antes de su despliegue.\n" +
+                        "\n" +
+                        "La segunda alternativa consistía en implementar una capa de fondo universal capaz de cubrir el espacio restante independientemente de las dimensiones del dispositivo. Aunque este enfoque no solucionaría directamente el problema de adaptabilidad, permitiría ocultar los espacios blancos y proporcionar una presentación visual más consistente.",
+                    decision: "Para ese momento, el proyecto ya se encontraba próximo a la etapa de despliegue, lo que limitaba considerablemente el tiempo disponible para reestructurar los assets.\n" +
+                        "\n" +
+                        "Por esta razón, decidí implementar la solución del fondo universal como una medida de mitigación a corto plazo. Al añadir una capa de fondo capaz de adaptarse al espacio disponible, pude eliminar los espacios blancos visibles y conseguir una apariencia más consistente entre diferentes dispositivos.\n" +
+                        "\n" +
+                        "Aunque esta no representaba la solución técnica ideal, era la alternativa más práctica considerando el tiempo restante del proyecto.",
+                    outcome: "La solución permitió eliminar las inconsistencias visuales más evidentes y realizar el despliegue del juego sin los espacios blancos que aparecían inicialmente en dispositivos con diferentes dimensiones de pantalla.\n" +
+                        "\n" +
+                        "Sin embargo, esta experiencia también evidenció una debilidad importante en mi proceso de desarrollo. El problema podría haberse evitado realizando pruebas con múltiples dispositivos y relaciones de aspecto desde etapas más tempranas de la producción.\n" +
+                        "\n" +
+                        "Aprendí que, en el desarrollo para dispositivos móviles, la adaptabilidad debe considerarse desde las primeras etapas de diseño e implementación y no tratarse únicamente como un ajuste previo al lanzamiento.\n" +
+                        "\n" +
+                        "En futuros proyectos, establecería una estrategia de pruebas más amplia desde las primeras etapas del desarrollo, utilizando diferentes dimensiones y relaciones de aspecto para validar la composición visual antes de finalizar los assets.\n" +
+                        "\n" +
+                        "Esta experiencia reforzó la importancia de diseñar los elementos visuales y los sistemas teniendo en cuenta su escalabilidad y capacidad de adaptación, especialmente al desarrollar para plataformas con una gran variedad de dispositivos y configuraciones de pantalla."
+                }
+            }
+        ]
     },
 ]
 
@@ -708,6 +908,40 @@ export const GameExpEN: Project[] = [
                         "\n" +
                         "As a result, I now aim to apply this approach more consistently when designing gameplay systems, particularly when dealing with persistent data, modular progression, and systems that are expected to evolve throughout development."
                 }
+            }, {
+                id: "p2",
+                title: "Achievement system",
+                description: {
+                    context: "One of the most complex systems I developed was the achievement system. Its complexity came primarily from the fact that achievements were triggered by highly specific player actions that could not easily be generalized into a single set of conditions.\n" +
+                        "\n" +
+                        "Additionally, each achievement needed to interact correctly with the rest of the game's systems and their respective timing, including enemies, spells, scene transitions, and other gameplay events. This required a system capable of responding to a wide variety of conditions without interfering with the core functionality of the game.",
+                    problem: "The main challenge was creating a system that could be integrated into different types of code and gameplay components while allowing other programmers to continue working on those systems independently.\n" +
+                        "\n" +
+                        "Since multiple programmers were working simultaneously on different parts of the project, directly modifying existing systems to implement achievement conditions could create unnecessary merge conflicts and make future maintenance more difficult.\n" +
+                        "\n" +
+                        "Therefore, the achievement system needed to be modular, easy to integrate, and flexible enough to accommodate new conditions without requiring significant modifications to existing code.",
+                    possibilities: "The first solution was to create a modular architecture in which each achievement condition was implemented as an independent component that could be attached to the appropriate prefab or gameplay object.\n" +
+                        "\n" +
+                        "Although this approach could potentially result in a larger number of individual components and become more difficult to organize as the project grew, it significantly reduced the risk of merge conflicts and made individual achievement conditions easier to modify or replace.\n" +
+                        "\n" +
+                        "The second option was to implement the achievement conditions directly within the existing gameplay systems and organize them through clearly defined variables, methods, or conditions.\n" +
+                        "\n" +
+                        "This approach would have kept the logic more centralized and potentially more organized within each system. However, it also introduced a greater risk of merge conflicts and made the achievement logic more dependent on the implementation of the systems in which it was contained. As a result, debugging and modifying achievements in the future would have been more difficult.",
+                    decision: "In the end, I decided to implement the modular approach.\n" +
+                        "\n" +
+                        "This architecture allowed achievement conditions to exist independently from the core gameplay systems while still being able to listen and respond to the events required to trigger them.\n" +
+                        "\n" +
+                        "It also gave designers greater freedom to modify and configure achievements without requiring significant changes to the underlying gameplay code. More importantly, the modular structure made the system highly mutable, allowing new achievement types to be introduced without restructuring existing systems.",
+                    outcome: "Although the final implementation resulted in multiple unique components, all of them inherited from a common base component. This allowed us to maintain a consistent structure while giving each achievement the specific logic it required.\n" +
+                        "\n" +
+                        "The result was a cleaner and more maintainable achievement system that was easier to debug and modify. Each achievement could be isolated and tested independently, reducing the need to investigate unrelated gameplay systems when an achievement failed to trigger correctly.\n" +
+                        "\n" +
+                        "The benefits of this architecture became even more apparent later in development when we decided to expand the number of achievements. Because the system was already modular, adding new achievements became significantly faster and required minimal changes to existing code.\n" +
+                        "\n" +
+                        "This project reinforced my understanding of the importance of prioritizing code mutability and modularity. Systems should not only be designed to solve their immediate requirements, but also to accommodate future changes without forcing developers to modify or restructure unrelated parts of the project.\n" +
+                        "\n" +
+                        "By designing systems around independent and reusable components, it becomes possible to reduce technical dependencies, minimize conflicts within a team, and make future iteration significantly more efficient."
+                }
             }
         ]
     },
@@ -797,6 +1031,30 @@ export const GameExpEN: Project[] = [
                     "This project ultimately became an important learning experience in AI systems, debugging, technical decision-making, and balancing development scope against available resources.",
                 problem: "One of the main technical challenges involved the enemy AI. The enemies had inconsistent movement and stopping behaviors, caused by errors in the transitions between different AI states. During development, we identified several edge cases in which the AI would behave differently from its intended design. This not only on a problematic, but on a buggy way, which it could break the game at some points"
             }
+        }, {
+            id: "p2",
+            title: "Enemy spawn and difficulty",
+            description: {
+                context: "One of the main challenges during the development of the game was managing how enemies were spawned and despawned throughout the five-minute gameplay period. The system needed to distribute enemies consistently while avoiding both excessive spawning and insufficient enemy presence.\n" +
+                    "\n" +
+                    "This was particularly important because the player could not simply ignore enemies in the arena and still progress effectively. As a result, the number and frequency of enemies had a direct impact on both the game's difficulty and the overall player experience.",
+                problem: "Spawning too many enemies simultaneously created problems with performance, gameplay balance, and the overall player experience. On the other hand, spawning too few enemies reduced the intended level of challenge and could make the gameplay feel empty or repetitive.\n" +
+                    "\n" +
+                    "The system therefore needed to maintain a balance between technical performance and an engaging gameplay experience.",
+                possibilities: "One possible solution was to implement a fixed number of enemies throughout the level. This approach would have been relatively simple and predictable to manage, but it would also have made the gameplay more repetitive and reduced the possibility of dynamically adjusting the difficulty.\n" +
+                    "\n" +
+                    "Another option was to implement a timed spawning system that allowed designers to modify the number and frequency of enemies throughout the production process. This approach provided significantly more flexibility, but it also introduced a greater risk of bugs and inconsistencies as the system was modified during development.",
+                decision: "We decided to implement a timed spawning system that would spawn a specific number of enemies at randomized locations at defined intervals.\n" +
+                    "\n" +
+                    "This decision was primarily based on the fact that the game's balance was still subject to change. Because we expected designers to continue testing and adjusting the difficulty, the spawning system needed to be flexible and easy to modify.\n" +
+                    "\n" +
+                    "Rather than optimizing the system exclusively for its initial configuration, we prioritized creating a system that could adapt to future design changes without requiring significant modifications to its underlying structure.",
+                outcome: "Although the system introduced some additional bugs during development, it ultimately worked as intended and provided the designers with the flexibility they needed to test and modify the game's difficulty balance. This allowed the final difficulty progression to be refined later in production based on playtesting and feedback.\n" +
+                    "\n" +
+                    "Compared with the fixed-enemy approach, the alternative would likely have been safer from a technical perspective and easier to control. However, it would have resulted in a more predictable gameplay experience and would have been significantly more difficult to adapt if the design requirements changed.\n" +
+                    "\n" +
+                    "This experience helped me understand the importance of balancing technical stability with system flexibility. A solution should not only solve the immediate problem, but also consider how likely the requirements are to change throughout development. In this case, accepting a small amount of additional technical risk allowed us to create a system that better supported iteration and collaboration between programming and game design."
+            }
         }]
     },
     {
@@ -859,7 +1117,39 @@ export const GameExpEN: Project[] = [
             itHasBeenPublished: false,
             publishedLink: ""
         },
-        CaseStudy: []
+        CaseStudy: [
+            {
+                id: "p1",
+                title: "Assets management with Device responsiveness",
+                description: {
+                    context: "While managing the game's assets, particularly the background elements, one of the main challenges I encountered during the mobile development process was ensuring that the visual assets adapted correctly to different device dimensions.\n" +
+                        "\n" +
+                        "This issue originated from a design mistake on my part. During development, I repeatedly tested the game on a single device and created the assets specifically around its dimensions. I initially assumed that Unity would automatically adapt these assets to different screen sizes, which was not the case.",
+                    problem: "The assets did not scale or adapt correctly to different device dimensions, resulting in visible white spaces and inconsistencies in the visual presentation of the game.\n" +
+                        "\n" +
+                        "Because the project was intended for mobile devices, supporting different screen sizes and aspect ratios was essential to maintaining a consistent user experience.",
+                    possibilities: "The first solution was to create different asset variants for each relevant screen dimension or aspect ratio. This would have provided greater visual control and ensured that the assets were properly adapted to each device.\n" +
+                        "\n" +
+                        "However, this approach would have required a significant amount of additional work, and by that stage of development, the project had limited time remaining before deployment.\n" +
+                        "\n" +
+                        "The second option was to implement a universal background layer that could fill the remaining space regardless of the device's dimensions. While this approach would not solve the underlying responsiveness issue, it would prevent the white spaces from being visible and provide a more consistent visual presentation.",
+                    decision: "At that point, the project was already approaching deployment, which significantly limited the time available for restructuring the assets.\n" +
+                        "\n" +
+                        "Therefore, I decided to implement the universal background solution as a short-term mitigation. By adding a background layer that could adapt to the available space, I was able to eliminate the visible white areas and provide a more consistent appearance across different devices.\n" +
+                        "\n" +
+                        "Although this was not the ideal technical solution, it represented the most practical option within the project's remaining development time.",
+                    outcome: "The solution successfully eliminated the most noticeable visual inconsistencies and allowed the game to be deployed without the white spaces that were initially appearing on devices with different screen dimensions.\n" +
+                        "\n" +
+                        "However, this experience also highlighted an important weakness in my development process. The problem could have been avoided by testing the game across multiple devices and aspect ratios much earlier in production.\n" +
+                        "\n" +
+                        "I learned that mobile development requires responsiveness to be considered from the beginning of the design and implementation process rather than treated as a final-stage adjustment.\n" +
+                        "\n" +
+                        "In future projects, I would establish a broader testing strategy from the early stages of development, using multiple screen dimensions and aspect ratios to validate the visual layout before finalizing the assets.\n" +
+                        "\n" +
+                        "This experience reinforced the importance of designing assets and systems with scalability and adaptability in mind, particularly when developing for platforms with highly varied hardware and display configurations."
+                }
+            }
+        ]
     },
 ]
 
