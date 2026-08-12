@@ -46,6 +46,7 @@ export interface Project {
     itHasBeenPublished: boolean
     publishedLink: string
   }
+  CaseStudy: CaseStudy[]
 }
 
 export interface ProjectTranslation {
@@ -122,4 +123,16 @@ export type PagePops = {
 
 export type GameWidgetProps = {
   id: string
+}
+
+export type CaseStudy = {
+  id: string
+  title: string
+  description: {
+    context: string
+    problem: string
+    possibilities: string
+    decision: string
+    outcome: string
+  }
 }

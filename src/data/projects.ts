@@ -54,8 +54,7 @@ export const WebProjectsES: Project[] = [
     {
         id: 'p1',
         title: 'Proyecto base - Portafolio web',
-        description:
-            'Este proyecto fue desarrollado en 2026, tras múltiples versiones previas construidas con diferentes herramientas. Este portafolio fue creado usando React y alojado en GitHub Pages. Refleja mi evolución como programador, así como mi nivel de organización y crecimiento a lo largo de los años.',
+        description: 'Este proyecto fue desarrollado en 2026, tras múltiples versiones previas construidas con diferentes herramientas. Este portafolio fue creado usando React y alojado en GitHub Pages. Refleja mi evolución como programador, así como mi nivel de organización y crecimiento a lo largo de los años.',
         isProjectDeployed: false,
         iframeSrc: '',
         imageSrc: IMGPort,
@@ -102,13 +101,13 @@ export const WebProjectsES: Project[] = [
             footerLink: '',
             itHasBeenPublished: false,
             publishedLink: ""
-        }
+        },
+        CaseStudy: []
     },
     {
         id: 'p2',
         title: 'Proyecto web - Plataforma de juego',
-        description:
-            'Esta página web, desarrollada en 2026 como proyecto de clase, fue construida con React como base. ' +
+        description: 'Esta página web, desarrollada en 2026 como proyecto de clase, fue construida con React como base. ' +
             'Se conecta directamente con una base de datos mediante el servicio Google Firebase, el cual almacena los datos de las partidas y los registra en la tabla de posiciones. ' +
             'También está vinculada con un juego desarrollado en Unity, el cual es una réplica del clásico "Flappy Bird". ' +
             'Cuenta con registro mediante Google, acceso a metadatos a través de un script en Python, y un panel de administrador controlado desde el propio Firebase.',
@@ -155,13 +154,13 @@ export const WebProjectsES: Project[] = [
             footerLink: '',
             itHasBeenPublished: false,
             publishedLink: ""
-        }
+        },
+        CaseStudy: []
     },
     {
         id: 'p3',
         title: 'Cocktail App - Learning to prepare',
-        description:
-            'Este es un proyecto desarrollado con React Native, que consiste en una aplicación web con acceso a una amplia variedad de cócteles para preparar, indicando los ingredientes, los pasos y el tiempo necesario para su elaboración. ' +
+        description: 'Este es un proyecto desarrollado con React Native, que consiste en una aplicación web con acceso a una amplia variedad de cócteles para preparar, indicando los ingredientes, los pasos y el tiempo necesario para su elaboración. ' +
             'El proyecto se conecta con Firebase para verificar que los usuarios sean mayores de edad, accede a una API gratuita con información detallada de cada cóctel e incluso utiliza el acelerómetro del dispositivo para simular el proceso de mezcla de la bebida.',
         isProjectDeployed: false,
         iframeSrc: '',
@@ -205,7 +204,8 @@ export const WebProjectsES: Project[] = [
             footerLink: 'https://snack.expo.dev/@pg29julians/cocktail-app---final',
             itHasBeenPublished: false,
             publishedLink: ""
-        }
+        },
+        CaseStudy: []
     },
 ]
 
@@ -213,8 +213,7 @@ export const WebProjectsEN: Project[] = [
     {
         id: 'p1',
         title: 'Base Project - Web Portfolio',
-        description:
-            'This project was developed in 2026, following multiple previous versions built with different tools. This portfolio was created using React and hosted on GitHub Pages. It reflects my evolution as a developer, as well as my level of organization and personal growth over the years.',
+        description: 'This project was developed in 2026, following multiple previous versions built with different tools. This portfolio was created using React and hosted on GitHub Pages. It reflects my evolution as a developer, as well as my level of organization and personal growth over the years.',
         isProjectDeployed: false,
         iframeSrc: '',
         imageSrc: IMGPort,
@@ -261,13 +260,13 @@ export const WebProjectsEN: Project[] = [
             footerLink: '',
             itHasBeenPublished: false,
             publishedLink: ""
-        }
+        },
+        CaseStudy: []
     },
     {
         id: 'p2',
         title: 'Web Project - Gaming Platform',
-        description:
-            'This web application, developed in 2026 as a class project, with the purpose of fully learning React framework.' +
+        description: 'This web application, developed in 2026 as a class project, with the purpose of fully learning React framework.' +
             'It connects directly to a database through Google Firebase, which stores gameplay data and registers it on the leaderboard. ' +
             'It is also integrated with a Unity-based game, a recreation of the classic "Flappy Bird." ' +
             'The platform features Google authentication, metadata access via a Python script, and an admin panel managed through Firebase.',
@@ -314,13 +313,13 @@ export const WebProjectsEN: Project[] = [
             footerLink: '',
             itHasBeenPublished: false,
             publishedLink: ""
-        }
+        },
+        CaseStudy: []
     },
     {
         id: 'p3',
         title: 'Cocktail App - Learning to Prepare',
-        description:
-            'This is a project developed with React Native, consisting of a web application that provides access to a wide variety of cocktails to prepare, including ingredients, preparation steps, and the time required for each. ' +
+        description: 'This is a project developed with React Native, consisting of a web application that provides access to a wide variety of cocktails to prepare, including ingredients, preparation steps, and the time required for each. ' +
             'The project connects with Firebase to verify that users are of legal drinking age, accesses a free API with detailed information on each cocktail, and even uses the device\'s accelerometer to simulate the drink mixing process.',
         isProjectDeployed: false,
         iframeSrc: '',
@@ -364,7 +363,8 @@ export const WebProjectsEN: Project[] = [
             footerLink: 'https://snack.expo.dev/@pg29julians/cocktail-app---final',
             itHasBeenPublished: false,
             publishedLink: ""
-        }
+        },
+        CaseStudy: []
     },
 ]
 
@@ -372,8 +372,7 @@ export const GameExpES: Project[] = [
     {
         id: 'p3',
         title: 'Rekindled - Actualmente en desarrollo',
-        description:
-            'Este es un juego de combate a distancia en tercera persona, que combina personajes 2D dentro de un mundo 3D. ' +
+        description: 'Este es un juego de combate a distancia en tercera persona, que combina personajes 2D dentro de un mundo 3D. ' +
             'Aquí seguimos a Cinder, un mago con temática de fénix que debe escalar un volcán mortal para entregar el último huevo de fénix a la lava hirviente y salvar a su especie. ' +
             'Deberá combinar distintos elementos para lanzar hechizos poderosos, usados para enfrentar a todos los monstruos mortales que habitan el volcán. ' +
             'Este proyecto no solo es una de las cosas más ambiciosas en las que he trabajado hasta ahora, sino también uno de los pasos más importantes en mi carrera, tanto por el conocimiento como por las habilidades que obtuve durante su desarrollo. ' +
@@ -428,13 +427,45 @@ export const GameExpES: Project[] = [
             footerLink: "",
             itHasBeenPublished: true,
             publishedLink: "https://store.steampowered.com/widget/4926530/"
-        }
+        },
+        CaseStudy: [{
+            id: "p1",
+            title: "Data persistente",
+            description: {
+                context: "Este proyecto es uno de los trabajos más ambiciosos en los que he participado hasta el momento y representa uno de los pasos más importantes en mi desarrollo como programador. Durante su desarrollo he adquirido una cantidad significativa de conocimientos y experiencia práctica, particularmente en el diseño, implementación y mantenimiento de sistemas de juego más complejos.\n" +
+                    "\n" +
+                    "Para este proyecto decidimos utilizar Unity, principalmente porque queríamos experimentar con características menos convencionales, incluyendo la combinación de personajes en 2D dentro de un entorno tridimensional. Unity nos proporcionó un flujo de trabajo conocido y, al mismo tiempo, nos permitió experimentar con este enfoque híbrido sin introducir una complejidad técnica innecesaria en el proyecto.",
+                problem: "Uno de los principales desafíos técnicos estuvo relacionado con la implementación del sistema de datos persistentes. Inicialmente, el sistema presentaba problemas al guardar y restaurar la información del juego, especialmente cuando los valores persistentes interactuaban con valores que se estaban modificando durante la partida.\n" +
+                    "\n" +
+                    "Esto generaba situaciones en las que el sistema de persistencia podía proporcionar incorrectamente al jugador contenido que todavía no había desbloqueado. Por ejemplo, un jugador podía obtener acceso a hechizos poderosos o recibir logros sin haber cumplido previamente con los requisitos necesarios.",
+                possibilities: "La primera solución considerada consistía en implementar un sistema interno para realizar un seguimiento de los datos temporales del juego. Este sistema almacenaría determinados valores temporalmente y los restauraría cuando el jugador muriera o alcanzara un punto adecuado para reiniciarlos.\n" +
+                    "\n" +
+                    "Aunque este enfoque podía resultar menos organizado desde el punto de vista de la arquitectura del sistema, permitiría mantener una relación más directa entre los datos temporales y el estado actual de la partida.\n" +
+                    "\n" +
+                    "La segunda alternativa consistía en mantener referencias explícitas sobre los elementos que el jugador debería haber desbloqueado en un momento determinado del juego y reducir la cantidad de información tratada como datos persistentes. Este enfoque proporcionaba una estructura más organizada, aunque podía introducir una mayor carga de procesamiento en determinados casos límite.",
+                decision: "Finalmente, decidí combinar ambos enfoques en lugar de depender exclusivamente de uno de ellos.\n" +
+                    "\n" +
+                    "Para los elementos más directos y controlados de la progresión, como los elementos y hechizos que el jugador había desbloqueado, decidí utilizar referencias al estado esperado de progresión. Estos valores eran relativamente predecibles y no dependían significativamente de las decisiones individuales del jugador.\n" +
+                    "\n" +
+                    "Sin embargo, reconocí que este enfoque no sería adecuado para las estadísticas del jugador, ya que estas dependen directamente de sus acciones durante la partida. Para estos valores implementé información temporal que se actualiza en cada punto de control. De esta manera, las estadísticas del jugador solamente se almacenan de forma persistente en momentos controlados del juego.\n" +
+                    "\n" +
+                    "Este enfoque híbrido permitió diferenciar entre datos relacionados con la progresión, que podían validarse mediante referencias predefinidas, y datos generados por las acciones del jugador, que debían reflejar su comportamiento real durante la partida.",
+                outcome: "El sistema resultante permitió gestionar correctamente los datos persistentes sin sobrescribir de manera incorrecta los valores actuales del juego ni otorgar al jugador contenido que todavía no había desbloqueado.\n" +
+                    "\n" +
+                    "El principal costo de esta solución fue el incremento de la complejidad tanto de la arquitectura de los scripts como del sistema general de persistencia. Como consecuencia, el sistema se volvió más sensible a cambios futuros y requirió una mayor planificación al introducir nuevas funcionalidades o modificar las estructuras de datos existentes.\n" +
+                    "\n" +
+                    "Sin embargo, esta complejidad también permitió establecer una base más confiable y controlada para gestionar la progresión y las estadísticas del jugador.\n" +
+                    "\n" +
+                    "Esta experiencia también me permitió comprender la importancia de diseñar sistemas pensando en su flexibilidad futura. En lugar de concentrarme únicamente en solucionar el problema inmediato, aprendí que estructurar los sistemas teniendo en cuenta posibles modificaciones puede reducir considerablemente las dificultades de desarrollo a medida que un proyecto crece.\n" +
+                    "\n" +
+                    "Como resultado, ahora busco aplicar este enfoque de manera más frecuente al diseñar sistemas de juego, especialmente aquellos relacionados con datos persistentes, progresión modular y funcionalidades que probablemente evolucionarán durante el desarrollo."
+            }
+        }]
     },
     {
         id: 'p2',
         title: 'EcoRanger',
-        description:
-            'EcoRanger es un proyecto desarrollado en Unity como entrega de mitad de programa del curso de Programación para Juegos, Web y Móvil de la Vancouver Film School. ' +
+        description: 'EcoRanger es un proyecto desarrollado en Unity como entrega de mitad de programa del curso de Programación para Juegos, Web y Móvil de la Vancouver Film School. ' +
             'Fue desarrollado en equipo de 5 personas, donde desempeñé el rol de uno de los dos programadores del proyecto. ' +
             'EcoRanger es un shooter 3D de conflicto ambiental que presenta a Ekko, un Ranger espacial enviado a la Tierra con la misión de impedir que los peligrosos Eco Breakers la destruyan mediante una contaminación masiva. ' +
             'Durante el juego, Ekko deberá resistir durante 5 minutos hasta que lleguen los refuerzos, utilizando su pistola teletransportadora para eliminar los distintos tipos de basura presentes en el área. ' +
@@ -490,13 +521,39 @@ export const GameExpES: Project[] = [
             footerLink: "",
             itHasBeenPublished: false,
             publishedLink: ""
-        }
+        },
+        CaseStudy: [{
+            id: "p1",
+            title: "Analisis de movimiento de enemigos",
+            description: {
+                context: "Este fue uno de los primeros proyectos que completé íntegramente como parte de un equipo utilizando Unity. El proyecto me proporcionó una base sólida en el desarrollo colaborativo de videojuegos y me permitió familiarizarme con diversos principios y metodologías de trabajo que continúo aplicando actualmente en proyectos más grandes y complejos.\n" +
+                    "\n" +
+                    "Desarrollamos el proyecto utilizando Unity, principalmente porque el equipo contaba con mayor experiencia en C# y porque varios de sus integrantes provenían de contextos artísticos o no técnicos, con poca experiencia previa en desarrollo de videojuegos. Unity ofrecía un entorno de desarrollo más accesible e intuitivo para el equipo en comparación con alternativas como Godot o Unreal Engine.",
+                possibilities: "Una de las primeras alternativas consideradas fue reemplazar completamente la arquitectura existente de la IA por otro enfoque, como un árbol de comportamiento (behavior tree) o una cola de acciones (action queue). Sin embargo, reconstruir el sistema desde cero no garantizaba que los problemas subyacentes fueran solucionados y, además, podía introducir nuevos errores.\n" +
+                    "\n" +
+                    "La segunda posibilidad consistía en mantener la arquitectura existente y realizar pruebas sistemáticas para identificar y solucionar progresivamente los casos límite hasta conseguir un comportamiento consistente. Aunque este enfoque requería más tiempo, representaba una alternativa de menor riesgo dentro del alcance del proyecto y me permitía comprender con mayor profundidad el sistema desarrollado.",
+                decision: "Finalmente, decidí mantener el sistema existente y abordar los casos límite mediante un proceso sistemático de pruebas e iteración. Este enfoque me permitió comprender mejor la arquitectura que había implementado, identificar cómo interactuaban los diferentes estados y analizar cómo estos comportamientos afectaban la experiencia del jugador.\n" +
+                    "\n" +
+                    "Además, consideré que, incluso si reemplazaba completamente la arquitectura, tendría que realizar un proceso considerable de depuración y pruebas para identificar y solucionar los casos límite. Por esta razón, mejorar progresivamente el sistema existente representaba una estrategia más controlada dentro del tiempo disponible para el proyecto.",
+                outcome: "Logré identificar y solucionar la mayoría de los casos límite encontrados durante el desarrollo del proyecto. Sin embargo, esta experiencia también me permitió identificar varios aspectos del proceso que podría haber gestionado de una manera más eficiente.\n" +
+                    "\n" +
+                    "En primer lugar, subestimé el tiempo necesario para identificar y solucionar los diferentes casos límite. Una mejor estimación del alcance y una colaboración más temprana con otros integrantes del equipo podrían haber permitido resolver algunos de estos problemas de manera más eficiente.\n" +
+                    "\n" +
+                    "En segundo lugar, podría haber realizado una investigación más profunda sobre arquitecturas alternativas para sistemas de inteligencia artificial. Al concentrarme principalmente en mejorar el sistema existente, reduje potencialmente la posibilidad de encontrar una solución más sencilla o eficiente.\n" +
+                    "\n" +
+                    "El principal costo técnico de esta decisión se hizo evidente cuando el juego comenzó a presentar problemas de rendimiento durante los enfrentamientos con una alta concentración de enemigos. En ese momento, solucioné el problema limitando la cantidad de enemigos que podían aparecer simultáneamente en cada nivel.\n" +
+                    "\n" +
+                    "Mirando el proyecto en retrospectiva, considero que una solución más escalable habría sido implementar un sistema de object pooling y reducir algunas llamadas innecesarias. Estas estrategias habrían disminuido el costo computacional asociado con la creación, destrucción y procesamiento constante de los objetos enemigos.\n" +
+                    "\n" +
+                    "En última instancia, este proyecto representó una experiencia fundamental para mi aprendizaje sobre sistemas de inteligencia artificial, depuración, toma de decisiones técnicas y gestión del alcance de un proyecto en relación con los recursos y el tiempo disponibles.",
+                problem: "Uno de los principales desafíos técnicos estuvo relacionado con la inteligencia artificial de los enemigos. Estos presentaban comportamientos inconsistentes tanto durante el desplazamiento como al momento de detenerse. Durante el desarrollo identificamos múltiples casos límite en los que la IA no se comportaba de acuerdo con lo establecido en el diseño. El problema se originaba principalmente en las transiciones entre los diferentes estados de la inteligencia artificial. Esto no solamente estaba causando bugs sino tambien rompiendo el juego."
+            }
+        }]
     },
     {
         id: 'p1',
         title: '(Des)Conectado - Un juego fuera del dispositivo',
-        description:
-            'Este proyecto fue desarrollado en colaboración con la Universidad de los Andes. ' +
+        description: 'Este proyecto fue desarrollado en colaboración con la Universidad de los Andes. ' +
             'Presenta el DEMO de una novela gráfica interactiva para dispositivos móviles Android, centrada en Ashley, una joven con nomofobia que se pierde en un bosque mientras su familia acampa y debe encontrar el camino de regreso. ' +
             'Este proyecto representa mi primer acercamiento profesional a Unity y mi inicio formal en el área de programación, ya que con anterioridad únicamente había realizado ejercicios menores. ' +
             'Puedes descargar un DEMO del projecto en formato APK para dispositivos Android (Para esto es necesario autorizar el dispositivo para instalar aplicaciones externas.)',
@@ -553,7 +610,8 @@ export const GameExpES: Project[] = [
             footerLink: "",
             itHasBeenPublished: false,
             publishedLink: ""
-        }
+        },
+        CaseStudy: []
     },
 ]
 
@@ -561,8 +619,7 @@ export const GameExpEN: Project[] = [
     {
         id: 'p3',
         title: 'Rekindled - Currently a Work in Progress',
-        description:
-            'This is a third-person ranged combat game, featuring 2D characters in a 3D world. ' +
+        description: 'This is a third-person ranged combat game, featuring 2D characters in a 3D world. ' +
             'Here we follow Cinder, a phoenix-themed mage who has to climb a deadly volcano to deliver the last phoenix egg to the boiling lava and save his species. ' +
             'He will have to combine different elements to cast powerful spells, used to fight all the deadly monsters that inhabit the volcano. ' +
             'This project is not only one of the most ambitious things I have worked on so far, but also one of the biggest steps I have made in my career, both in the knowledge and the skill I obtained during this project. ' +
@@ -617,13 +674,47 @@ export const GameExpEN: Project[] = [
             footerLink: "",
             itHasBeenPublished: true,
             publishedLink: "https://store.steampowered.com/widget/4926530/"
-        }
+        },
+        CaseStudy: [
+            {
+                id: "p1",
+                title: "Persistant Data",
+                description: {
+                    context: "This project is one of the most ambitious projects I have worked on so far and represents one of the most significant steps in my development as a programmer. Throughout its development, I have gained substantial technical knowledge and practical experience, particularly in designing, implementing, and maintaining more complex gameplay systems.\n" +
+                        "\n" +
+                        "For this project, we decided to use Unity, primarily because we wanted to experiment with less conventional features, including the combination of 2D characters within a 3D environment. Unity provided us with a familiar development workflow while allowing us to experiment with this hybrid approach without introducing unnecessary technical complexity into the project.",
+                    problem: "One of the main technical challenges involved implementing the persistent data system. The system initially experienced problems when saving and restoring gameplay data, particularly when persistent values interacted with values currently being modified during gameplay.\n" +
+                        "\n" +
+                        "This resulted in situations where the persistent data system could incorrectly provide the player with content that had not yet been unlocked. For example, players could gain access to powerful spells or receive achievements without fulfilling the required conditions.",
+                    possibilities: "The first solution considered was implementing an internal tracker for temporary gameplay data. This system would store temporary values independently and restore them when the player died or reached an appropriate reset point.\n" +
+                        "\n" +
+                        "Although this approach would have been somewhat less organized from a system architecture perspective, it would have maintained a stronger relationship between the temporary data and the player's current gameplay state.\n" +
+                        "\n" +
+                        "The second approach was to maintain explicit references to the content the player should have unlocked at a specific point in the game and reduce the amount of information treated as persistent data. This approach provided a more structured system, but it could introduce additional processing requirements in certain edge cases.",
+                    decision: "At last, I decided to combine both approaches rather than relying exclusively on one system.\n" +
+                        "\n" +
+                        "For more direct and controlled aspects of progression, such as the elements and spells the player had unlocked, I decided to use references to the expected progression state. These values were relatively predictable and did not depend heavily on individual player decisions.\n" +
+                        "\n" +
+                        "However, I recognized that this approach would not be appropriate for player statistics, where the player's actions directly influence the stored data. For these values, I implemented temporary data that is updated at each checkpoint. This ensured that player statistics were only committed to persistent storage at controlled points during the game.\n" +
+                        "\n" +
+                        "This hybrid approach allowed the system to distinguish between progression-based data, which could be validated against predefined references, and player-driven data, which needed to reflect the player's actual actions.",
+                    outcome: "The resulting system successfully handled persistent data without incorrectly overriding gameplay values or granting players content they had not yet unlocked.\n" +
+                        "\n" +
+                        "The primary trade-off was an increase in the complexity of both the script architecture and the overall persistence system. As a result, the system became more sensitive to future changes and required greater consideration when introducing new gameplay features or modifying existing data structures.\n" +
+                        "\n" +
+                        "However, this complexity also provided a more reliable and controlled foundation for managing progression and player statistics.\n" +
+                        "\n" +
+                        "This experience also helped me understand the importance of designing systems with future flexibility in mind. Rather than focusing exclusively on solving the immediate problem, I learned that structuring systems to accommodate future changes can significantly reduce development friction as a project grows.\n" +
+                        "\n" +
+                        "As a result, I now aim to apply this approach more consistently when designing gameplay systems, particularly when dealing with persistent data, modular progression, and systems that are expected to evolve throughout development."
+                }
+            }
+        ]
     },
     {
         id: 'p2',
         title: 'EcoRanger',
-        description:
-            'EcoRanger is a project developed in Unity as a mid-program deliverable for the Game, Web & Mobile Programming course at Vancouver Film School. ' +
+        description: 'EcoRanger is a project developed in Unity as a mid-program deliverable for the Game, Web & Mobile Programming course at Vancouver Film School. ' +
             'It was developed by a team of 5, where I served as one of the two programmers on the project. ' +
             'EcoRanger is a 3D environmental conflict shooter featuring Ekko, a space Ranger sent to Earth on a mission to prevent the dangerous Eco Breakers from destroying it through massive pollution. ' +
             'Throughout the game, Ekko must hold out for 5 minutes until reinforcements arrive, using a teleportation gun to eliminate different types of waste scattered across the area. ' +
@@ -679,13 +770,39 @@ export const GameExpEN: Project[] = [
             footerLink: "",
             itHasBeenPublished: false,
             publishedLink: ""
-        }
+        },
+        CaseStudy: [{
+            id: "p1",
+            title: "Enemy movement analysis",
+            description: {
+                context: "This was one of the first projects I fully completed as part of a team using Unity. It provided me with a strong foundation in collaborative game development and introduced me to many of the principles and workflows that I continue to apply to larger and more complex projects today.\n" +
+                    "\n" +
+                    "We developed the project in Unity, primarily because our team had greater experience with C# and because several team members came from artistic or non-technical backgrounds with limited experience in game development. Unity provided a more accessible and intuitive development environment for the team compared with alternatives such as Godot or Unreal Engine.",
+                possibilities: "One potential solution was to replace the existing AI architecture entirely with a different approach, such as a behavior tree or an action queue. However, restructuring the entire system would not necessarily guarantee that the underlying issues would be resolved and could potentially introduce additional problems.\n" +
+                    "\n" +
+                    "The second option was to maintain the existing architecture and systematically test and resolve the identified edge cases until the AI behaved consistently. Although this approach was more time-consuming, it represented a lower-risk solution within the project's scope and allowed me to gain a deeper understanding of the system.",
+                decision: "Ultimately, I decided to maintain the existing system and address the edge cases through systematic testing and iteration. This approach allowed me to better understand the architecture I had implemented, identify how individual states interacted with one another, and evaluate how these behaviors affected the player experience.\n" +
+                    "\n" +
+                    "My reasoning was also that, even if I replaced the existing architecture, I would still need to perform extensive debugging and testing to identify and resolve edge cases. Therefore, improving the current system provided a more controlled approach within the project's available time.", 
+                outcome: "I was able to identify and resolve the majority of the edge cases discovered during the project's development period. However, the experience also highlighted several areas where I could have approached the development process more effectively.\n" +
+                    "\n" +
+                    "First, I underestimated the amount of time required to identify and resolve edge cases. With better time estimation and earlier collaboration with other team members, some of these issues could have been addressed more efficiently.\n" +
+                    "\n" +
+                    "Second, I could have conducted more research into alternative AI architectures during development. By focusing primarily on improving the existing system, I potentially limited the opportunity to discover a simpler or more efficient solution.\n" +
+                    "\n" +
+                    "The main technical trade-off of this decision became apparent when the game experienced performance issues during encounters with a high concentration of enemies. At the time, I addressed this by limiting the number of enemies that could be spawned simultaneously within a level.\n" +
+                    "\n" +
+                    "Looking back, I recognize that a more scalable solution would have been to implement an object pooling system and reduce unnecessary function calls. These approaches would have reduced the computational overhead associated with repeatedly creating, destroying, and processing enemy objects.\n" +
+                    "\n" +
+                    "This project ultimately became an important learning experience in AI systems, debugging, technical decision-making, and balancing development scope against available resources.",
+                problem: "One of the main technical challenges involved the enemy AI. The enemies had inconsistent movement and stopping behaviors, caused by errors in the transitions between different AI states. During development, we identified several edge cases in which the AI would behave differently from its intended design. This not only on a problematic, but on a buggy way, which it could break the game at some points"
+            }
+        }]
     },
     {
         id: 'p1',
         title: '(Dis)Connected - An Off-Device Game',
-        description:
-            'This project was developed in collaboration with Universidad de los Andes. ' +
+        description: 'This project was developed in collaboration with Universidad de los Andes. ' +
             'It presents the DEMO of an interactive graphic novel for Android mobile devices, centered on Ashley, a young woman with nomophobia who gets lost in a forest while her family goes camping and must find her way back. ' +
             'This project represents my first professional approach to Unity and my formal entry into software development, as I had previously only completed minor exercises.',
         isProjectDeployed: false,
@@ -741,7 +858,8 @@ export const GameExpEN: Project[] = [
             footerLink: "",
             itHasBeenPublished: false,
             publishedLink: ""
-        }
+        },
+        CaseStudy: []
     },
 ]
 
