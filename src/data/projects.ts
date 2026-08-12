@@ -1148,6 +1148,19 @@ export const GameExpEN: Project[] = [
                         "\n" +
                         "This experience reinforced the importance of designing assets and systems with scalability and adaptability in mind, particularly when developing for platforms with highly varied hardware and display configurations."
                 }
+            }, {
+                id: "p2",
+                title: "Touch controls and unity mobile",
+                description: {
+                    context: "This was one of my first times using Unity, and jump to a mobile game was not a good choice." +
+                        "During the early development, even with previews research, touch managing for mobile was really unstable." +
+                        "This one presented constant bugs or blocking elements inside the raycast for the touch. ",
+                    problem: "The touch Unity Manager package was really unstable, causing issues with the gameObjects on scene, even for the basic elements of the game.",
+                    possibilities: "My first option was to try to patch it after multiple attempts, although it will consume a lot more of time and resources." +
+                        "The second option was try to reduce the touch as much as possible, and do everything with UI form Unity",
+                    decision: "Because of time and because I didn't have the resources to do so, ",
+                    outcome: ""
+                }
             }
         ]
     },
