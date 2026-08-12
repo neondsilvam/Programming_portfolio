@@ -20,14 +20,10 @@ const translations: Record<Lang, Translations> = {
           '\n' +
           'Durante los últimos dos años, he enfocado mi crecimiento en el desarrollo de software, fortaleciendo mis habilidades en programación, desarrollo web y desarrollo móvil, con un interés especial en la creación de soluciones digitales .\n' +
           '\n' +
-          'He trabajado con tecnologías y lenguajes como Python, C++, C#, Kotlin y TypeScript, además de herramientas y frameworks como Processing, p5.js, CMD Script y HLSL. Actualmente, continúo expandiendo mis conocimientos con un enfoque principal en React, React Native y Vue, desarrollando aplicaciones modernas, eficientes y con una sólida experiencia de usuario.\n' +
-          '\n' +
-          'Del mismo modo, estoy aprendiendo sobre Unity y unreal, desarrollando juegos y projectos de diferentes generos e indoles.' +
-          '\n' +
           'Me gusta combinar la creatividad con la tecnología para construir experiencias digitales.',
       tags: ['HTML - 2 años', 'CSS - 2 años', 'JavaScript - 1 año', 'C# - 1 año', 'Vue - 6 meses', 'React - 6 meses', 'React Native - 6 meses', 'C++ - 6 meses'],
       catchPhrase: "La oportunidad de expandir tus posibilidades",
-      identitySentence: "Soy un programmador, experto en desarrollo de frontend y de sistemas generales. He estudiado mas de 10 lenguajes diferentes desarrollando juegos, paginas web y aplicaciones moviles. Mi objetivo es desarrollarme inicialmente como frontend y eventualmente como desarrollador fullstack.",
+      identitySentence: "Soy un programmador diferente, creativo y al mismo tiempo organizado. Mezclando la experiencia artistica con la logica informatica para generar nuevas perspectivas solidas y eficientes. Experto en desarrollo de frontend y de sistemas generales. He estudiado mas de 10 lenguajes diferentes desarrollando juegos, paginas web y aplicaciones moviles. Mi objetivo es desarrollarme inicialmente como frontend y eventualmente como desarrollador fullstack.",
       Highlights: {
         title: "Destacados",
         subTitle: "Estos han sindo algunos de mis projectos mas destacados"
@@ -90,14 +86,10 @@ const translations: Record<Lang, Translations> = {
           '\n' +
           'Over the past two years, I have concentrated my professional growth on software development, strengthening my skills in programming, web development, and mobile development, with a particular interest in building effective digital solutions.' +
           '\n' +
-          'I have worked with technologies and languages such as Python, C++, C#, Kotlin, and TypeScript, as well as tools and frameworks including Processing, p5.js, CMD Script, and HLSL. I am currently expanding my knowledge with a primary focus on React, React Native, and Vue, developing modern, efficient applications with a strong emphasis on user experience.' +
-          '\n' +
-          'Likewise, I had also worked with engines such as Unity and Unreal to work on multiple games of a variety of genres. ' +
-          '\n' +
           'I am passionate about merging creativity with technology to craft meaningful digital experiences.',
       tags: ['HTML - 2 years', 'CSS - 2 years', 'JavaScript - 1 year', 'C# - 1 year', 'Vue - 6 months', 'React - 6 months', 'React Native - 6 months', 'C++ - 6 months'],
       catchPhrase: "Expand your horizon",
-      identitySentence: "I am a programmer, specialized on frontend and systems development. I had studied more than 10 coding languages, reflected on projects such as games, web pages and mobile apps. My objective is to grow initially as a frontend developer and eventually as a fullstack developer.",
+      identitySentence: "I am a distinctive, creative, and highly organized programmer who combines an artistic background with strong computational thinking. By integrating creativity with technical logic, I strive to develop innovative perspectives and solutions that are both robust and efficient. I specialized on frontend and systems development. I had studied more than 10 coding languages, reflected on projects such as games, web pages and mobile apps. My objective is to grow initially as a frontend developer and eventually as a fullstack developer.",
       Highlights: {
         title: "Highlights",
         subTitle: "This had been some of my best most recent projects"
