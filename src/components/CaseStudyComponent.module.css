@@ -26,6 +26,19 @@
     color: #1b1b1b;
 }
 
+/*For the responsiveness*/
+
+@media (max-width: 500px) {
+    
+    .title{
+        font-size: 3em;
+    }
+    
+    .CaseTitle{
+        font-size: 1.5em;
+    }
+}
+
 .CaseStudyContainer{
     text-align: left;
     justify-content: space-evenly;
