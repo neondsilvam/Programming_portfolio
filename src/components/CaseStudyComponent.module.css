@@ -1,0 +1,67 @@
+.title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 4em;
+    color: #1b1b1b;
+}
+
+.organizer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.CaseStudy{
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+}
+
+.CaseTitle{
+    font-weight: bold;
+    font-size: 2em;
+    color: #1b1b1b;
+}
+
+.CaseStudyContainer{
+    text-align: left;
+    justify-content: space-evenly;
+    margin: 3% 0;
+    background-color: lightgrey;
+    border-radius: 25px;
+    width: 80%;
+    padding: 5%;
+}
+
+.CaseButton {
+    background: rgba(243, 244, 246, 0.2);
+    font-size: 1em;
+    border: none;
+    border-radius: 25px;
+    color: #1b1b1b;
+    cursor: pointer;
+    transition: background 0.15s;
+    padding: 0.5em 1em;
+    margin: 1em auto;
+}
+
+.CaseButton:hover {
+    background: #f3f4f6;
+    color: #000500;
+}
+
+/*For the Description*/
+
+.context,
+.problem,
+.possibilities,
+.desicion,
+.outcome{
+    font-size: 1em;
+    color: #1b1b1b;
+    padding: 0.5em 0;
+    font-weight: 400;
+}

@@ -7,6 +7,7 @@ import { motion } from "motion/react"
 import {IntroVariant} from "../types/variants.ts";
 import {CVButtonComponent} from "../components/CVButtonComponent.tsx";
 import {GameDownloadWidgetCustomComponent} from "../components/GameDownloadWidgetCustomComponent.tsx";
+import {CaseStudyComponent} from "../components/CaseStudyComponent.tsx";
 
 export function GameExp({ initialIndex }: { initialIndex: number }) {
     const {t, lang} = useLang()
@@ -66,74 +67,76 @@ export function GameExp({ initialIndex }: { initialIndex: number }) {
                     <CVButtonComponent currentPage={"gameExp"} />
                 </aside>
 
-                <div className={styles.detail}>
-                    <div className={styles.detailHeader}>
-                        <h2 className={styles.detailTitle}>{selected.title}</h2>
-                        <p className={styles.detailDesc}>{selected.description}</p>
-                        {selected.hasExternalLinks ? (
-                            <a href={selected.externalLinks} target="_blank" className={styles.detailDesc}>{selected.externalLinks}</a>) : (<></>)}
-                    </div>
-                    <div className={styles.iframeWrapper}>
-                        {selected.iframeSrc ? (
-                            <iframe
-                                src={selected.iframeSrc}
-                                title={selected.title}
-                                className={styles.iframe}
-                                allowFullScreen
-                            />
-                        ) : (
-                            <img className={styles.image} src={selected.imageSrc}></img>
-                        )}
-                    </div>
-                    {selected.process.itHasBeenPublished ? <GameDownloadWidgetCustomComponent id={selected.process.publishedLink}/> : <></>}
-                    <button className={styles.processButton}
-                            onClick={handleDesc}>{selected.isShowingTheProcess ? t.gameExp.showingProcessButtonTextTrue : t.gameExp.showingProcessButtonTextFalse}</button>
-                    {selected.isShowingTheProcess ? (
-                        <div className={styles.processArea}>
-                            <div className={styles.processFrame}>
-                                <h4 className={styles.processTitle}>{selected.process.sections.preproduction.title}</h4>
-                                <div className={styles.processOrganizer}>
-                                    <div className={styles.processSection}>
-                                        {selected.process.sections.preproduction.description.map((t) => (
-                                            <p className={styles.processDescription}>{t}</p>
-                                        ))}
-                                    </div>
-                                    <div className={styles.processSection}>
-                                        {selected.process.sections.preproduction.media.map((t) => (
-                                            <img className={styles.processMedia} src={t}></img>
-                                        ))}
-                                    </div>
-                                </div>
-                                <h4 className={styles.processTitle}>{selected.process.sections.production.title}</h4>
-                                <div className={styles.processOrganizer}>
-                                    <div className={styles.processSection}>
-                                        {selected.process.sections.production.media.map((t) => (
-                                            <img className={styles.processMedia} src={t}></img>
-                                        ))}
-                                    </div>
-                                    <div className={styles.processSection}>
-                                        {selected.process.sections.production.description.map((t) => (
-                                            <p className={styles.processDescription}>{t}</p>
-                                        ))}
-                                    </div>
-                                </div>
-                                <h4 className={styles.processTitle}>{selected.process.sections.postproduction.title}</h4>
-                                <div className={styles.processOrganizer}>
-                                    <div className={styles.processSection}>
-                                        {selected.process.sections.postproduction.description.map((t) => (
-                                            <p className={styles.processDescription}>{t}</p>
-                                        ))}
-                                    </div>
-                                    <div className={styles.processSection}>
-                                        {selected.process.sections.postproduction.media.map((t) => (
-                                            <img className={styles.processMedia} src={t}></img>
-                                        ))}
-                                    </div>
-                                </div>
-                                <h5 className={styles.processSubtitle}>{selected.process.sectionFooter}</h5>
-                            </div>
+                <div className={styles.container}>
+                    <div className={styles.detail}>
+                        <div className={styles.detailHeader}>
+                            <h2 className={styles.detailTitle}>{selected.title}</h2>
+                            <p className={styles.detailDesc}>{selected.description}</p>
+                            {selected.hasExternalLinks ? (
+                                <a href={selected.externalLinks} target="_blank" className={styles.detailDesc}>{selected.externalLinks}</a>) : (<></>)}
                         </div>
-                    ) : (<></>)}
+                        {selected.process.itHasBeenPublished ? <GameDownloadWidgetCustomComponent id={selected.process.publishedLink}/> : <></>}
+                        <div className={styles.iframeWrapper}>
+                            {selected.iframeSrc ? (
+                                <iframe
+                                    src={selected.iframeSrc}
+                                    title={selected.title}
+                                    className={styles.iframe}
+                                    allowFullScreen
+                                />
+                            ) : (
+                                <img className={styles.image} src={selected.imageSrc}></img>
+                            )}
+                        </div>
+                        <button className={styles.processButton} onClick={handleDesc}>{selected.isShowingTheProcess ? t.gameExp.showingProcessButtonTextTrue : t.gameExp.showingProcessButtonTextFalse}</button>
+                        {selected.isShowingTheProcess ? (
+                            <div className={styles.processArea}>
+                                <div className={styles.processFrame}>
+                                    <h4 className={styles.processTitle}>{selected.process.sections.preproduction.title}</h4>
+                                    <div className={styles.processOrganizer}>
+                                        <div className={styles.processSection}>
+                                            {selected.process.sections.preproduction.description.map((t) => (
+                                                <p className={styles.processDescription}>{t}</p>
+                                            ))}
+                                        </div>
+                                        <div className={styles.processSection}>
+                                            {selected.process.sections.preproduction.media.map((t) => (
+                                                <img className={styles.processMedia} src={t}></img>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <h4 className={styles.processTitle}>{selected.process.sections.production.title}</h4>
+                                    <div className={styles.processOrganizer}>
+                                        <div className={styles.processSection}>
+                                            {selected.process.sections.production.media.map((t) => (
+                                                <img className={styles.processMedia} src={t}></img>
+                                            ))}
+                                        </div>
+                                        <div className={styles.processSection}>
+                                            {selected.process.sections.production.description.map((t) => (
+                                                <p className={styles.processDescription}>{t}</p>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <h4 className={styles.processTitle}>{selected.process.sections.postproduction.title}</h4>
+                                    <div className={styles.processOrganizer}>
+                                        <div className={styles.processSection}>
+                                            {selected.process.sections.postproduction.description.map((t) => (
+                                                <p className={styles.processDescription}>{t}</p>
+                                            ))}
+                                        </div>
+                                        <div className={styles.processSection}>
+                                            {selected.process.sections.postproduction.media.map((t) => (
+                                                <img className={styles.processMedia} src={t}></img>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <h5 className={styles.processSubtitle}>{selected.process.sectionFooter}</h5>
+                                </div>
+                            </div>
+                        ) : (<></>)}
+                    </div>
+                        <CaseStudyComponent CaseStudy={selected.CaseStudy} />
                 </div>
             </div>
         </motion.section>

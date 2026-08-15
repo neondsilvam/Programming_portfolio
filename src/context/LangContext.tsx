@@ -66,6 +66,11 @@ const translations: Record<Lang, Translations> = {
         SecondaryGithub: 'Github Secundarios (Experimentos y exploración)'
       },
       ShortSubtitle: "¿Quieres contactarme?"
+    },
+    StudyCaseInfo: {
+      Title: "Casos de Estudio",
+      buttonText: "Mas Detalles",
+      buttonSaveText: "Menos Detalles"
     }
   },
   en: {
@@ -133,6 +138,11 @@ const translations: Record<Lang, Translations> = {
       showingProcessButtonTextTrue: "Hide Process",
       CVText: "Download my CV"
     },
+    StudyCaseInfo: {
+      Title: "Case Study",
+      buttonText: "See more",
+      buttonSaveText: "See less"
+    }
   },
 }
 

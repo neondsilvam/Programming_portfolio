@@ -115,6 +115,11 @@ export interface Translations {
       SecondaryGithub: string
     }
   }
+  StudyCaseInfo: {
+    Title: string
+    buttonText: string
+    buttonSaveText: string
+  }
 }
 
 export type PagePops = {
