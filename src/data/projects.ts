@@ -127,6 +127,32 @@ export const WebProjectsES: Project[] = [
                         "\n" +
                         "Esta experiencia reforzó mi comprensión sobre la importancia de separar el estado compartido de la interfaz de usuario individual. Al trasladar la navegación a un contexto centralizado, pude reducir las dependencias entre componentes, mejorar la reutilización del código y establecer una arquitectura más mantenible para el portafolio."
                 }
+            }, {
+                id: "p2",
+                title: "Diseño Responsivo",
+                description: {
+                    context: "Otro de los principales desafíos que tuve que enfrentar durante el desarrollo de este portafolio fue gestionar la adaptación de la interfaz al cambiar entre diferentes dispositivos y tamaños de pantalla.\n" +
+                        "\n" +
+                        "Aunque la página era generalmente responsiva, existían casos específicos en los que algunas pantallas o componentes no se adaptaban correctamente. Estos problemas eran particularmente evidentes al navegar entre páginas con diferentes estructuras o al visualizar el portafolio en dispositivos con dimensiones distintas.",
+                    problem: "El diseño original del portafolio no había sido desarrollado considerando el comportamiento responsivo como una prioridad. Como consecuencia, la estructura inicial de la página no estaba completamente preparada para adaptarse de manera consistente a diferentes dispositivos y tamaños de pantalla.\n" +
+                        "\n" +
+                        "Esto generaba inconsistencias en la distribución de los elementos y problemas visuales dependiendo del dispositivo utilizado.",
+                    possibilities: "Una de las posibles soluciones consistía en convertir las dimensiones existentes, que en algunos casos eran fijas, en valores porcentuales y ajustar los diferentes elementos utilizando tamaños relativos.\n" +
+                        "\n" +
+                        "Aunque este enfoque habría requerido menos modificaciones estructurales, no garantizaba una adaptación consistente para todos los tamaños de pantalla. Algunos diseños podían seguir comportándose de manera inesperada al utilizar dimensiones considerablemente diferentes.\n" +
+                        "\n" +
+                        "La segunda alternativa consistía en utilizar las reglas @media de CSS para crear diferentes variaciones del diseño dependiendo del tamaño de pantalla. Este enfoque requeriría más tiempo de desarrollo, ya que cada punto de ruptura tendría que ser probado y ajustado individualmente. Sin embargo, proporcionaría un mayor control sobre la distribución de los elementos y permitiría establecer una estructura más organizada para el diseño responsivo.",
+                    decision: "Finalmente, decidí implementar las reglas @media de CSS en lugar de depender exclusivamente de valores porcentuales.\n" +
+                        "\n" +
+                        "Aunque este enfoque requirió más tiempo durante el desarrollo, proporcionó un mayor control sobre el comportamiento de cada componente en diferentes tamaños de pantalla. Además, permitió establecer una estructura más mantenible que puede modificarse y expandirse con mayor facilidad a medida que el portafolio evolucione.",
+                    outcome: "Aunque implementar las diferentes variaciones responsivas requirió tiempo adicional de desarrollo, el resultado final permitió que la página se adaptara considerablemente mejor a múltiples dispositivos y tamaños de pantalla.\n" +
+                        "\n" +
+                        "Más importante aún, este proceso me permitió comprender mejor cómo estructurar diseños responsivos desde las primeras etapas de desarrollo, en lugar de tratarlos únicamente como un ajuste final.\n" +
+                        "\n" +
+                        "También adquirí experiencia práctica en el uso de las reglas @media de CSS y aprendí a planificar la estructura de los componentes considerando desde el inicio las diferentes dimensiones de pantalla.\n" +
+                        "\n" +
+                        "Este conocimiento se ha convertido en una herramienta importante para futuros proyectos web, donde la adaptación responsiva puede incorporarse desde las primeras etapas tanto del diseño como de la arquitectura del proyecto."
+                }
             }
         ]
     },
@@ -209,7 +235,45 @@ export const WebProjectsES: Project[] = [
                     "\n" +
                     "En futuros proyectos, priorizaría la implementación de la autorización a nivel del backend o de la seguridad de la base de datos, utilizando el frontend principalmente como una interfaz para reflejar los permisos del usuario y no como la capa principal de seguridad."
             }
-        }]
+        },
+            {
+                id: "p2",
+                title: "Puntuación alta persistente",
+                description: {
+                    context: 
+                        "Durante el desarrollo de este proyecto, uno de los sistemas principales consistió en establecer una conexión entre los datos desarrollados en YAML y JavaScript para transferir información desde un servidor web hacia la aplicación principal. Esto permitía actualizar dinámicamente tanto los datos del jugador como el estado actual del sistema.\n" +
+                        "\n" +
+                        "Uno de los desafíos más importantes de esta implementación estuvo relacionado con el sistema de high score, ya que la puntuación debía mantenerse de manera persistente para cada jugador y estar asociada correctamente con su cuenta de Firebase.",
+                    problem: 
+                        "El principal desafío consistía en desarrollar un sistema de puntuación persistente que pudiera asociar correctamente cada resultado con el usuario autenticado correspondiente en Firebase.\n" +
+                        "\n" +
+                        "El sistema debía recuperar la puntuación existente del jugador al iniciar sesión y actualizarla cuando este consiguiera un nuevo récord.",
+                    possibilities: 
+                        "Una de las posibles soluciones consistía en estructurar los datos de Firebase como un diccionario, utilizando el correo electrónico del usuario como clave y su high score como valor correspondiente. De esta manera, la aplicación podría recuperar directamente el valor asociado al usuario al iniciar la sesión.\n" +
+                        "\n" +
+                        "Este enfoque permitiría acceder de manera relativamente directa a la puntuación almacenada y simplificaría su recuperación inicial. Sin embargo, produciría una estructura de datos menos organizada y podría resultar más difícil de mantener a medida que el sistema creciera.\n" +
+                        "\n" +
+                        "La segunda alternativa consistía en crear un custom hook encargado de recuperar y gestionar la puntuación del usuario en relación con los datos almacenados en Firebase.\n" +
+                        "\n" +
+                        "Aunque este enfoque introducía una capa adicional de abstracción, permitía separar de manera más clara las responsabilidades y facilitaba la reutilización de la lógica en diferentes partes de la aplicación.",
+                    decision:
+                        "Inicialmente, decidí implementar el enfoque basado en un diccionario, ya que parecía ser la solución más directa.\n" +
+                        "\n" +
+                        "Sin embargo, a medida que avanzó el desarrollo, decidí reemplazarlo por un custom hook. Esta decisión estuvo principalmente relacionada con la mantenibilidad del sistema a largo plazo.\n" +
+                        "\n" +
+                        "Aunque el diccionario parecía ser más eficiente inicialmente, la estructura que había implementado no eliminaba completamente la necesidad de realizar iteraciones sobre los datos de puntuación. Como consecuencia, la ventaja de eficiencia que inicialmente parecía ofrecer era menor de lo esperado, mientras que la estructura resultaba más difícil de ampliar y mantener.\n" +
+                        "\n" +
+                        "El custom hook permitió encapsular de manera más organizada la recuperación y gestión de la puntuación del jugador, manteniendo esta funcionalidad independiente de los componentes que utilizaban los datos.",
+                    outcome: 
+                        "El cambio de la implementación inicial requirió tiempo adicional de desarrollo, lo cual tuvo un impacto en el cronograma del proyecto. Sin embargo, la arquitectura resultante proporcionó una base más sólida para el resto de la aplicación.\n" +
+                        "\n" +
+                        "El custom hook facilitó considerablemente la gestión del sistema de high score y permitió establecer una separación más clara entre la capa de datos y la interfaz de la aplicación.\n" +
+                        "\n" +
+                        "Más importante aún, este proceso me permitió comprender mejor cómo estructurar y acceder a los datos del backend desde el frontend. También me enseñó a evaluar las decisiones técnicas no solamente según el costo inmediato de implementación, sino también teniendo en cuenta su mantenibilidad y escalabilidad a largo plazo.\n" +
+                        "\n" +
+                        "Esta experiencia me proporcionó bases más sólidas para diseñar sistemas orientados a datos y reforzó la importancia de seleccionar arquitecturas capaces de evolucionar junto con el proyecto."
+                }
+            }]
     },
     {
         id: 'p3',
@@ -260,7 +324,73 @@ export const WebProjectsES: Project[] = [
             publishedLink: ""
         },
         CaseStudy: [
-            
+            {
+                id: "p1",
+                title: "Firebase y React Native",
+                description: {
+                    context: "Debido a que esta aplicación estaba diseñada para la creación de cócteles y bebidas alcohólicas, era necesario implementar un mecanismo de restricción por edad que permitiera determinar si los usuarios cumplían con la edad mínima requerida para el proyecto. Debido a que la aplicación fue desarrollada en Vancouver, Columbia Británica, la edad mínima considerada era de 19 años.\n" +
+                        "\n" +
+                        "Para abordar este requisito, la aplicación utilizaba Firebase para implementar un sistema de autenticación mediante usuario y contraseña. Como parte del flujo de acceso, los usuarios también debían declarar que cumplían con el requisito mínimo de edad establecido.\n" +
+                        "\n" +
+                        "Sin embargo, uno de los desafíos de trabajar con React Native estaba relacionado con la compatibilidad entre el framework y las librerías de terceros. En ese momento del desarrollo, la versión más reciente de Firebase disponible no se integraba correctamente con el entorno de React Native utilizado, lo que impedía que el sistema de autenticación se comunicara de manera confiable con el servidor.",
+                    problem: "La versión más reciente de Firebase no funcionaba correctamente dentro del entorno de React Native utilizado, limitando la comunicación con el servidor de autenticación e impidiendo que los usuarios pudieran acceder correctamente a la aplicación.\n" +
+                        "\n" +
+                        "Debido a que la autenticación formaba parte de los requisitos de acceso, este problema de compatibilidad impedía directamente que los usuarios pudieran utilizar las funcionalidades principales de la aplicación.",
+                    possibilities: "La primera solución consistía en reemplazar Firebase por otro servidor o proveedor de autenticación. Aunque esto podía solucionar potencialmente el problema de compatibilidad, también implicaba reemplazar un sistema existente principalmente debido a un problema que todavía no había investigado completamente.\n" +
+                        "\n" +
+                        "La segunda alternativa consistía en investigar con mayor profundidad el problema de compatibilidad y determinar si existía una versión estable de Firebase que pudiera utilizarse correctamente con el entorno actual de React Native.\n" +
+                        "\n" +
+                        "Aunque esta opción implicaba utilizar una versión anterior en lugar de adoptar inmediatamente la versión más reciente, permitía mantener la arquitectura existente mientras se solucionaba el problema de compatibilidad.",
+                    decision: "Finalmente, decidí investigar con mayor profundidad la compatibilidad entre Firebase y React Native en lugar de reemplazar el proveedor de autenticación.\n" +
+                        "\n" +
+                        "A través de esta investigación, encontré documentación y referencias a una versión anterior de Firebase que había funcionado correctamente con la configuración de React Native utilizada en el proyecto.\n" +
+                        "\n" +
+                        "Decidí utilizar esta versión compatible y estructurar la configuración de dependencias alrededor de ella, en lugar de continuar intentando utilizar la versión más reciente.",
+                    outcome: "El uso de una versión compatible de Firebase permitió restablecer correctamente el sistema de autenticación y el flujo de restricción por edad, permitiendo que los usuarios accedieran a la aplicación de acuerdo con lo establecido.\n" +
+                        "\n" +
+                        "Más importante aún, este proceso me permitió comprender la importancia de investigar la compatibilidad entre dependencias antes de reemplazar una tecnología o arquitectura existente. También adquirí un mayor conocimiento sobre la gestión y estabilización de dependencias de terceros dentro de React Native.\n" +
+                        "\n" +
+                        "Esta experiencia proporcionó una base más sólida para implementar futuras funcionalidades relacionadas con la autenticación, especialmente si la aplicación llegara a incorporar características o datos personalizados para cada usuario.\n" +
+                        "\n" +
+                        "También reforzó la importancia de considerar la compatibilidad entre versiones, la gestión de dependencias y las limitaciones específicas de cada plataforma al trabajar con frameworks como React Native."
+                }
+            },
+            {
+                id: "P2",
+                title: "API y estructura de la App",
+                description: {
+                    context: 
+                        "Originalmente, tenía planeado desarrollar esta aplicación utilizando una API pública diferente a la que se encuentra actualmente integrada en el proyecto. La API original proporcionaba acceso abierto a una amplia colección de bebidas y a sus respectivas instrucciones de preparación, lo que permitía obtener recetas específicas directamente y sin restricciones significativas.\n" +
+                        "\n" +
+                        "Sin embargo, esta API fue eventualmente descontinuada, lo que me obligó a migrar la aplicación hacia una API pública diferente. Durante este proceso descubrí que la nueva API contaba con una estructura de datos y un modelo de acceso completamente diferentes.\n" +
+                        "\n" +
+                        "Además de tener mayores restricciones de acceso, la nueva API únicamente permitía obtener una lista de bebidas a partir de su letra inicial. Esto modificaba considerablemente la manera en la que debía diseñarse el sistema de búsqueda y filtrado de la aplicación.",
+                    problem: 
+                        "La migración de la API hizo que la arquitectura original de la aplicación dejara de ser compatible con la nueva fuente de datos.\n" +
+                        "\n" +
+                        "El trabajo que había realizado previamente estaba construido alrededor de la estructura y las funcionalidades de la API original, por lo que simplemente reemplazar una API por la otra habría generado inconsistencias significativas entre la lógica de la aplicación, la interfaz y el sistema de recuperación de datos.\n" +
+                        "\n" +
+                        "Como consecuencia, tuve que reconsiderar la manera en la que debía estructurarse la aplicación teniendo en cuenta las capacidades y limitaciones de la nueva API.",
+                    possibilities: 
+                        "La primera solución consistía en rediseñar el concepto y las funcionalidades de la aplicación para adaptarlos a las características de la nueva API. Aunque esto requeriría tiempo adicional de desarrollo y posiblemente implicaría modificar partes importantes del proyecto existente, permitiría construir la aplicación alrededor de las capacidades reales de la nueva fuente de datos.\n" +
+                        "\n" +
+                        "La segunda alternativa consistía en mantener el diseño original e intentar adaptar la nueva API para que funcionara dentro de él. Este enfoque requeriría menos modificaciones inmediatas y potencialmente podría completarse más rápido. Sin embargo, también presentaba un mayor riesgo de generar soluciones alternativas poco eficientes, inconsistencias y problemas técnicos adicionales dentro de la aplicación.",
+                    decision: 
+                        "Después de revisar detalladamente la nueva API y probar sus diferentes endpoints y estructuras de datos, determiné que adaptarla a la arquitectura original requeriría modificar gran parte de la implementación existente.\n" +
+                        "\n" +
+                        "En lugar de construir múltiples soluciones alternativas alrededor de las limitaciones de la nueva API, decidí rediseñar el concepto y el flujo de interacción de la aplicación tomando como base las capacidades reales de la nueva fuente de datos.\n" +
+                        "\n" +
+                        "De esta manera, la API pasó a formar parte fundamental de la arquitectura de la aplicación, en lugar de ser tratada únicamente como una limitación que debía ser evitada.",
+                    outcome: 
+                        "El rediseño requirió tiempo adicional de desarrollo y significó modificar partes de la aplicación que ya habían sido implementadas.\n" +
+                        "\n" +
+                        "Sin embargo, el resultado final fue una aplicación más consistente y estable, cuya arquitectura se encontraba mejor alineada con la estructura y las limitaciones de la nueva API.\n" +
+                        "\n" +
+                        "Esta experiencia me enseñó una lección importante sobre el trabajo con servicios externos: cuando una dependencia cambia, intentar mantener una arquitectura existente a toda costa puede generar más complejidad que rediseñar el sistema de acuerdo con los nuevos requerimientos.\n" +
+                        "\n" +
+                        "También reforzó la importancia de evaluar las capacidades y limitaciones de una API desde las primeras etapas del desarrollo, especialmente cuando la arquitectura de una aplicación depende considerablemente de una fuente de datos externa."
+                }
+            }
         ]
     },
 ]
@@ -340,6 +470,30 @@ export const WebProjectsEN: Project[] = [
                     "It also simplified the implementation of additional features, such as the navigation highlight indicator, because these components could access the shared navigation state directly through the Context.\n" +
                     "\n" +
                     "This experience reinforced my understanding of the importance of separating shared application state from individual UI components. By moving navigation into a centralized context, I was able to reduce component dependencies, improve reusability, and create a more maintainable architecture for the portfolio."
+            }
+        }, {
+            id: "p2",
+            title: "Responsive design",
+            description: {
+                context: "Another major challenge I encountered during the development of this portfolio was managing how the interface adapted when switching between different devices and screen sizes.\n" +
+                    "\n" +
+                    "Although the website was generally responsive, there were specific cases where certain screens or components failed to adapt correctly. These issues became particularly noticeable when navigating between pages with different layouts and viewing the portfolio on devices with different dimensions.",
+                problem: "The original design of the portfolio had not been created with responsive behavior as a primary consideration. As a result, the website's initial structure was not fully prepared to adapt consistently across different devices and screen sizes.\n" +
+                    "\n" +
+                    "This caused layout inconsistencies and visual issues depending on the device being used.",
+                possibilities: "One possible solution was to convert the existing fixed dimensions into percentage-based values and adjust the layouts as much as possible using relative sizing.\n" +
+                    "\n" +
+                    "Although this approach would have required fewer structural changes, it would not guarantee consistent results across all screen sizes. Certain layouts could still behave unpredictably when presented with significantly different dimensions.\n" +
+                    "\n" +
+                    "The second option was to use CSS @media queries to create specific layout variations based on screen size. This approach would require more development time because each breakpoint would need to be tested and adjusted individually. However, it would provide greater control over the layout and create a more structured approach to responsive design.",
+                decision: "Ultimately, I decided to implement CSS @media queries rather than relying exclusively on percentage-based sizing.\n" +
+                    "\n" +
+                    "Although this approach required more time during development, it provided greater control over how each component behaved at different screen sizes. It also created a more maintainable structure that could be expanded or adjusted more easily as the portfolio evolved.",
+                outcome: "Although implementing the responsive variations required additional development time, the final website adapted significantly better across multiple devices and screen sizes.\n" +
+                    "\n" +
+                    "More importantly, this process helped me develop a better understanding of how to structure responsive layouts from the beginning rather than treating responsiveness as a final adjustment.\n" +
+                    "\n" +
+                    "I also gained practical experience using CSS @media queries and learned how to plan component layouts with different screen sizes in mind. This knowledge has become particularly valuable for future web projects, where responsive behavior can be incorporated into the design and architecture from the early stages of development."
             }
         }]
     },
@@ -423,6 +577,43 @@ export const WebProjectsEN: Project[] = [
                         "\n" +
                         "In future projects, I would prioritize implementing authorization at the backend or database-security level and use the frontend primarily as an interface for communicating the user's permissions rather than as the primary security layer."
                 }
+            }, {
+                id: "p2",
+                title: "Persistent High scores",
+                description: {
+                    context: 
+                        "During the development of this project, one of the main systems involved connecting YAML-based data with JavaScript to transfer information from a web server to the main application. This allowed the player's data and the current state of the system to be updated dynamically.\n" +
+                        "\n" +
+                        "One of the most challenging aspects of this implementation was the high score system, which needed to persist independently for each player and remain associated with their Firebase account.",
+                    problem: 
+                        "The main challenge was creating a persistent high score system that could correctly associate each score with the corresponding authenticated Firebase user.\n" +
+                        "\n" +
+                        "The system needed to retrieve the player's existing score when they signed in and update it when a new high score was achieved.",
+                    possibilities: 
+                        "One possible solution was to structure the Firebase data as a dictionary, using the user's email as the key and their high score as the corresponding value. The application could then retrieve the value associated with the user when the session started.\n" +
+                        "\n" +
+                        "This approach would provide relatively direct access to the stored score and could simplify the initial retrieval process. However, it would result in a less structured data model and could become more difficult to maintain as the system expanded.\n" +
+                        "\n" +
+                        "The second approach was to create a custom hook responsible for retrieving and managing the user's score in relation to the available Firebase data.\n" +
+                        "\n" +
+                        "Although this approach introduced an additional layer of abstraction, it provided a cleaner separation of responsibilities and made the logic easier to reuse across different parts of the application.",
+                    decision:
+                        "Initially, I decided to implement the dictionary-based approach because it appeared to be the more straightforward solution.\n" +
+                        "\n" +
+                        "However, as development progressed, I decided to replace it with a custom hook. This decision was based on the long-term maintainability of the system.\n" +
+                        "\n" +
+                        "While the dictionary appeared more efficient at first, it did not completely eliminate the need to iterate through the stored score data in the way the system was structured. As a result, its apparent efficiency advantage became less significant while making the data structure more difficult to extend and maintain.\n" +
+                        "\n" +
+                        "The custom hook provided a more organized way to encapsulate the retrieval and management of the player's score while keeping this functionality independent from the components that consumed it.",
+                    outcome: 
+                        "Changing the initial implementation required additional development time, which affected the project's schedule. However, the resulting architecture provided a stronger foundation for the rest of the project.\n" +
+                        "\n" +
+                        "The custom hook made the high score system easier to manage and provided a clearer separation between the data layer and the application's interface.\n" +
+                        "\n" +
+                        "More importantly, this process helped me better understand how backend data should be structured and accessed from the frontend. It also taught me to evaluate technical decisions not only according to their immediate implementation cost, but also according to their long-term maintainability and scalability.\n" +
+                        "\n" +
+                        "This experience gave me stronger foundations for designing data-driven systems and reinforced the importance of choosing an architecture that can evolve alongside the project."
+                }
             }
         ]
     },
@@ -474,7 +665,73 @@ export const WebProjectsEN: Project[] = [
             itHasBeenPublished: false,
             publishedLink: ""
         },
-        CaseStudy: []
+        CaseStudy: [
+            {
+                id: "p1",
+                title: "Firebase and React Native",
+                description: {
+                    context: "Because this application was designed around the creation of cocktails and alcoholic beverages, it required an age-restriction mechanism to ensure that users met the minimum legal drinking age applicable to the project's target location. Since the application was developed in Vancouver, British Columbia, the required minimum age was 19.\n" +
+                        "\n" +
+                        "To address this requirement, the application used Firebase authentication to require users to create an account with a username and password. As part of the application's access flow, users were also required to acknowledge that they met the minimum age requirement.\n" +
+                        "\n" +
+                        "However, one of the challenges of working with React Native was the compatibility between the framework and third-party libraries. At the time of development, the latest Firebase version available did not integrate correctly with the React Native environment being used, preventing the authentication system from communicating reliably with the server.",
+                    problem: "The latest version of Firebase was not functioning correctly within the React Native environment, limiting communication with the authentication server and preventing users from successfully accessing the application.\n" +
+                        "\n" +
+                        "Because authentication was part of the application's access requirements, this compatibility issue effectively prevented users from reaching the main functionality.",
+                    possibilities: "The first possible solution was to replace Firebase with another backend or authentication provider. Although this could potentially resolve the compatibility issue, it would also mean replacing an existing system primarily because of a compatibility problem that I had not yet fully investigated.\n" +
+                        "\n" +
+                        "The second option was to investigate the compatibility issue further and determine whether a stable Firebase version could be used with the current React Native environment.\n" +
+                        "\n" +
+                        "Although this approach meant working with an older version rather than immediately adopting the latest release, it offered the possibility of maintaining the existing architecture while resolving the compatibility problem.",
+                    decision: "Ultimately, I decided to investigate the Firebase and React Native compatibility issue in greater depth rather than replacing the authentication provider.\n" +
+                        "\n" +
+                        "Through this research, I found documentation and references to a previous Firebase version that had been successfully used with the React Native configuration of the project.\n" +
+                        "\n" +
+                        "I decided to use this compatible version and structure the dependency configuration around it rather than continuing to rely on the latest release.",
+                    outcome: "Using the compatible Firebase version allowed me to successfully restore the authentication and age-restriction flow, enabling users to access the application as intended.\n" +
+                        "\n" +
+                        "More importantly, this process taught me the importance of understanding dependency compatibility before replacing an established technology or architecture. I also gained a better understanding of how to manage and stabilize third-party dependencies in React Native.\n" +
+                        "\n" +
+                        "This experience provided a stronger foundation for future authentication features, particularly if the application were later expanded to include additional user-specific functionality or data.\n" +
+                        "\n" +
+                        "It also reinforced the importance of maintaining awareness of version compatibility, dependency management, and platform-specific limitations when working with frameworks such as React Native."
+                }
+            }, {
+                id: "P2",
+                title: "API and App Structure",
+                description: {
+                    context: "Originally, I planned to develop this application using a different public API rather than the one currently integrated into the project. The original API provided open access to a broad collection of beverages and their individual preparation instructions, which allowed the application to retrieve specific recipes directly and without significant restrictions.\n" +
+                        "\n" +
+                        "However, the API was eventually discontinued, forcing me to migrate the application to a different public API. During this transition, I discovered that the new API had a fundamentally different data structure and access model.\n" +
+                        "\n" +
+                        "In addition to having more restrictive access, the new API only allowed the application to retrieve beverages based on their starting letter. This significantly changed how the filtering and search functionality needed to be designed.",
+                    problem: 
+                        "The API migration made the original application architecture incompatible with the new data source.\n" +
+                        "\n" +
+                        "The work that had already been completed was built around the structure and capabilities of the original API, meaning that directly replacing the API would cause significant inconsistencies between the application's logic, interface, and data retrieval system.\n" +
+                        "\n" +
+                        "As a result, I needed to reconsider how the application should be structured around the capabilities and limitations of the new API.",
+                    possibilities: 
+                        "The first possible solution was to redesign the application's concept and functionality to better accommodate the new API. Although this would require additional development time and potentially mean reworking parts of the existing project, it would allow the application to be designed around the actual capabilities of the new data source.\n" +
+                        "\n" +
+                        "The second option was to preserve the original design and attempt to adapt the new API to it. This approach would require fewer immediate changes and could potentially be completed faster. However, it introduced a greater risk of creating workarounds, inconsistencies, and additional technical issues throughout the application.",
+                    decision: 
+                        "After extensively reviewing the new API and testing its available endpoints and data structure, I determined that adapting it to the original application architecture would require changing most of the existing implementation.\n" +
+                        "\n" +
+                        "Rather than building multiple workarounds around the limitations of the new API, I decided to redesign the application's concept and interaction flow around the capabilities of the new data source.\n" +
+                        "\n" +
+                        "This allowed the API to become a fundamental part of the application's architecture rather than treating it as a limitation that needed to be bypassed.",
+                    outcome: 
+                        "The redesign required additional development time and meant reworking parts of the application that had already been implemented.\n" +
+                        "\n" +
+                        "However, the final result was a more consistent and stable application that aligned more naturally with the structure and limitations of the new API.\n" +
+                        "\n" +
+                        "This experience taught me an important lesson about working with external services: when a dependency changes, attempting to preserve an existing architecture at all costs can sometimes create more complexity than redesigning the system around the new requirements.\n" +
+                        "\n" +
+                        "It also reinforced the importance of evaluating an API's capabilities and limitations early in development, particularly when the application's architecture depends heavily on an external data source."
+                }
+            }
+        ]
     },
 ]
 
@@ -809,6 +1066,39 @@ export const GameExpES: Project[] = [
                         "En futuros proyectos, establecería una estrategia de pruebas más amplia desde las primeras etapas del desarrollo, utilizando diferentes dimensiones y relaciones de aspecto para validar la composición visual antes de finalizar los assets.\n" +
                         "\n" +
                         "Esta experiencia reforzó la importancia de diseñar los elementos visuales y los sistemas teniendo en cuenta su escalabilidad y capacidad de adaptación, especialmente al desarrollar para plataformas con una gran variedad de dispositivos y configuraciones de pantalla."
+                }
+            }, {
+                id: "p2",
+                title: "Interación Táctil y Unity mobile",
+                description: {
+                    context: 
+                        "Esta fue una de mis primeras experiencias desarrollando un proyecto en Unity, y elegir una plataforma móvil introdujo un desafío técnico considerable. Durante las primeras etapas del desarrollo, incluso después de realizar una investigación preliminar, la implementación de interacciones mediante controles táctiles resultó ser considerablemente menos estable de lo esperado.\n" +
+                        "\n" +
+                        "El sistema de entrada táctil generaba errores de manera frecuente, particularmente al interactuar con objetos dentro de la escena. Los raycasts utilizados para detectar las interacciones táctiles también podían ser bloqueados por otros objetos, impidiendo que los elementos de gameplay correspondientes recibieran correctamente la entrada del jugador.",
+                    problem: 
+                        "El sistema de entrada táctil de Unity que estaba utilizando presentaba problemas de estabilidad dentro del proyecto, generando comportamientos inesperados con los GameObjects presentes en la escena, incluso en elementos básicos del gameplay.\n" +
+                        "\n" +
+                        "Estas dificultades hacían complicado detectar y procesar de manera confiable las interacciones del jugador con el entorno.",
+                    possibilities: 
+                        "La primera solución consistía en continuar depurando y corrigiendo la implementación existente del sistema táctil hasta solucionar los diferentes problemas encontrados.\n" +
+                        "\n" +
+                        "Aunque esto potencialmente habría permitido obtener un sistema de interacción más robusto, habría requerido una cantidad considerable de tiempo y recursos adicionales, los cuales eran limitados debido al cronograma del proyecto.\n" +
+                        "\n" +
+                        "La segunda alternativa consistía en reducir al mínimo las interacciones táctiles directas con el entorno tridimensional y trasladar la mayor cantidad posible de funcionalidades al sistema de UI de Unity.\n" +
+                        "\n" +
+                        "Este enfoque reduciría la cantidad de interacciones que dependían de raycasts sobre objetos de la escena y proporcionaría un entorno más controlado para procesar las entradas táctiles.",
+                    decision: 
+                        "Debido a las limitaciones de tiempo del proyecto y a la relativa facilidad de implementar interacciones táctiles mediante el sistema de UI de Unity, decidí trasladar la mayor cantidad posible de funcionalidades a interacciones basadas en la interfaz.\n" +
+                        "\n" +
+                        "Aunque esta no representaba la solución ideal desde una perspectiva técnica o de diseño, permitió reducir la inestabilidad causada por la implementación táctil existente y continuar avanzando hacia la fecha límite del proyecto.",
+                    outcome: 
+                        "Este enfoque me permitió completar una versión funcional de la demo dentro del tiempo disponible.\n" +
+                        "\n" +
+                        "Sin embargo, la experiencia también evidenció cuánto tenía todavía por aprender sobre el desarrollo en Unity, particularmente en relación con los sistemas de entrada para dispositivos móviles, el funcionamiento de los raycasts y la gestión de interacciones.\n" +
+                        "\n" +
+                        "Mirando el proyecto en retrospectiva, reconozco que abordé el problema principalmente como un desafío de implementación a corto plazo, en lugar de investigar con mayor profundidad la arquitectura de los sistemas de entrada de Unity y las causas subyacentes del problema.\n" +
+                        "\n" +
+                        "A pesar de ello, el proyecto se convirtió en una experiencia de aprendizaje importante. Me enseñó a evaluar con mayor anticipación los requerimientos específicos de cada plataforma, comprender las limitaciones de las herramientas utilizadas y considerar cómo las decisiones técnicas tomadas durante las primeras etapas del desarrollo pueden afectar significativamente el resto del proyecto."
                 }
             }
         ]
@@ -1152,14 +1442,29 @@ export const GameExpEN: Project[] = [
                 id: "p2",
                 title: "Touch controls and unity mobile",
                 description: {
-                    context: "This was one of my first times using Unity, and jump to a mobile game was not a good choice." +
-                        "During the early development, even with previews research, touch managing for mobile was really unstable." +
-                        "This one presented constant bugs or blocking elements inside the raycast for the touch. ",
-                    problem: "The touch Unity Manager package was really unstable, causing issues with the gameObjects on scene, even for the basic elements of the game.",
-                    possibilities: "My first option was to try to patch it after multiple attempts, although it will consume a lot more of time and resources." +
-                        "The second option was try to reduce the touch as much as possible, and do everything with UI form Unity",
-                    decision: "Because of time and because I didn't have the resources to do so, ",
-                    outcome: ""
+                    context: "This was one of my first experiences developing a project in Unity, and choosing to target a mobile platform introduced a significant technical challenge. During the early stages of development, even after conducting preliminary research, implementing touch-based interactions proved to be considerably less stable than expected.\n" +
+                        "\n" +
+                        "The touch input system frequently generated bugs, particularly when interacting with objects within the scene. Raycasts used to detect touch interactions could also be blocked by other objects, preventing the intended gameplay elements from receiving input correctly.",
+                    problem: "The Unity touch input system being used at the time was unstable within the project, causing unexpected interactions with GameObjects in the scene, including some of the game's basic gameplay elements.\n" +
+                        "\n" +
+                        "These issues made it difficult to reliably detect and process player input through the environment.",
+                    possibilities: "The first possible solution was to continue debugging and patching the existing touch implementation until the issues were resolved.\n" +
+                        "\n" +
+                        "Although this could potentially have resulted in a more robust interaction system, it would have required a significant amount of additional development time and resources, which were limited within the project's schedule.\n" +
+                        "\n" +
+                        "The second option was to minimize direct touch interaction with the 3D environment and move as much of the interaction as possible to Unity's UI system.\n" +
+                        "\n" +
+                        "This approach would reduce the number of interactions relying on scene-based raycasts and provide a more controlled environment for processing touch input.",
+                    decision: "Due to the project's time constraints and the relative simplicity of implementing touch interactions through Unity's UI system, I decided to move as much functionality as possible to UI-based interactions.\n" +
+                        "\n" +
+                        "Although this was not the ideal solution from a technical or design perspective, it allowed me to reduce the instability caused by the existing touch implementation and continue progressing toward the project's deadline.",
+                    outcome: "This approach allowed me to complete a functional version of the demo within the available timeframe.\n" +
+                        "\n" +
+                        "However, the experience also highlighted how much I still needed to learn about Unity development, particularly regarding mobile input systems, raycasting, and interaction management.\n" +
+                        "\n" +
+                        "Looking back, I recognize that I approached the problem primarily as a short-term implementation challenge rather than investigating the underlying architecture of Unity's input systems more deeply.\n" +
+                        "\n" +
+                        "Nevertheless, the project became an important learning experience. It taught me to evaluate platform-specific requirements earlier, understand the limitations of the tools I was using, and consider how technical decisions made at the beginning of development can significantly affect the rest of the project."
                 }
             }
         ]
