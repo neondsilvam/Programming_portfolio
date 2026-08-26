@@ -12,10 +12,10 @@ export function Contact() {
         {label: labels.email, value: contactInfo.email, href: `mailto:${contactInfo.email}`},
         {label: labels.phoneCol, value: contactInfo.phoneCol, href: `tel:${contactInfo.phoneCol}`},
         {label: labels.phoneCad, value: contactInfo.phoneCad, href: `tel:${contactInfo.phoneCad}`},
-        {label: labels.linkedin, value: contactInfo.linkedin, href: `https://${contactInfo.linkedin}`},
         {label: labels.MainGithub, value: contactInfo.MainGithub, href: `https://github.com/${contactInfo.MainGithub}`},
-        {label: labels.SecondaryGithub, value: contactInfo.SecondaryGithub, href: `https://github.com/${contactInfo.SecondaryGithub}`
-        },
+        {label: labels.SecondaryGithub, value: contactInfo.SecondaryGithub, href: `https://github.com/${contactInfo.SecondaryGithub}`},
+        {label: labels.Linktree, value: contactInfo.Linktree, href: contactInfo.Linktree},
+        {label: labels.linkedin, value: contactInfo.linkedin, href: `https://${contactInfo.linkedin}`},
     ]
 
     return (

@@ -113,6 +113,7 @@ export interface Translations {
       linkedin: string
       MainGithub: string
       SecondaryGithub: string
+      Linktree: string
     }
   }
   StudyCaseInfo: {

@@ -5,4 +5,5 @@ export const contactInfo = {
   linkedin: 'www.linkedin.com/in/julian-d-silva',
   MainGithub: 'neondsilvam',
   SecondaryGithub: 'pg29JulianDSilva',
+  Linktree: 'https://linktr.ee/neon.d.silvam'
 }

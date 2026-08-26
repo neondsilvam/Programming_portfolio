@@ -63,7 +63,8 @@ const translations: Record<Lang, Translations> = {
         location: 'Ubicación',
         linkedin: 'LinkedIn',
         MainGithub: 'GitHub Principal (Projectos principales)',
-        SecondaryGithub: 'Github Secundarios (Experimentos y exploración)'
+        SecondaryGithub: 'Github Secundarios (Experimentos y exploración)',
+        Linktree: "Mas de mis projectos"
       },
       ShortSubtitle: "¿Quieres contactarme?"
     },
@@ -123,7 +124,8 @@ const translations: Record<Lang, Translations> = {
         location: 'Location',
         linkedin: 'LinkedIn',
         MainGithub: 'Main GitHub Link (Main projects)',
-        SecondaryGithub: 'Secondary Github Link (Self learn and exploration)'
+        SecondaryGithub: 'Secondary Github Link (Self learn and exploration)',
+        Linktree: "More of my projects"
       },
       ShortSubtitle: "Want to get in touch?"
     },
