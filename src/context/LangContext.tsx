@@ -21,7 +21,7 @@ const translations: Record<Lang, Translations> = {
           'Durante los últimos dos años, he enfocado mi crecimiento en el desarrollo de software, fortaleciendo mis habilidades en programación, desarrollo web y desarrollo móvil, con un interés especial en la creación de soluciones digitales .\n' +
           '\n' +
           'Me gusta combinar la creatividad con la tecnología para construir experiencias digitales.',
-      tags: ['HTML - 2 años', 'CSS - 2 años', 'JavaScript - 1 año', 'C# - 1 año', 'Vue - 6 meses', 'React - 6 meses', 'React Native - 6 meses', 'C++ - 6 meses'],
+      tags: ['HTML - 2 años', 'CSS - 2 años', 'JavaScript - 1 año', 'C# - 1 año', 'Vue - 1 año', 'React - 1 año', 'React Native - 1 año', 'C++ - 1 año'],
       catchPhrase: "La oportunidad de expandir tus posibilidades",
       identitySentence: "Soy un programmador diferente, creativo y al mismo tiempo organizado. Mezclando la experiencia artistica con la logica informatica para generar nuevas perspectivas solidas y eficientes. Experto en desarrollo de frontend y de sistemas generales. He estudiado mas de 10 lenguajes diferentes desarrollando juegos, paginas web y aplicaciones moviles. Mi objetivo es desarrollarme inicialmente como frontend y eventualmente como desarrollador fullstack.",
       Highlights: {
@@ -93,7 +93,7 @@ const translations: Record<Lang, Translations> = {
           'Over the past two years, I have concentrated my professional growth on software development, strengthening my skills in programming, web development, and mobile development, with a particular interest in building effective digital solutions.' +
           '\n' +
           'I am passionate about merging creativity with technology to craft meaningful digital experiences.',
-      tags: ['HTML - 2 years', 'CSS - 2 years', 'JavaScript - 1 year', 'C# - 1 year', 'Vue - 6 months', 'React - 6 months', 'React Native - 6 months', 'C++ - 6 months'],
+      tags: ['HTML - 2 years', 'CSS - 2 years', 'JavaScript - 1 year', 'C# - 1 year', 'Vue - 1 year', 'React - 1 year', 'React Native - 1 year', 'C++ - 1 year'],
       catchPhrase: "Expand your horizon",
       identitySentence: "I am a distinctive, creative, and highly organized programmer who combines an artistic background with strong computational thinking. By integrating creativity with technical logic, I strive to develop innovative perspectives and solutions that are both robust and efficient. I specialized on frontend and systems development. I had studied more than 10 coding languages, reflected on projects such as games, web pages and mobile apps. My objective is to grow initially as a frontend developer and eventually as a fullstack developer.",
       Highlights: {
