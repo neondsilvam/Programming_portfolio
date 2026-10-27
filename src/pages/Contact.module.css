@@ -37,7 +37,9 @@
   background: #ffffff;
 }
 
-.card:last-child {
+.card:last-child,
+.card:nth-last-child(2)
+{
     grid-column: 1 / -1;
 }
 

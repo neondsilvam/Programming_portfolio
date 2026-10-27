@@ -9,7 +9,7 @@ export function DirectContact() {
 
     const ShortContactList = [
         {label: labels.email, value: contactInfo.email, href: `mailto:${contactInfo.email}`},
-        {label: labels.phoneCad, value: contactInfo.phoneCad, href: `tel:${contactInfo.phoneCad}`},
+        {label: labels.phoneCol, value: contactInfo.phoneCol, href: `tel:${contactInfo.phoneCol}`},
         {label: labels.linkedin, value: contactInfo.linkedin, href: `https://${contactInfo.linkedin}`
         },
     ]
