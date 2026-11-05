@@ -4,5 +4,10 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   base: "/Programming_portfolio/",
-  plugins: [react()],
+    plugins: [react()],
+    server: {
+        watch: {
+            ignored: ['**/.vs/**'],
+        },
+    },
 })
