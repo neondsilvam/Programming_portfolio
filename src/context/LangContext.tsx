@@ -50,7 +50,6 @@ const translations: Record<Lang, Translations> = {
     webProjects: {
       sections: [
         {id: '2026', label: '2026'},
-        {id: '2025', label: '2025'},
       ],
       clarification: 'Estos han sido algunos de mis proyectos mas recientes (Incluyendo esta página)',
       projects: [],
@@ -139,7 +138,6 @@ const translations: Record<Lang, Translations> = {
     webProjects: {
       sections: [
         {id: '2026', label: '2026'},
-        {id: '2025', label: '2025'},
       ],
       clarification: 'These are some of my best Web projects. (Including this web page.)',
       projects: [],
