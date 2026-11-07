@@ -1,4 +1,4 @@
-@keyframes StartUpAnimation {
+/*@keyframes StartUpAnimation {
     0% {
         opacity: 1;
     }
@@ -6,7 +6,7 @@
         opacity: 0;
         z-index: 0;
     }
-}
+}*/
 
 .StartUp {
     position: fixed;
@@ -15,7 +15,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 1);
-    animation: StartUpAnimation 1s ease-out forwards;
+    /*animation: StartUpAnimation 1s ease-out forwards;*/
     z-index: 9999;
     pointer-events: none;
 }

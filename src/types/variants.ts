@@ -17,3 +17,8 @@ export const ScrollVariantOut = {
     moving: { opacity: 0, y: '0%' },
     end: { opacity: 1, y: '0%' },
 }
+
+export const begginingVariant = {
+    start: { opacity: 1 },
+    end: { opacity: 0 },
+}
