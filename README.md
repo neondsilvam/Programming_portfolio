@@ -2,20 +2,22 @@
 
 
 
-##### Last Updated: *26/10/2026*
+##### Last Updated: *06/11/2026*
 
 
 
 ###### Dev Log Recent Changes:
 
-* UPDATE: Personal Description
-* UPDATE: Contact info
+* UPDATE: CV PDF
+* UPDATE: Coding Skills Section
+* FIXED: Minor Bug with initial animation
+* FIXED: Minor Bug with web projects section
 
 
 
 Frameworks and tools used for the project:
 
-* JetBrains Ridder
+* Visual Studio
 * React
 * Motion (react version)
 * Node.js
