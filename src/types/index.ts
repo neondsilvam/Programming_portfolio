@@ -154,7 +154,6 @@ export interface FirebaseConnectionState {
     checkedAt: Date | null;
 }
 
-export type { Lang };
 export const LANGS: Lang[] = ["es", "en"];
 
 export type SiteTexts = Translations;
@@ -202,12 +201,7 @@ export interface RemoteProject {
     CaseStudy: RemoteCaseStudy[];
 }
 
-export interface RemoteHighlight {
-    id: string;
-    title: string;
-    description: string;
-    section: string;
-}
+export type RemoteHighlight = Omit<HighlightProjects, "imgSrc" | "posInList">;
 
 export interface LocalProjectData {
     imageSrc: string;

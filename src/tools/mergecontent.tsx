@@ -7,12 +7,12 @@ import type {
     RemoteProject,
 } from "../types/index";
 
+
 const EMPTY_PROJECT_ASSETS: LocalProjectData = {
     imageSrc: "",
     media: { preproduction: [], production: [], postproduction: [] },
 };
 
-/** Une los textos y booleanos de Firestore con las imágenes locales. */
 export function mergeProject(
     remote: RemoteProject,
     local: LocalProjectData | undefined,
@@ -42,7 +42,6 @@ export function mergeProject(
     };
 }
 
-/** Une los textos de un destacado con su imagen y posición locales. */
 export function mergeHighlight(
     remote: RemoteHighlight,
     local: LocalHighlightData | undefined
