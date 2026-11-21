@@ -142,3 +142,108 @@ export type CaseStudy = {
     outcome: string
   }
 }
+
+/*Nueva addición para el Firebase*/
+
+export type ConnectionStatus = "idle" | "checking" | "connected" | "error";
+
+export interface FirebaseConnectionState {
+    status: ConnectionStatus;
+    error: string | null;
+    latencyMs: number | null;
+    checkedAt: Date | null;
+}
+
+export type { Lang };
+export const LANGS: Lang[] = ["es", "en"];
+
+// Se reutiliza tu tipo existente: los textos de Firestore tienen la misma forma
+export type SiteTexts = Translations;
+
+export type ProjectCategory = "webProjects" | "gameExp";
+export type ProcessStage = "preproduction" | "production" | "postproduction";
+
+export type ContentStatus = "checking" | "connected" | "error";
+
+// ─────────────────────────────────────────────
+// Proyectos tal como vienen de Firestore (solo textos)
+// ─────────────────────────────────────────────
+export interface RemoteProcessSection {
+    title: string;
+    description: string[];
+}
+
+export interface RemoteCaseStudy {
+    id: string;
+    title: string;
+    description: {
+        context: string;
+        problem: string;
+        possibilities: string;
+        decision: string;
+        outcome: string;
+    };
+}
+
+export interface RemoteProject {
+    id: string;
+    title: string;
+    description: string;
+    isProjectDeployed: boolean;
+    iframeSrc: string;
+    section: string;
+    hasExternalLinks: boolean;
+    externalLinks: string;
+    isShowingTheProcess: boolean;
+    process: {
+        sections: Record<ProcessStage, RemoteProcessSection>;
+        sectionFooter: string;
+        footerHasLink: boolean;
+        footerLink: string;
+        itHasBeenPublished: boolean;
+        publishedLink: string;
+    };
+    CaseStudy: RemoteCaseStudy[];
+}
+
+export interface RemoteHighlight {
+    id: string;
+    title: string;
+    description: string;
+    section: string;
+}
+
+// ─────────────────────────────────────────────
+// Lo que NO está en Firestore: imágenes (imports) y números
+// ─────────────────────────────────────────────
+export interface LocalProjectData {
+    imageSrc: string;
+    media: Record<ProcessStage, string[]>;
+}
+
+export interface LocalHighlightData {
+    imgSrc: string;
+    posInList: number;
+}
+
+// ─────────────────────────────────────────────
+// Resultado final, ya combinado
+// ─────────────────────────────────────────────
+export interface LangContent {
+    texts: SiteTexts;
+    webProjects: Project[];
+    gameExp: Project[];
+    highlights: HighlightProjects[];
+}
+
+export type SiteContent = Record<Lang, LangContent>;
+
+export interface FirebaseConnection {
+    status: ContentStatus;          // "checking" | "connected" | "error"
+    error: string | null;
+    latencyMs: number | null;
+    content: SiteContent | null;    // textos + proyectos de ES y EN
+    isConnected: boolean;
+    isChecking: boolean;
+    retry: () => Promise<boolean>;
+}

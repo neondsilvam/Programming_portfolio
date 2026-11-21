@@ -13,6 +13,9 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "dotenv": "^18.0.10",
+    "env": "^0.0.2",
+    "firebase": "^13.4.0",
     "motion": "^12.42.2",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
