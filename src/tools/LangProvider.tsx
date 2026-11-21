@@ -3,11 +3,9 @@ import type { Lang } from '../types'
 import { LangContext } from '../context/LangContext'
 import { useLoadedContent } from './contentContext'
 
-// Este archivo exporta SOLO el componente (requisito de Fast Refresh).
-
 export function LangProvider({ children }: { children: ReactNode }) {
     const [lang, setLang] = useState<Lang>('en')
-    const content = useLoadedContent() // ambos idiomas ya están descargados
+    const content = useLoadedContent()
 
     const toggleLang = () => setLang((prev) => (prev === 'es' ? 'en' : 'es'))
 

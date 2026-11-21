@@ -24,3 +24,42 @@
     margin-left: 50%;
 }
 
+/*Para el mensaje de Error*/
+
+.ErrorBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ErrorText {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: 'Cause', sans-serif;
+}
+
+.ErrorSmall {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Cause', sans-serif;
+}
+
+.ErrorButton {
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 10px 20px;
+    background-color: rgba(0, 180, 20, 1);
+    color: black;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Cause', sans-serif;
+    pointer-events: all;
+    z-index: 9999;
+}
