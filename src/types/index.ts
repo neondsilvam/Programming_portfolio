@@ -157,7 +157,6 @@ export interface FirebaseConnectionState {
 export type { Lang };
 export const LANGS: Lang[] = ["es", "en"];
 
-// Se reutiliza tu tipo existente: los textos de Firestore tienen la misma forma
 export type SiteTexts = Translations;
 
 export type ProjectCategory = "webProjects" | "gameExp";
@@ -165,9 +164,6 @@ export type ProcessStage = "preproduction" | "production" | "postproduction";
 
 export type ContentStatus = "checking" | "connected" | "error";
 
-// ─────────────────────────────────────────────
-// Proyectos tal como vienen de Firestore (solo textos)
-// ─────────────────────────────────────────────
 export interface RemoteProcessSection {
     title: string;
     description: string[];
@@ -213,9 +209,6 @@ export interface RemoteHighlight {
     section: string;
 }
 
-// ─────────────────────────────────────────────
-// Lo que NO está en Firestore: imágenes (imports) y números
-// ─────────────────────────────────────────────
 export interface LocalProjectData {
     imageSrc: string;
     media: Record<ProcessStage, string[]>;
@@ -226,9 +219,6 @@ export interface LocalHighlightData {
     posInList: number;
 }
 
-// ─────────────────────────────────────────────
-// Resultado final, ya combinado
-// ─────────────────────────────────────────────
 export interface LangContent {
     texts: SiteTexts;
     webProjects: Project[];
@@ -239,10 +229,10 @@ export interface LangContent {
 export type SiteContent = Record<Lang, LangContent>;
 
 export interface FirebaseConnection {
-    status: ContentStatus;          // "checking" | "connected" | "error"
+    status: ContentStatus;          
     error: string | null;
     latencyMs: number | null;
-    content: SiteContent | null;    // textos + proyectos de ES y EN
+    content: SiteContent | null;    
     isConnected: boolean;
     isChecking: boolean;
     retry: () => Promise<boolean>;

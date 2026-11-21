@@ -2,18 +2,14 @@
 
 
 
-##### Last Updated: *06/11/2026*
+##### Last Updated: *06/20/2026*
 
 
 
 ###### Dev Log Recent Changes:
 
-* UPDATE: CV PDF
-* UPDATE: Coding Skills Section
-* FIXED: Minor Bug with initial animation
-* FIXED: Minor Bug with web projects section
-
-
+* ADDED: Firebase Connection with API calls to fetch content from Firestore 
+* ADDED: New loading system for firebase content with a loading screen and error handling
 
 Frameworks and tools used for the project:
 
@@ -21,6 +17,7 @@ Frameworks and tools used for the project:
 * React
 * Motion (react version)
 * Node.js
+* Firebase
 
 
 

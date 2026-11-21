@@ -45,7 +45,6 @@ function AppGate() {
 
     return (
         <>
-            {/* La app solo se monta cuando Firestore entregó todo el contenido */}
             {isReady && (
                 <LangProvider>
                     <NavProvider>
@@ -54,7 +53,6 @@ function AppGate() {
                 </LangProvider>
             )}
 
-            {/* El loader queda encima y, al estar listo, hace su animación de salida (exit) */}
             <AnimatePresence>
                 {!isReady && <Loadder key="loader" />}
             </AnimatePresence>

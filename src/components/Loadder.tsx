@@ -13,7 +13,7 @@ export function Loadder() {
             variants={begginingVariant}
             initial="start"
             animate="start"
-            exit="end"                 // se ejecuta cuando AnimatePresence lo quita
+            exit="end"                 
             transition={{ duration: 1.5 }}
         >
             {status === 'error' ? (

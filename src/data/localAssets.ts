@@ -1,7 +1,3 @@
-// Imágenes (imports de Vite) y números que NO viven en Firestore.
-// Se combinan con los textos de Firestore usando el `id` de cada proyecto.
-// Son iguales en ES y EN, por eso hay un solo mapa por categoría.
-
 import type { LocalHighlightData, LocalProjectData, ProjectCategory } from "../types/index";
 
 // Portafolio

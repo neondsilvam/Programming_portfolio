@@ -13,24 +13,11 @@ import type {
     SiteTexts,
 } from "../types/index";
 
-// ─────────────────────────────────────────────
-// Estructura en Firestore
-//
-// translations/
-//   en  → { nav, profilePage, webProjects, gameExp, contactPage, StudyCaseInfo }
-//   es
-//
-// projects/            (un documento por proyecto)
-//   WebProjectsEN_p1, WebProjectsES_p1, ...
-//   GameExpEN_p1,     GameExpES_p1, ...
-//   HighlightsEN_p1,  HighlightsES_p1, ...
-// ─────────────────────────────────────────────
 const TEXTS_COLLECTION = "translations";
 const PROJECTS_COLLECTION = "projects";
 
 type ListName = ProjectCategory | "highlights";
 
-// Prefijo del ID del documento → nombre de la lista en el código
 const PREFIX_TO_LIST: Record<string, ListName> = {
     WebProjects: "webProjects",
     GameExp: "gameExp",
@@ -39,7 +26,6 @@ const PREFIX_TO_LIST: Record<string, ListName> = {
 
 const SUFFIX_TO_LANG: Record<string, Lang> = { EN: "en", ES: "es" };
 
-// Ej: "GameExpEN_p3" → prefix "GameExp", lang "EN", id "p3"
 const DOC_ID_PATTERN = /^(WebProjects|GameExp|Highlights)(EN|ES)_(.+)$/;
 
 type RawDoc = { id: string } & Record<string, unknown>;
@@ -49,8 +35,6 @@ function toMessage(err: unknown) {
     return err instanceof FirebaseError ? err.code : "error";
 }
 
-// getDocFromServer / getDocsFromServer van siempre al servidor:
-// si responden, la conexión está verificada.
 async function fetchSiteTexts(lang: Lang): Promise<SiteTexts> {
     const path = `${TEXTS_COLLECTION}/${lang}`;
 
@@ -72,7 +56,6 @@ async function fetchSiteTexts(lang: Lang): Promise<SiteTexts> {
     return data as SiteTexts;
 }
 
-/** Lee TODA la colección projects en una sola consulta y la agrupa por idioma y lista. */
 async function fetchGroupedProjects(): Promise<Grouped> {
     let snap;
     try {
@@ -95,11 +78,11 @@ async function fetchGroupedProjects(): Promise<Grouped> {
         }
         const [, prefix, langSuffix, idFromDocName] = match;
         const data = d.data();
-        // Si el documento ya trae un campo id se respeta; si no, se usa el del nombre ("p1")
+        
         grouped[SUFFIX_TO_LANG[langSuffix]][PREFIX_TO_LIST[prefix]].push({ ...data, id: (data.id as string) ?? idFromDocName });
     });
 
-    // Si falta alguna lista completa, mejor fallar que mostrar una página vacía
+    
     for (const lang of ["en", "es"] as const) {
         for (const [prefix, list] of Object.entries(PREFIX_TO_LIST)) {
             if (grouped[lang][list].length === 0) {
@@ -111,11 +94,6 @@ async function fetchGroupedProjects(): Promise<Grouped> {
     return grouped;
 }
 
-/**
- * Firestore devuelve los documentos ordenados por ID (p1, p2, p3).
- * El orden de la página se toma del orden en que aparecen las claves en localAssets.ts
- * (ej. gameExp: p3, p2, p1 → Rekindled primero). Los que no estén ahí van al final.
- */
 function sortByLocalOrder<T extends { id: string }>(items: T[], order: string[]): T[] {
     const pos = (id: string) => {
         const i = order.indexOf(id);
@@ -157,7 +135,6 @@ function buildLang(lang: Lang, texts: SiteTexts, grouped: Grouped): LangContent 
     };
 }
 
-/** Descarga todo en paralelo (3 lecturas). Si algo falla, rechaza la promesa completa. */
 export async function loadAllContent(): Promise<SiteContent> {
     const [en, es, grouped] = await Promise.all([
         fetchSiteTexts("en"),
