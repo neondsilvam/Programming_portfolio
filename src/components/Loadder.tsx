@@ -10,6 +10,22 @@ export function Loadder() {
             initial="start"
             animate="end"
             transition={{ duration: 1.5, delay: 1 }}
-        />
+        >
+            <LoadingCircleSpinner />
+        </motion.div>
+    )
+}
+
+function LoadingCircleSpinner() {
+    return (
+            <motion.div
+                className={styles.Spinner}
+                animate={{ transform: "rotate(360deg)" }}
+                transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "linear",
+                }}
+            />
     )
 }
